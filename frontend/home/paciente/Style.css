@@ -22,7 +22,7 @@
     width: 232px;
     height: 56px;
     display: flex;
-   color: white;
+    color: white;
     justify-content: center;
     align-items: center;
     background-color: #FF6A00;
@@ -34,7 +34,7 @@
     width: 56px;
     height: 56px;
     display: flex;
-  color: white;
+    color: white;
     align-items: center;
     background-color: #D9D9D9;
     margin-left: 20px;
@@ -44,8 +44,8 @@
     width: 56px;
     height: 56px;
     display: flex;
-   color: white;
-    justify-content: flex-end;
+    color: white;
+    justify-content: center;
     align-items: center;
     background-color: #C55607; 
     margin-right: 20px;
@@ -98,6 +98,8 @@
     margin-left: 22px;
     margin-right: 22px;
     margin-bottom: 39px;
+    justify-content: flex-end;
+    padding-left: 5px ;
 }
 .BTN{
     width: 156px;
@@ -147,6 +149,10 @@
     margin-right: 22px;
     margin-left: 22px;
     margin-bottom: 39px;
+    padding-left: 11px;
+    padding-top: 4px;
+    padding-right: 6px;
+    padding-bottom: 3px;
 }
 .BTN2{
     width: 156px;
