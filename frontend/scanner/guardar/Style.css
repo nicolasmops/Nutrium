@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    width: 412px;
+    height: 917px;
+    
+
+}
+
+.arriba{
+    width: 100%;
+    height: 120px;
+    background-color: #AAD9F0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.Titulo{
+    font-family: "Sora", sans-serif;
+    width: 232px;
+    height: 56px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6A00;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+.Configuracion{
+    font-family: "Sora", sans-serif;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    color: white;
+    align-items: center;
+    background-color: #D9D9D9;
+    margin-left: 20px;
+}
+.logo{
+    font-family: "Sora", sans-serif;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: #C55607; 
+    margin-right: 20px;
+}
+
+
+.medio{
+    height: 677px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Historial{
+    width: 369.5px;
+    height: 306px;
+    background-color: #8096EF;
+    margin-top: 22px;
+    margin-left: 21.25px;
+    margin-right: 21.25px;
+    margin-bottom: 22px;
+    display: flex;
+
+}
+.izq{
+    display: flex;
+    flex-direction: column;
+    width: 209px;
+}
+
+
+.Doctora{
+    width: 142px;
+    height: 269px;
+    display: flex;
+    background-color: #D9D9D9;
+    justify-content: flex-end;
+    margin-top: 15px;
+    margin-bottom: 22px;
+    margin-right: 16.5px;
+}
+.Hist{
+    font-family: "Sora", sans-serif;
+    color: white;
+    font-size: 24px;
+    width: 172px;
+    height: 57px;
+    display: flex;
+    background-color: #2541B2;
+    margin-top: 16px;
+    margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 39px;
+    justify-content: flex-end;
+    padding-left: 5px ;
+}
+.BTN{
+    width: 156px;
+    height: 189px;
+    background-color: #D9D9D9;
+    margin-left: 25px;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.Chats{
+    width: 369.5px;
+    height: 306px;
+    background-color: #8096EF;
+    margin-left: 21.25px;
+    margin-right: 21.25px;
+    display: flex;
+    
+}
+
+
+.Doctor{
+    width: 142px;
+    height: 269px;
+    display: flex;
+    background-color: #D9D9D9;
+    margin-top: 15px;
+    margin-bottom: 22px;
+    margin-left: 16.5px;
+
+}
+
+.der{
+    display: flex;
+    flex-direction: column;
+    width: 209px;
+}
+.Texto{
+    font-family: "Sora", sans-serif;
+    color: white;
+    font-size: 24px;
+    width: 172px;
+    height: 39px;
+    display: flex;
+    background-color: #2541B2;
+    margin-top: 16px;
+    margin-right: 22px;
+    margin-left: 22px;
+    margin-bottom: 39px;
+    padding-left: 11px;
+    padding-top: 4px;
+    padding-right: 6px;
+    padding-bottom: 3px;
+}
+.BTN2{
+    width: 156px;
+    height: 189px;
+    background-color: #D9D9D9;
+    margin-left: 25px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.abajo{
+    width: 100%;
+    height: 120px;
+    background-color: #AAD9F0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnsabajo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+}
+
+.Home{
+    font-family: "Sora", sans-serif;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 57px;
+
+}
+.Guardados{
+    font-family: "Sora", sans-serif;
+    font-size: 10px;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 57px;
+    
+}
+.Mapa{
+    font-family: "Sora", sans-serif;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 57px;
+}
+.Usuario{
+    font-family: "Sora", sans-serif;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 57px;
+}
+.Escaner{
+    font-family: "Sora", sans-serif;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+}
