@@ -64,11 +64,19 @@
     margin-right: 20px;
 }
 
+
+
 .medio{
     height: 677px;
     width: 100%;
     display: flex;
 }
+.Historial{
+    width: 369.5px;
+    height: 306px;
+    background-color: #8096EF;
+}
+
 
 .abajo{
     width: 100%;
