@@ -1,11 +1,10 @@
 *{
     margin: 0;
+}
+body{
     width: 412px;
     height: 917px;
-    
-
 }
-
 .arriba{
     width: 100%;
     height: 120px;
@@ -173,6 +172,7 @@
 }
 
 .btnsabajo{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -184,11 +184,14 @@
     font-family: "Sora", sans-serif;
     background-color: #D9D9D9;
     display: flex;
+    font-family: "Sora", sans-serif;
+    font-size: 10px;
+    background-color: #D9D9D9;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 57px;
     width: 57px;
-
 }
 .Guardados{
     font-family: "Sora", sans-serif;
@@ -203,6 +206,7 @@
 }
 .Mapa{
     font-family: "Sora", sans-serif;
+    font-size: 10px;
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
@@ -212,6 +216,7 @@
 }
 .Usuario{
     font-family: "Sora", sans-serif;
+    font-size: 10px;
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
@@ -221,6 +226,7 @@
 }
 .Escaner{
     font-family: "Sora", sans-serif;
+    font-size: 10px;
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
