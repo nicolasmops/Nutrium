@@ -4,4 +4,5 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = el.dataset.href;
       });
     });
-  });
+  }); 
+  console.log("se commitear y pushear con cmd")

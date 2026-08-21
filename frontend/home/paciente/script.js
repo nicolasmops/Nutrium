@@ -5,3 +5,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  console.log("se pushear con cmd")
