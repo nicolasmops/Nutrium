@@ -74,8 +74,6 @@ body{
     background-color: #2541B2;
 }
 .producto{
-    margin-top: 10px;
-    margin-left: 26px;
     width: 145px;
     height: 193px;
     background-color: #8096EF;
@@ -106,6 +104,10 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 26px;
+    column-gap: 52px;
+    row-gap: 22px;
 }
 
 .abajo{
