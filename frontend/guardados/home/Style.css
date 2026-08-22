@@ -66,6 +66,21 @@ body{
     display: flex;
     flex-direction: column;
 }
+.ns{
+    margin-top: 10px;
+    margin-left: 15px;
+    width:216px;
+    height: 20px;
+    background-color: #2541B2;
+}
+.msj{
+    margin-top: 61px;
+    margin-left: 26px;
+    width: 145px;
+    height: 193px;
+    background-color: #8096EF;
+  
+}
 
 .abajo{
     width: 100%;
