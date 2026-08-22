@@ -41,7 +41,7 @@
     justify-content: flex-start;
     align-items: center;
     background-color: #C55607; 
-     margin-right: 20px;
+    margin-right: 20px;
 }
 .logo1{
     width: 20px;
@@ -94,6 +94,18 @@ body{
     height: 20px;
     background-color: #2541B2;
     margin: 10px 9px 0;
+}
+.texto{
+    width: 127px;
+    height: 12px;
+    background-color: #2541B2;
+    margin-left:9px;
+    margin-top: 8px;
+}
+.lista-guardados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .abajo{
