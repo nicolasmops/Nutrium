@@ -73,13 +73,21 @@ body{
     height: 20px;
     background-color: #2541B2;
 }
-.msj{
-    margin-top: 61px;
+.producto{
+    margin-top: 10px;
     margin-left: 26px;
     width: 145px;
     height: 193px;
     background-color: #8096EF;
   
+}
+.foto{
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px;
+    width: 127px;
+    height: 127px;
+    background-color: #D9D9D9;
 }
 
 .abajo{
