@@ -2,12 +2,12 @@
     margin: 0;
 }
 body{
-    width: 412px;
-    height: 917px;
+    width: 100vw; 
+    height: 100vh; 
 }
 .arriba{
     width: 100%;
-    height: 120px;
+    height: 13.086vh; 
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
@@ -15,222 +15,223 @@ body{
     align-items: center;
     
 }
-
+ 
 .Titulo{
     font-family: "Sora", sans-serif;
-    width: 232px;
-    height: 56px;
+    width: 56.311vw; 
+    height: 6.107vh; 
     display: flex;
     color: white;
     justify-content: center;
     align-items: center;
     background-color: #FF6A00;
-    margin-left: 14px;
-    margin-right: 14px;
+    margin-left: 3.398vw; 
+    margin-right: 3.398vw; 
 }
 .Configuracion{
     font-family: "Sora", sans-serif;
-    width: 56px;
-    height: 56px;
+    width: 13.592vw; 
+    height: 6.107vh; 
     display: flex;
     color: white;
     align-items: center;
     background-color: #D9D9D9;
-    margin-left: 20px;
+    margin-left: 4.854vw; 
 }
 .logo{
     font-family: "Sora", sans-serif;
-    width: 56px;
-    height: 56px;
+    width: 13.592vw; 
+    height: 6.107vh; 
     display: flex;
     color: white;
     justify-content: center;
     align-items: center;
     background-color: #C55607; 
-    margin-right: 20px;
+    margin-right: 4.854vw; 
 }
-
-
+ 
+ 
 .medio{
-    height: 677px;
+    height: 73.828vh; 
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 .Historial{
-    width: 369.5px;
-    height: 306px;
+    width: 89.684vw; 
+    height: 33.37vh; 
     background-color: #8096EF;
-    margin-top: 22px;
-    margin-left: 21.25px;
-    margin-right: 21.25px;
-    margin-bottom: 22px;
+    margin-top: 2.399vh; 
+    margin-left: 5.158vw; 
+    margin-right: 5.158vw; 
+    margin-bottom: 2.399vh; 
     display: flex;
-
+ 
 }
 .izq{
     display: flex;
     flex-direction: column;
-    width: 209px;
+    width: 50.728vw; 
 }
-
-
+ 
+ 
 .Doctora{
-    width: 142px;
-    height: 269px;
+    width: 34.466vw; 
+    height: 29.335vh; 
     display: flex;
     background-color: #D9D9D9;
     justify-content: flex-end;
-    margin-top: 15px;
-    margin-bottom: 22px;
-    margin-right: 16.5px;
+    margin-top: 1.636vh; 
+    margin-bottom: 2.399vh; 
+    margin-right: 4.005vw; 
 }
 .Hist{
     font-family: "Sora", sans-serif;
     color: white;
-    font-size: 24px;
-    width: 172px;
-    height: 57px;
+    font-size: 5.825vw; 
+    width: 41.748vw; 
+    height: 6.216vh; 
     display: flex;
     background-color: #2541B2;
-    margin-top: 16px;
-    margin-left: 22px;
-    margin-right: 22px;
-    margin-bottom: 39px;
+    margin-top: 1.745vh; 
+    margin-left: 5.34vw; 
+    margin-right: 5.34vw; 
+    margin-bottom: 4.253vh; 
     justify-content: flex-end;
-    padding-left: 5px ;
+    padding-left: 1.214vw; 
 }
 .BTN{
-    width: 156px;
-    height: 189px;
+    width: 37.864vw; 
+    height: 20.611vh; 
     background-color: #D9D9D9;
-    margin-left: 25px;
-    margin-top: 30px;
-    margin-right: 30px;
+    margin-left: 6.068vw; 
+    margin-top: 3.272vh; 
+    margin-right: 7.282vw; 
 }
-
+ 
 .Chats{
-    width: 369.5px;
-    height: 306px;
+    width: 89.684vw; 
+    height: 33.37vh; 
     background-color: #8096EF;
-    margin-left: 21.25px;
-    margin-right: 21.25px;
+    margin-left: 5.158vw; 
+    margin-right: 5.158vw; 
     display: flex;
     
 }
-
-
+ 
+ 
 .Doctor{
-    width: 142px;
-    height: 269px;
+    width: 34.466vw; 
+    height: 29.335vh;
     display: flex;
     background-color: #D9D9D9;
-    margin-top: 15px;
-    margin-bottom: 22px;
-    margin-left: 16.5px;
-
+    margin-top: 1.636vh;
+    margin-bottom: 2.399vh;
+    margin-left: 4.005vw; 
+ 
 }
-
+ 
 .der{
     display: flex;
     flex-direction: column;
-    width: 209px;
+    width: 50.728vw; 
 }
 .Texto{
     font-family: "Sora", sans-serif;
     color: white;
-    font-size: 24px;
-    width: 172px;
-    height: 39px;
+    font-size: 5.825vw; 
+    width: 41.748vw; 
+    height: 4.253vh; 
     display: flex;
     background-color: #2541B2;
-    margin-top: 16px;
-    margin-right: 22px;
-    margin-left: 22px;
-    margin-bottom: 39px;
-    padding-left: 11px;
-    padding-top: 4px;
-    padding-right: 6px;
-    padding-bottom: 3px;
+    margin-top: 1.745vh; 
+    margin-right: 5.34vw;
+    margin-left: 5.34vw; 
+    margin-bottom: 4.253vh; 
+    padding-left: 2.67vw; 
+    padding-top: 0.436vh; 
+    padding-right: 1.456vw; 
+    padding-bottom: 0.327vh; 
 }
 .BTN2{
-    width: 156px;
-    height: 189px;
+    width: 37.864vw;
+    height: 20.611vh; 
     background-color: #D9D9D9;
-    margin-left: 25px;
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 6.068vw; 
+    margin-top: 3.272vh; 
+    margin-left: 7.282vw; 
 }
-
+ 
 .abajo{
     width: 100%;
-    height: 120px;
+    height: 13.086vh;
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
+ 
 .btnsabajo{
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 80px;
+    height: 8.724vh; 
 }
-
+ 
 .Home{
     font-family: "Sora", sans-serif;
     background-color: #D9D9D9;
     display: flex;
     font-family: "Sora", sans-serif;
-    font-size: 10px;
+    font-size: 2.427vw; 
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 57px;
-    width: 57px;
+    height: 6.216vh; 
+    width: 13.835vw; 
 }
 .Guardados{
     font-family: "Sora", sans-serif;
-    font-size: 10px;
+    font-size: 2.427vw;
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 57px;
-    width: 57px;
+    height: 6.216vh;
+    width: 13.835vw;
     
 }
 .Mapa{
     font-family: "Sora", sans-serif;
-    font-size: 10px;
+    font-size: 2.427vw;
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 57px;
-    width: 57px;
+    height: 6.216vh; 
+    width: 13.835vw; 
 }
 .Usuario{
     font-family: "Sora", sans-serif;
-    font-size: 10px;
+    font-size: 2.427vw; 
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 57px;
-    width: 57px;
+    height: 6.216vh; 
+    width: 13.835vw; 
 }
 .Escaner{
     font-family: "Sora", sans-serif;
-    font-size: 10px;
+    font-size: 2.427vw;
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
-    width: 80px;
+    height: 8.724vh; 
+    width: 19.417vw; 
 }
+ 
