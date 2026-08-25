@@ -1,0 +1,8 @@
+ FORMULA PX A VIEWPORT:
+ ancho: (ancho del objeto / ancho base (412)) * 100
+ alto: (alto del objeto / alto base(917)) * 100
+
+ EN LA TERMINNAL CMD:
+ 1. git add . ----> pre commit, prepara los cambios en la nube
+ 2. git commit -m "[nombre del commit]" ----> commitea los cambios LOS CORCHETES SON PLACEHOLDER, NO VAN EN EL COMANDO
+ 3. git push ----> pushea los cambios
