@@ -1,178 +1,122 @@
 *{
     margin: 0;
 }
-body{
-    width: 100vw; 
-    height: 100vh; 
-}
+
 .arriba{
     width: 100%;
     height: 13.086vh; 
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
-    
-}
- 
-.Titulo{
-    font-family: "Sora", sans-serif;
-    width: 56.311vw; 
-    height: 6.107vh; 
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    background-color: #FF6A00;
-    margin-left: 3.398vw; 
-    margin-right: 3.398vw; 
 }
 .Configuracion{
     font-family: "Sora", sans-serif;
     width: 13.592vw; 
     height: 6.107vh; 
-    display: flex;  
-    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     background-color: #D9D9D9;
-    margin-left: 4.854vw; 
+}
+.Titulo{
+    font-family: "Sora", sans-serif;
+    width: 56.311vw; 
+    height: 6.216vh; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6A00;
+    border-radius: 15.049vw; 
 }
 .logo{
     font-family: "Sora", sans-serif;
     width: 13.592vw; 
     height: 6.107vh; 
     display: flex;
-    color: white;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     background-color: #C55607; 
     margin-right: 4.854vw; 
 }
- 
- 
+.logo1{
+    width: 4.854vw; 
+    height: 2.181vh; 
+    background-color: #D9D9D9;
+    margin-left: 4.369vw; 
+}
+body{
+    width: 100vw; 
+    height: 100vh; 
+}
+.logo2{
+    width: 38.592vw; 
+    height: 2.181vh; 
+    background-color: #2541B2;
+    margin-left: 2.913vw; 
+}
+
 .medio{
     height: 73.828vh; 
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.Historial{
-    width: 89.684vw; 
-    height: 33.37vh; 
-    background-color: #8096EF;
-    margin-top: 2.399vh; 
-    margin-left: 5.158vw; 
-    margin-right: 5.158vw; 
-    margin-bottom: 2.399vh; 
-    display: flex;
- 
-}
-.izq{
-    display: flex;
-    flex-direction: column;
-    width: 50.728vw; 
-    justify-content: space-between;
-}
- 
- 
-.Doctora{
-    width: 34.466vw; 
-    height: 29.335vh; 
-    display: flex;
-    background-color: #D9D9D9;
-    justify-content: flex-end;
-    margin-top: 1.636vh; 
-    margin-bottom: 2.399vh; 
-    margin-right: 4.005vw; 
-}
-.Hist{
-    font-family: "Sora", sans-serif;
-    color: white;
-    font-size: 5.825vw; 
-    width: 40.048vw; 
-    height: 6.216vh; 
-    display: flex;
+.ns{
+    margin-top: 1.091vh; 
+    margin-left: 3.641vw; 
+    width: 52.427vw; 
+    height: 2.181vh; 
     background-color: #2541B2;
-    margin-left: 5.34vw; 
-    margin-right: 5.34vw; 
-    margin-bottom: 1.5vh; 
-    justify-content: flex-end;
-    padding-left: 1.214vw; 
 }
-.BTN{
-    width: 37.864vw; 
-    height: 20.611vh; 
-    background-color: #D9D9D9;
-    margin-left: 6.068vw; 
-    margin-top: 3.272vh; 
-    margin-right: 7.282vw; 
-}
- 
-.Chats{
-    width: 89.684vw; 
-    height: 33.37vh; 
+.producto{
+    width: 35.194vw; 
+    height: 21.046vh; 
     background-color: #8096EF;
-    margin-left: 5.158vw; 
-    margin-right: 5.158vw; 
-    display: flex;
-    
 }
- 
- 
-.Doctor{
-    width: 34.466vw; 
-    height: 29.335vh;
+.foto{
     display: flex;
+    justify-content: center; 
+    margin: 1.091vh 2.184vw 0; 
+    width: 30.825vw; 
+    height: 13.849vh; 
     background-color: #D9D9D9;
-    margin-top: 1.636vh;
-    margin-bottom: 2.399vh;
-    margin-left: 4.005vw; 
- 
 }
- 
-.der{
-    display: flex;
-    flex-direction: column;
-    width: 50.728vw; 
-    justify-content: space-between;
-}
-.Texto{
-    font-family: "Sora", sans-serif;
-    color: white;
-    font-size: 5.825vw; 
-    width: 40.048vw; 
-    height: 4.253vh; 
-    display: flex;
+.nombre{
+    width: 16.99vw; 
+    height: 2.181vh; 
     background-color: #2541B2;
-    margin-right: 5.34vw;
-    margin-left: 5.34vw; 
-    margin-bottom: 1.5vh; 
-    padding-left: 2.67vw; 
-    padding-top: 0.436vh; 
-    padding-right: 1.456vw; 
-    padding-bottom: 0.327vh; 
-    justify-content: flex-start;
-    align-items: center;
+    margin: 1.091vh 2.184vw 0; 
 }
-.BTN2{
-    width: 37.864vw;
-    height: 20.611vh; 
-    background-color: #D9D9D9;
-    margin-left: 7.282vw; 
-    margin-top: 3.272vh; 
-    margin-right: 6.068vw; 
+.texto{
+    width: 30.825vw; 
+    height: 1.309vh; 
+    background-color: #2541B2;
+    margin-left: 2.184vw; 
+    margin-top: 0.872vh; 
 }
- 
+.lista-guardados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.091vh; 
+    margin-left: 6.311vw; 
+    column-gap: 12.621vw; 
+    row-gap: 2.399vh; 
+}
+
 .abajo{
     width: 100%;
-    height: 13.086vh;
+    height: 13.086vh; 
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
- 
 .btnsabajo{
     width: 100%;
     display: flex;
@@ -181,12 +125,11 @@ body{
     justify-content: space-evenly;
     height: 8.724vh; 
 }
- 
 .Home{
     font-family: "Sora", sans-serif;
+    font-size: 2.427vw; 
     background-color: #D9D9D9;
     display: flex;
-    font-size: 2.427vw; 
     justify-content: center;
     align-items: center;
     height: 6.216vh; 
@@ -194,18 +137,17 @@ body{
 }
 .Guardados{
     font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
+    font-size: 2.427vw; 
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6.216vh;
-    width: 13.835vw;
-    
+    height: 6.216vh; 
+    width: 13.835vw; 
 }
 .Mapa{
     font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
+    font-size: 2.427vw; 
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
@@ -225,7 +167,7 @@ body{
 }
 .Escaner{
     font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
+    font-size: 2.427vw; 
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
