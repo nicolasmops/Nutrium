@@ -1,5 +1,7 @@
 *{
+   box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 body{
     width: 100vw; 
@@ -61,10 +63,10 @@ body{
     width: 89.684vw; 
     height: 33.37vh; 
     background-color: #8096EF;
-    margin-top: 2.399vh; 
-    margin-left: 5.158vw; 
-    margin-right: 5.158vw; 
-    margin-bottom: 2.399vh; 
+    margin-top: 1.74vh; 
+    margin-left: 3.27vw; 
+    margin-right: 6.18vw; 
+    margin-bottom: 1.52vh; 
     display: flex;
  
 }
@@ -136,6 +138,7 @@ body{
     flex-direction: column;
     width: 50.728vw; 
     justify-content: space-between;
+    align-content: center;
 }
 .Texto{
     font-family: "Sora", sans-serif;
@@ -145,9 +148,10 @@ body{
     height: 4.253vh; 
     display: flex;
     background-color: #2541B2;
-    margin-right: 5.34vw;
-    margin-left: 5.34vw; 
-    margin-bottom: 1.5vh; 
+    margin-top: 2.39vh;
+    margin-right: 3.27vw;
+    margin-left: 6.18vw; 
+    margin-bottom:2.18vh; 
     padding-left: 2.67vw; 
     padding-top: 0.436vh; 
     padding-right: 1.456vw; 
