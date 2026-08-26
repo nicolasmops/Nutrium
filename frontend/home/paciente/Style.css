@@ -152,6 +152,8 @@ body{
     padding-top: 0.436vh; 
     padding-right: 1.456vw; 
     padding-bottom: 0.327vh; 
+    justify-content: flex-start;
+    align-items: center;
 }
 .BTN2{
     width: 37.864vw;
