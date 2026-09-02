@@ -70,8 +70,26 @@ body{
     flex-direction: column;
     overflow-y: auto;
     gap: 1.19vh;
+    position: relative;
 }
-.ns{
+.mas{
+    background-color: #FF6A00;
+    height: 11.668vh;
+    width: 25.97vw;
+    border-radius: 50%;
+
+    position: fixed;
+    bottom: 8rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: white;
+
+}
+
+.filtro{
     margin-top: 1.091vh; 
     margin-left: 3.641vw; 
     width: 52.427vw; 

@@ -67,6 +67,8 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+
 }
 .ns{
     margin-top: 1.091vh; 
@@ -76,20 +78,20 @@ body{
     background-color: #2541B2;
 }
 .producto{
-    width: 35.194vw; 
-    height: 21.046vh; 
+    width: 44.417vw; 
+    height: 25.190vh; 
     background-color: #8096EF;
 }
 .foto{
     display: flex;
     justify-content: center; 
-    margin: 1.091vh 2.184vw 0; 
-    width: 30.825vw; 
-    height: 13.849vh; 
+    margin: 1.091vh 2.184vw 0;
+    aspect-ratio: 1/1; 
+    width: 40.048vw;  
     background-color: #D9D9D9;
 }
 .nombre{
-    width: 16.99vw; 
+    width: 21.214vw; 
     height: 2.181vh; 
     background-color: #2541B2;
     margin: 1.091vh 2.184vw 0; 
