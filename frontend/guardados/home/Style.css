@@ -105,12 +105,11 @@ body{
 }
 .lista-guardados{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 1.091vh; 
-    margin-left: 6.311vw; 
-    column-gap: 12.621vw; 
-    row-gap: 2.399vh; 
+    margin-left: 3.88vw; 
+    column-gap: 1.3vh; 
+    row-gap: 3.39vw; 
 }
 
 .abajo{
