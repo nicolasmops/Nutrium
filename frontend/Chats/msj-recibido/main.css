@@ -59,6 +59,11 @@
     margin-left: 5.34vw;
     margin-top: 1.2vh;
     margin-bottom: 1.2vh;
+    font-size: 3vh;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+
 }
 
 .Mensaje{
@@ -67,15 +72,65 @@
     background-color: #8096EF;
     margin-left: 3.88vw;
     margin-right: 3.88vw;
+    border-radius: 1.2%;
 }
 
 .top{
     height: 13.52vh;
     width: 92.23vw;
+    display: flex;
+    flex-direction: row;
 }
 .foto{
-    height: 23.06vh;
+    height: 23.06vw;
     aspect-ratio: 1/1;
+    background-color: #D9D9D9;
+    margin-top: 1.744vh;
+    margin-left: 3.88vw;
+}
+
+.titulo{
+    width: 47.09vw;
+    height: 4.47vh;
+    background-color: #2541B2;
+    margin-top: 1.74vh;
+    margin-left: 5.34vw;
+    margin-bottom: 1.41vh;
+}
+
+.nombre{
+    width: 47.09vw;
+    height: 3.27vh;
+    background-color: #2541B2;
+    margin-left: 5.34vw;
+}
+
+.bottom{
+    height: 53.87vh;
+    width: 92.23vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.41vh;
+    align-items: center;
+}
+
+.text{
+    width: 84.95vw;
+    height: 1.96vh;
+    background-color: #2541B2;
+}
+
+
+.responder{
+    width: 20.145vw;
+    aspect-ratio: 1/1;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    margin-top: 23.7vh;
+    margin-left: 68.45vw;
 }
 
 .abajo{
