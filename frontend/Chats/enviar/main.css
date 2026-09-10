@@ -1,6 +1,7 @@
 *{
     margin: 0;
-
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .arriba{
@@ -44,52 +45,75 @@
     background-color: #C55607; 
     margin-right: 4.854vw; 
 }
-.medio{
-    height: 73.828vhpx;
-    width: 100%;
+
+body{
+    width: 100vw; 
+    height: 100vh; 
 }
-.abajo{
-    width: 100%;
-    height: 120px;
-    background-color: #AAD9F0;
+.logo2{
+    width: 46.6vw; 
+    height: 2.181vh; 
+    background-color: #2541B2;
+    margin-left: 2.913vw; 
 }
 
-.Titulo{
-    font-family: "Sora", sans-serif;
-    width: 233px;
-    height: 57px;
+.medio{
+        height: 86.91vh; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+}
+.cont{
+    height: 3.16vh;
+    width:  100%;
+    margin-top: 1.19vh;
+}
+.atras{
+    width: 13.83vw;
+    height: 3.16vh;
+    background-color: #D9D9D9;
+    margin-left: 5.58vw;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #FF6A00;
 }
-.Configuracion{
-    font-family: "Sora", sans-serif;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #D9D9D9;
+.flechita{
+        font-size: 24px;
 }
-.logo{
-    font-family: "Sora", sans-serif;
-    width: 56px;
-    height: 56px;
+.mensaje{
+    height: 79.28vh;
+    width: 92.23vw;
+    background-color: #8096EF;
+    margin-top: 1.19vh;
+    margin-left: 3.88vw;
+    border-radius: 8px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #C55607; 
+    flex-direction: column;
 }
-
-.abajo{
-    width: 100%;
-    height: 13.086vh; 
-    background-color: #AAD9F0;
+.head{
+    width: 84.95vw;
+    height: 9.16vh;
+    margin-top: 1.74vh;
+    margin-left: 3.64vw;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    background-color: yellow;
+}
+.prefijo{
+    display: flex;
+    flex-direction: column;
+    gap: 2.61vh;
+}
+.de{
+    width:11.65vw;
+    height: 3.27vh;
+    background-color: #2541B2;
+}
+.para{
+    width:16.5vw;
+    height: 3.27vh;
+    background-color: #2541B2;
+}
+.nombres{
+    height: 9.16vh;
+    width: 66vw;
 }
