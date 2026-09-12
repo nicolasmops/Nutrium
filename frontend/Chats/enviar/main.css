@@ -1,4 +1,4 @@
-*{
+f*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -96,7 +96,6 @@ body{
     margin-top: 1.74vh;
     margin-left: 3.64vw;
     display: flex;
-    background-color: yellow;
 }
 .prefijo{
     display: flex;
@@ -116,4 +115,45 @@ body{
 .nombres{
     height: 9.16vh;
     width: 66vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2.42vw;
+    gap: 2.7vh;
+    padding-bottom: 0;
+}
+.uno{
+    width: 66vw;
+    height:  3.21vh;
+    background-color: #2541b2; 
+}
+.contenido{
+    width: 85.19vw;
+    height:  18.86vh;
+    display:flex;
+    flex-direction: column;
+    gap: 1.41vh;
+    margin-top: 2.61vh;
+}
+.oracion{
+width: 85.19vw;
+height: 1.96vh;
+background-color: #2541B2;
+margin-left: 3.64vw;
+}
+.dos{
+    margin-top: 35.2vh;
+    display: flex;
+    justify-content: flex-end;
+}
+.enviar{
+    width: 20.14vw;
+    height: 9.05vh;
+    background-color: #D9D9D9;
+    margin-right: 5.58vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.env{
+     font-size: 55px;
 }
