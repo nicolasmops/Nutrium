@@ -4,4 +4,4 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = el.dataset.href;
       });
     });
-  });
+  }); 
