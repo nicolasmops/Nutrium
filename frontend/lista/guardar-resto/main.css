@@ -107,6 +107,10 @@ align-items: center;
     justify-content: center;
     align-items: center;
 }
+.info{
+    display: flex;
+    flex-direction: row;
+}
 .subir{
     height: 3.81vh;
     width: 57.03vw;
@@ -116,8 +120,7 @@ align-items: center;
     align-items: center;
     font-family:  "Sora", sans-serif;
     color: white;
-    font-size: 24px;
-    margin-top: 9.37vh;
+    font-size: 24px; 
 }
 .mas{
     margin-top: 5.27vh;
@@ -149,21 +152,67 @@ align-items: center;
     height: 8.94vh;
     margin-top:1.41vh;
     margin-left: 3.88vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
 }
 .nombre{
     width: 19.66vw;
-    height: 3.05vh;
+    min-height: 3.05vh;
     background-color: #2541B2;
 }
 .direccion{
-    height: 1.96vh;
+    min-height: 1.96vh;
     width: 22.81vw;
     background-color: #2541B2;
-    margin-top: 1.19vh;
+}
+.der{
+    margin-top:1.41vh;
+    margin-left: 2.43vw;
+    width: 58.01vw;
+    height: 8.94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.txtn{
+    width: 40.78vw;
+    min-height: 3.05vh;
+    background-color: #2541B2;
+}
+.txtad{
+    width: 48.54vw;
+    min-height: 1.96vh;
+    background-color: #2541B2;
+    
+}
+.txtd{
+    width: 58.01vw;
+    min-height: 1.96vh;
+    background-color: #2541B2;
+}
+.nsq{
+    width: 76.21vw;
+    height: 1.53vh;
+    background-color: #2541B2;
+    margin-top: 1vh;
+    margin-left: 3.88vw;
+}
+.BTNGUARDAR{
+    width: 37.62vw;
+    height: 9.05vh;
+    background-color: #d9d9d9;
+    font-size: 32;
+    font-family: "Sora", sans-serif;;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 3.88vw;
+    margin-top: 3.81vh;
 }
 
-
-   
 .abajo{
     width: 100%;
     height: 13.086vh;
