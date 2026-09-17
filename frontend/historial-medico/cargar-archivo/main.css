@@ -52,17 +52,17 @@
     width: 4.854vw;
     height: 2.181vh;
     background-color: #D9D9D9;
-    margin-left: 4.369vw;
+    
 }
 body{
     width: 100vw;
     height: 100vh;
 }
 .logo2{
-    width: 38.592vw;
+    width: 46.36vw;
     height: 2.181vh;
     background-color: #2541B2;
-    margin-left: 2.913vw;
+    margin-left: 2.67vw;
 }
 
 
@@ -92,14 +92,14 @@ align-items: center;
 }
 .restaurant{
     width: 93.2vw;
-    height: 67.39vh;
+    height: 67.61vh;
     background-color: #8096ef;
     margin-top: 0.98vh;
 }
 .ft{
     width: 85.43vw;
     aspect-ratio: 1/1;
-    background-color: #D9D9D9;
+    background-color: #979797;
     margin-top: 1.74vh;
     margin-left: 3.83vw;
     display: flex;
@@ -109,8 +109,7 @@ align-items: center;
 }
 .info{
     display: flex;
-    flex-direction: column;
-    margin-left: 3.88vw;
+    flex-direction: row;
 }
 .subir{
     height: 3.81vh;
@@ -162,7 +161,6 @@ align-items: center;
     width: 19.66vw;
     min-height: 3.05vh;
     background-color: #2541B2;
-    margin-top: 1.85vh;
 }
 .direccion{
     min-height: 1.96vh;
@@ -195,11 +193,11 @@ align-items: center;
     background-color: #2541B2;
 }
 .nsq{
-    width: 83.98vw;
-    min-height: 1.53vh;
+    width: 76.21vw;
+    height: 1.53vh;
     background-color: #2541B2;
-    
-   
+    margin-top: 1vh;
+    margin-left: 3.88vw;
 }
 .BTNGUARDAR{
     width: 37.62vw;
@@ -213,12 +211,6 @@ align-items: center;
     border-radius: 10px;
     margin-left: 3.88vw;
     margin-top: 3.81vh;
-}
-.CONT{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.74vh;
-    gap: 1vh;
 }
 
 .abajo{
