@@ -142,6 +142,18 @@ body{
 .alto{
     height: 3.05vh
 }
+.agregar{
+    width: 48.54vw;
+    height: 9.05vh;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sora", sans-serif;
+    font-size: 24px;
+    border-radius: 10px;
+    margin-top: 15.27vh;
+}
 
 .abajo{
     width: 100%;
