@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<section class="cont">
+<article class="conte">
+    <input type="number" class="vh" id="ViewportHeight" placeholder="vh"></input>
+    <button id="BTNheight" class = "boton">calcular</button>
+</article>
+<article class="conte">
+    <input type="number" class="vh" id="ViewportWidth" placeholder="vw"></input>
+    <button id="BTNwidth" class = "boton">calcular</button>
+</article>
+    <script src="script.js"></script>
+</section>
+    <style>
+        .conte{
+            width:150px;
+            display: flex;
+        }
+        .boton{
+            margin-left: 15px;
+        }
+        .cont{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .vh{
+            width: 100px;
+            height: 20px;
+            font-size: 12px;
+        }
+    </style>
+</body>
+</html>
