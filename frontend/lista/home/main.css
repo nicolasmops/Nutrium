@@ -86,7 +86,19 @@ body{
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    transition: 0.2s ease;
+}
+.resto .despliegue{
+    display: none;
+}
 
+.resto.abierto .despliegue{
+    display: block;
+}
+
+.resto.abierto{
+ height: 52.23vh;
+ width: 92.23vw;
 }
 .nombre{
     width: 34.7vw;
