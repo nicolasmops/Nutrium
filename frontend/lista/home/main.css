@@ -81,12 +81,15 @@ body{
 .resto{
     width: 91.01vw;
     min-height: 17.45vh;
-    background-color: #D9D9D9;
+    background-color: #8096EF;
     margin-left: 3.64vw;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     transition: 0.2s ease;
+    .foto{
+        display: none
+    }
 }
 .resto .despliegue{
     display: none;
@@ -97,9 +100,42 @@ body{
 }
 
 .resto.abierto{
- height: 52.23vh;
+ min-height: 52.23vh;
  width: 92.23vw;
+justify-content: flex-start;
+.foto{
+    display: block;
+    aspect-ratio: 1/1;
+    width: 84.95vw;
+    background-color: #D9D9D9;
+    margin-left: 3.64vw;
+    margin-right: 3.64vw;
+    margin-top: 1.31vh;
+    margin-bottom: 1.31vh;
 }
+.nombre{
+    width: 59.22vw;
+    height: 4.03vh;
+    margin-bottom: 1.31vh;
+    margin-left: 3.64vw;
+}
+.desc{
+    width: 63.38vw;
+    height: 1.74vh;
+    margin-bottom: 1.31vh;
+    margin-left: 3.64vw;
+}
+.descripcion{
+    width: 84.95vw;
+    height: 1.74vh;
+    background-color: #2541B2;
+    margin-bottom: 1.31vh;
+    margin-left: 2.91vw;
+    margin-left: 3.64vw;
+}
+}
+
+
 .nombre{
     width: 34.7vw;
     height: 2.2vh;
