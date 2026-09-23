@@ -135,8 +135,9 @@ body{
 }
 .botones{
 display: flex;
+width: 88.83vw;
+margin-top:29.66vh;
 }
-
 .btn{
     height: 9.27vh;
     width: 20.63vw;
@@ -144,7 +145,8 @@ display: flex;
     border-radius: 10px;
     display:flex;
     justify-content: center;
-    align-items: ;
+    align-items: center;
+    margin-left: 2.43vw;
 }
 .notita{
     font-size: 51px;
@@ -165,7 +167,17 @@ display: flex;
     border-radius: 50px;
     background-color: #2541B2;
     margin-left: 1.7vh;
-    color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.t{
+    font-size: 24px;
+    font-family: "Sora", sans-serif;
+}
+.barcode{
+    font-size: 27px
 }
 
 .abajo{
