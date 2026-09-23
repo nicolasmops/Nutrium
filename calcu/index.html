@@ -1,39 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora de Viewport (VH / VW)</title>
+    <!-- Fuente moderna Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<section class="cont">
-<article class="conte">
-    <input type="number" class="vh" id="ViewportHeight" placeholder="vh"></input>
-    <button id="BTNheight" class = "boton">calcular</button>
-</article>
-<article class="conte">
-    <input type="number" class="vh" id="ViewportWidth" placeholder="vw"></input>
-    <button id="BTNwidth" class = "boton">calcular</button>
-</article>
+<body>
+
+    <main class="calculator-card">
+        <header class="header">
+            <h1>Viewport Converter</h1>
+            <p>Convierte píxeles a unidades dinámicas <code>vh</code> y <code>vw</code> fácilmente.</p>
+        </header>
+
+        <section class="cont">
+            <!-- Sección de VH -->
+            <article class="conte">
+                <div class="input-group">
+                    <label for="ViewportHeight">Alto (Pixels)</label>
+                    <div class="input-wrapper">
+                        <input type="number" class="vh" id="ViewportHeight" placeholder="ej: 250">
+                        <span class="unit">px</span>
+                    </div>
+                </div>
+                <button id="BTNheight" class="boton">Calcular VH</button>
+                <div class="result-box" id="resultHeight">0.00 vh</div>
+            </article>
+
+            <!-- Sección de VW -->
+            <article class="conte">
+                <div class="input-group">
+                    <label for="ViewportWidth">Ancho (Pixels)</label>
+                    <div class="input-wrapper">
+                        <input type="number" class="vh" id="ViewportWidth" placeholder="ej: 180">
+                        <span class="unit">px</span>
+                    </div>
+                </div>
+                <button id="BTNwidth" class="boton">Calcular VW</button>
+                <div class="result-box" id="resultWidth">0.00 vw</div>
+            </article>
+        </section>
+    </main>
+<style>
+    :root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --accent: #38bdf8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(56, 189, 248, 0.15) 0px, transparent 50%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--text-main);
+}
+
+/* Tarjeta Principal */
+.calculator-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+}
+
+.header p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.header code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--accent);
+}
+
+/* Contenedor de Formulario */
+.cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conte {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.vh {
+    width: 100%;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0 40px 0 12px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.vh:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.unit {
+    position: absolute;
+    right: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+/* Botones */
+.boton {
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.boton:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.boton:active {
+    transform: translateY(0);
+}
+
+/* Caja de Resultados */
+.result-box {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    padding: 8px;
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 6px;
+    border: 1px dashed rgba(56, 189, 248, 0.3);
+}
+</style>
     <script src="script.js"></script>
-</section>
-    <style>
-        .conte{
-            width:150px;
-            display: flex;
-        }
-        .boton{
-            margin-left: 15px;
-        }
-        .cont{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .vh{
-            width: 100px;
-            height: 20px;
-            font-size: 12px;
-        }
-    </style>
 </body>
 </html>
