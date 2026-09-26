@@ -5,21 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }); 
-  console.log("se commitear y pushear con cmd")
+
 
 let popup = document.getElementById("popup");
 let puedeONo = false;
-
-if(puedeONo == true){
-  popup.showModal()
+let popupGuardar = document.getElementById("popupGuardar");
+let btnEscanear = document.getElementById("btnEscanear");
+btnEscanear.addEventListener("click", funcionAbrir)
+function funcionAbrir(){
+  popup.showModal();
 }
-else{
-  popup.close()
-}
-
 let siButton = document.getElementById("si");
 let noButton = document.getElementById("no");
-síButton.addEventListener("click", funcionGuardar)
+siButton.addEventListener("click", funcionGuardar)
 noButton.addEventListener("click", funcionCerrar)
 
 function funcionGuardar(){
