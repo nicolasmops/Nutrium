@@ -76,7 +76,6 @@ body{
     gap: 22.13vh;
     padding-bottom: 0.65vh;
 }
-
 .t{
     color: white;
     font-size: 36px;
@@ -87,6 +86,82 @@ body{
     height: 7.52vh;
     background-color: #d9d9d9;
     border-radius: 50px;
+    
+}
+.popup{
+    height: 49.73vh;
+    width: 89.32vw;
+    border: none;
+    margin-left: 5.34vw;
+    margin-bottom: 2.51vh;
+    background-color: #Aad9f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.resto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headline{
+    width: 74.03vw;
+    height: 6.65vh;
+    background-color: #2541B2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.94vh;
+}
+.imagen{
+    width: 62.96vw;
+    height: 21.7vh;
+    background-color: #D9D9D9;
+    margin-top: 2.07vh;
+}
+.pregunta{
+    width: 74.03vw;
+    height: 3.27vh;
+    background-color: #2541B2;
+    display: flex;
+    align-items: center;
+    margin-top: 2.07vh;
+    color: white;
+    font-family: "Sora", sans-serif;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    width: 80.34vw;
+    height: 5.56vh;
+    gap: 4.85vw;
+    margin-right: 5.34vw;
+    margin-left: 3.64vw;
+    margin-top: 3.49vh;
+}
+.si{
+    width: 37.62vw;
+    height: 5.56vh;
+    background-color:#d9d9d9;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+   
+    color: white;
+    font-family: "Sora", sans-serif;
+     
+}
+.no{
+    width: 37.62vw;
+    height: 5.56vh;
+    background-color:#d9d9d9;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    
+    color: white;
+    font-family: "Sora", sans-serif;
+ 
 }
 
 .abajo{
