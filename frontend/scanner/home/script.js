@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 let popup = document.getElementById("popup");
-let puedeONo = false;
 let popupGuardar = document.getElementById("popupGuardar");
 let btnEscanear = document.getElementById("btnEscanear");
 btnEscanear.addEventListener("click", funcionAbrir)
@@ -17,13 +16,18 @@ function funcionAbrir(){
 }
 let siButton = document.getElementById("si");
 let noButton = document.getElementById("no");
-siButton.addEventListener("click", funcionGuardar)
+let guardarButton = document.getElementById("btnGuardar")
+siButton.addEventListener("click", funcionAbrirGuardar)
 noButton.addEventListener("click", funcionCerrar)
+guardarButton.addEventListener("click", funcionGuardar )
 
-function funcionGuardar(){
+function funcionAbrirGuardar(){
   popup.close();
   popupGuardar.showModal();
 }
 function funcionCerrar(){
   popup.close();
+}
+function funcionGuardar(){
+  popupGuardar.close()
 }
