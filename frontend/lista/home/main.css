@@ -81,7 +81,7 @@ body{
 .resto{
     width: 91.01vw;
     min-height: 17.45vh;
-    background-color: #8096EF;
+    background-color: #D9D9D9;
     margin-left: 3.64vw;
     display: flex;
     justify-content: flex-end;
@@ -102,6 +102,7 @@ body{
 .resto.abierto{
  min-height: 52.23vh;
  width: 92.23vw;
+ background-color: #8096EF;
 justify-content: flex-start;
 .foto{
     display: block;
@@ -151,6 +152,22 @@ justify-content: flex-start;
     margin-bottom: 2.18vh;
 }
 
+.mas{
+    background-color: #FF6A00;
+    height: 11.668vh;
+    width: 25.97vw;
+    border-radius: 50%;
+
+    position: fixed;
+    bottom: 8rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: white;
+
+}
 
 .abajo{
     width: 100%;
