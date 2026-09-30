@@ -40,22 +40,11 @@
    
     margin-right: 4.854vw; 
 }
-.logo1{
-    width: 4.854vw; 
-    height: 2.181vh; 
-    background-color: #D9D9D9;
-    margin-left: 4.369vw; 
-}
 body{
     width: 100vw; 
     height: 100vh; 
 }
-.logo2{
-    width: 38.592vw; 
-    height: 2.181vh; 
-    background-color: #2541B2;
-    margin-left: 2.913vw; 
-}
+
 
 .medio{
     height: 73.828vh; 
