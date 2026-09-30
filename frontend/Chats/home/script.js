@@ -5,3 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.mensaje').forEach(el => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('abierto');
+      });
+    });
+  });

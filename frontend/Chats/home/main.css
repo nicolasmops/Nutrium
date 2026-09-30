@@ -44,12 +44,7 @@ body{
     width: 100vw; 
     height: 100vh; 
 }
-.logo2{
-    width: 38.592vw; 
-    height: 2.181vh; 
-    background-color: #2541B2;
-    margin-left: 2.913vw; 
-}
+
 
 .medio{
     max-height: 73.828vh; 
@@ -95,6 +90,7 @@ body{
     justify-content: flex-start;
     border-radius: 10px;
     padding-left: 2.66vw;
+    transition: 0.5s ease;
 }
 .foto{
     width: 16.26vw;
@@ -122,6 +118,23 @@ body{
     height: 2.18vh;
     border-radius: 50px;
 }
+.mensaje .despliegue{
+    display: none;
+}
+
+.mensaje.abierto .despliegue{
+    display: block;
+}
+
+.mensaje.abierto{
+    width: 92.23vw;
+    min-height: 34.13vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
 .abajo{
     width: 100%;
     height: 13.086vh; 
