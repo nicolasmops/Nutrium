@@ -5,13 +5,39 @@
 
 .arriba{
     width: 100%;
-    height: 120px;
+    height: 14.26vh; 
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    
     align-items: center;
     
+}
+ 
+.Titulo{
+    font-family: "Sora", sans-serif;
+    width: 64.32vw; 
+    height: 8.07vh; 
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+   
+    margin-left: 5.7vw; 
+    margin-right: 7.28vw; 
+}
+
+
+.logo{
+    font-family: "Sora", sans-serif;
+    width: 13.592vw; 
+    height: 6.107vh; 
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+   
+    margin-right: 4.854vw; 
 }
 .medio{
     height: 677px;
@@ -23,33 +49,3 @@
     background-color: #AAD9F0;
 }
 
-.Titulo{
-    font-family: "Sora", sans-serif;
-    width: 233px;
-    height: 57px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #FF6A00;
-}
-.Configuracion{
-    font-family: "Sora", sans-serif;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #D9D9D9;
-}
-.logo{
-    font-family: "Sora", sans-serif;
-    width: 56px;
-    height: 56px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #C55607; 
-}
