@@ -49,6 +49,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #ffac70;
 }
 .Historial{
     width: 89.684vw; 
@@ -59,6 +60,8 @@ body{
     margin-right: 6.18vw; 
     margin-bottom: 1.52vh; 
     display: flex;
+    border-radius: 34px;
+    align-items: center;
  
 }
 .izq{
@@ -70,28 +73,40 @@ body{
  
  
 .Doctora{
-    width: 34.466vw; 
-    height: 29.335vh; 
+    width: 38.11vw; 
+    height: 27.70vh; 
     display: flex;
-    background-color: #D9D9D9;
     justify-content: flex-end;
     margin-top: 1.636vh; 
     margin-bottom: 2.399vh; 
-    margin-right: 4.005vw; 
+    margin-right: 4.005vw + 2.43vw; 
 }
 .Hist{
-    font-family: "Sora", sans-serif;
-    color: white;
-    font-size: 5.825vw; 
     width: 40.048vw; 
-    height: 6.216vh; 
+    height: 22.25vh; 
     display: flex;
-    background-color: #2541B2;
+    background-color: #f0c9a7;
     margin-left: 5.34vw; 
     margin-right: 5.34vw; 
     margin-bottom: 1.5vh; 
-    justify-content: flex-end;
     padding-left: 1.214vw; 
+    border-radius: 32px;
+    border: 5px solid #8b4d31;
+    flex-direction: column;
+    align-items: center;
+}
+.clipboard{
+width: 21.60vw;
+height: 9.71vh;
+margin-top: 3.88vw;
+}
+.histo{
+    font-family: "Sora", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #8b4d31;
+    margin-left: 4.37vw;
+    margin-top: 1.42vh;
 }
 .BTN{
     width: 37.864vw; 
@@ -109,7 +124,7 @@ body{
     margin-left: 5.158vw; 
     margin-right: 5.158vw; 
     display: flex;
-    
+    border-radius: 34px;
 }
  
  
@@ -179,18 +194,24 @@ body{
  
 .Home{
     font-family: "Sora", sans-serif;
-    background-color: #D9D9D9;
     display: flex;
     font-size: 2.427vw; 
     justify-content: center;
     align-items: center;
     height: 6.216vh; 
     width: 13.835vw; 
+    background-color: #ff9040;
+    width: 18.20vw;
+    height: 8.07vh;
+    border-radius: 30px;
+}
+.homeimg{
+    height: 3.93vh;
+    width: 9.95vw;
 }
 .Guardados{
     font-family: "Sora", sans-serif;
     font-size: 2.427vw;
-    background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,7 +222,6 @@ body{
 .Mapa{
     font-family: "Sora", sans-serif;
     font-size: 2.427vw;
-    background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,7 +231,6 @@ body{
 .Usuario{
     font-family: "Sora", sans-serif;
     font-size: 2.427vw; 
-    background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,7 +240,6 @@ body{
 .Escaner{
     font-family: "Sora", sans-serif;
     font-size: 2.427vw;
-    background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
