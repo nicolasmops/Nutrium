@@ -92,6 +92,7 @@ body{
     border: 5px solid #8b4d31;
     flex-direction: column;
     align-items: center;
+    box-shadow: 6px 6px 4px #00000025;
 }
 .clipboard{
 width: 21.60vw;
@@ -140,6 +141,7 @@ margin-top: 3.88vw;
     background-color: #f0c9a7;
     align-items: center;
     margin-left: 2.07vw;
+    box-shadow: 6px 6px 4px #00000025;
 }
 .chatpers{
     margin-top: 3.33vh;
@@ -160,6 +162,7 @@ width: 21.84vw;
     display: flex;
     flex-direction: row;
     align-items: center;
+   
 }
  
 .btnsabajo{
@@ -169,6 +172,7 @@ width: 21.84vw;
     align-items: center;
     justify-content: space-evenly;
     height: 8.724vh; 
+      margin-top: 1.85vh;
 }
  
 .Home{
@@ -183,6 +187,8 @@ width: 21.84vw;
     width: 18.20vw;
     height: 8.07vh;
     border-radius: 30px;
+         margin-bottom: 5.56vh;
+
 }
 .homeimg{
     height: 3.93vh;
@@ -196,7 +202,8 @@ width: 21.84vw;
     align-items: center;
     height: 6.216vh;
     width: 13.835vw;
-    
+         margin-bottom: 5.56vh;
+
 }
 .Mapa{
     font-family: "Sora", sans-serif;
@@ -206,6 +213,8 @@ width: 21.84vw;
     align-items: center;
     height: 6.216vh; 
     width: 13.835vw; 
+         margin-bottom: 5.56vh;
+
 }
 .Usuario{
     font-family: "Sora", sans-serif;
@@ -215,6 +224,8 @@ width: 21.84vw;
     align-items: center;
     height: 6.216vh; 
     width: 13.835vw; 
+         margin-bottom: 5.56vh;
+
 }
 .Escaner{
     font-family: "Sora", sans-serif;
@@ -224,4 +235,6 @@ width: 21.84vw;
     align-items: center;
     height: 8.724vh; 
     width: 19.417vw; 
+         margin-bottom: 5.56vh;
+
 }
