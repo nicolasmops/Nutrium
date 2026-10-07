@@ -50,12 +50,12 @@ body{
     background-color: #ffac70;
 }
 .Historial{
-    width: 89.684vw; 
+    width: 90.3vw; 
     height: 33.37vh; 
     background-color: #8096EF;
-    margin-top: 1.74vh; 
-    margin-left: 3.27vw; 
-    margin-right: 6.18vw; 
+    margin-left: 5.34vw; 
+    margin-right: 5.34vw; 
+    margin-top: 1.74vh;
     margin-bottom: 1.52vh; 
     display: flex;
     border-radius: 34px;
@@ -110,11 +110,11 @@ margin-top: 3.88vw;
 
  
 .Chats{
-    width: 89.684vw; 
+    width: 90.3vw; 
     height: 33.37vh; 
     background-color: #8096EF;
-    margin-left: 5.158vw; 
-    margin-right: 5.158vw; 
+    margin-left: 5.34vw; 
+    margin-right: 5.34vw; 
     display: flex;
     align-items: center;
     border-radius: 34px;
