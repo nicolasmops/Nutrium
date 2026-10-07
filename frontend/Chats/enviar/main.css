@@ -4,81 +4,90 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
 .arriba{
     width: 100%;
-    height: 14.26vh; 
+    height: 14.29vh;
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
-    
+   
     align-items: center;
-    
+   
 }
  
 .Titulo{
     font-family: "Sora", sans-serif;
-    width: 64.32vw; 
-    height: 8.07vh; 
+    width: 64.32vw;
+    height: 8.07vh;
     display: flex;
     color: white;
     justify-content: center;
     align-items: center;
-   
-    margin-left: 5.7vw; 
-    margin-right: 7.28vw; 
+    margin-top: 4.36vh;
+    margin-left: 5.7vw;
+    margin-right: 7.28vw;
 }
+
+
 
 
 .logo{
     font-family: "Sora", sans-serif;
-    width: 13.592vw; 
-    height: 6.107vh; 
+    width: 13.592vw;
+    height: 6.107vh;
     display: flex;
     color: white;
     justify-content: center;
     align-items: center;
-   
-    margin-right: 4.854vw; 
-}
-body{
-    width: 100vw; 
-    height: 100vh; 
-}
-.logo2{
-    width: 46.6vw; 
-    height: 2.181vh; 
-    background-color: #2541B2;
-    margin-left: 2.913vw; 
+    margin-top: 4.36vh;
+    margin-right: 4.854vw;
 }
 
+.logo2{
+    width: 46.6vw;
+    height: 2.181vh;
+    background-color: #2541B2;
+    margin-left: 2.913vw;
+}
+
+
 .medio{
-        height: 86.91vh; 
+        height: 71.42vh;
         width: 100%;
         display: flex;
         flex-direction: column;
+        background-color: #ffac70;
 }
 .cont{
     height: 3.16vh;
     width:  100%;
-    margin-top: 1.19vh;
+    margin-top: 1.52vh;
 }
 .atras{
-    width: 13.83vw;
-    height: 3.16vh;
+    width: 14.07vw;
+    height: 3.27vh;
     background-color: #D9D9D9;
     margin-left: 5.58vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
 }
 .flechita{
-        font-size: 24px;
+        font-size: 2.2vh;
 }
 .mensaje{
-    height: 79.28vh;
+    height: 63.69vh;
     width: 92.23vw;
     background-color: #8096EF;
-    margin-top: 1.19vh;
+    margin-top: 1.52vh;
     margin-left: 3.88vw;
     border-radius: 8px;
     display: flex;
@@ -86,68 +95,184 @@ body{
 }
 .head{
     width: 84.95vw;
-    height: 9.16vh;
-    margin-top: 1.74vh;
-    margin-left: 3.64vw;
+    height: auto;
+    margin: 1.74vh 0 0 3.64vw;
     display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+
+}
+.fila{
+    display: flex;
+    align-items: center;
+    gap: 2.42vw;
 }
 .prefijo{
     display: flex;
     flex-direction: column;
-    gap: 2.61vh;
+    gap: 1.2vh;
 }
-.de{
-    width:11.65vw;
-    height: 3.27vh;
-    background-color: #2541B2;
+.izq{
+    min-width: 17vw;
+    font-family: "Sora", sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 2.2vh;
+    white-space: nowrap;
 }
 .para{
     width:16.5vw;
     height: 3.27vh;
-    background-color: #2541B2;
+}
+.asunto{
+    font-size: 2vh;
 }
 .nombres{
-    height: 9.16vh;
     width: 66vw;
     display: flex;
     flex-direction: column;
+    gap: 1.2vh;
     padding-left: 2.42vw;
-    gap: 2.7vh;
-    padding-bottom: 0;
 }
-.uno{
-    width: 66vw;
-    height:  3.21vh;
-    background-color: #2541b2; 
+
+.der{
+    flex: 1;
+    min-height: 3.27vh;
+    font-family: "Sora", sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 2.18vh;
+    background-color: #A5B1E2;
+    display: flex;
+    align-items: center;
+    padding: 0.4vh 1.7vw;
+    border-radius: 10px;
+}
+.info{
+    font-size: 1.6vh;
+  
 }
 .contenido{
     width: 85.19vw;
-    height:  18.86vh;
-    display:flex;
+    margin: 2.61vh 0 0 3.64vw;
+    display: flex;
     flex-direction: column;
     gap: 1.41vh;
-    margin-top: 2.61vh;
 }
-.oracion{
-width: 85.19vw;
-height: 1.96vh;
-background-color: #2541B2;
-margin-left: 3.64vw;
+.texto{
+    width: 100%;
+    height: 35.22vh;
+    background-color: #A5B1E2;
+    border-radius: 10px;
+    padding: 1.5vh 3vw;
+    font-family: "Sora", sans-serif;
+    font-weight: 300;
+    font-size: 1.8vh;
+    color: white;
+    overflow-y: auto;
 }
-.dos{
-    margin-top: 35.2vh;
+
+
+.envio{
     display: flex;
     justify-content: flex-end;
+    width: 100%;
+    
 }
 .enviar{
-    width: 20.14vw;
-    height: 9.05vh;
+    width: 28vw;
+    height: 6vh;
     background-color: #D9D9D9;
-    margin-right: 5.58vw;
+    border: none;
+    border-radius: 8px;
+    font-family: "Sora", sans-serif;
+    font-size: 2.4vh;
+    cursor: pointer;
+}
+
+.abajo{
+    width: 100%;
+    height: 14.29vh;
+    background-color: #AAD9F0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+ 
+.btnsabajo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 8.724vh;
+      margin-top: 1.85vh;
+}
+ 
+.Home{
+    font-family: "Sora", sans-serif;
+    display: flex;
+    font-size: 2.427vw;
+    justify-content: center;
+    align-items: center;
+    height: 6.216vh;
+    width: 13.835vw;
+    background-color: #ff9040;
+    width: 18.20vw;
+    height: 8.07vh;
+    border-radius: 30px;
+         margin-bottom: 5.56vh;
+
+
+}
+.homeimg{
+    height: 3.93vh;
+    width: 9.95vw;
+}
+.Guardados{
+    font-family: "Sora", sans-serif;
+    font-size: 2.427vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 6.216vh;
+    width: 13.835vw;
+         margin-bottom: 5.56vh;
+
+
 }
-.env{
-     font-size: 55px;
+.Mapa{
+    font-family: "Sora", sans-serif;
+    font-size: 2.427vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.216vh;
+    width: 13.835vw;
+         margin-bottom: 5.56vh;
+
+
+}
+.Usuario{
+    font-family: "Sora", sans-serif;
+    font-size: 2.427vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.216vh;
+    width: 13.835vw;
+         margin-bottom: 5.56vh;
+
+
+}
+.Escaner{
+    font-family: "Sora", sans-serif;
+    font-size: 2.427vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8.724vh;
+    width: 19.417vw;
+    margin-bottom: 5.56vh;
 }

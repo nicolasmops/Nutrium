@@ -1,52 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mensaje recibido</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
     <section class="arriba">
-        <img class="Titulo" src="../../aComponentes/Titulo.png"></img>
-        <img class="logo" src="../../aComponentes/Logo.png"></img>
+        <img class="Titulo" src="../../aComponentes/Titulo.png" alt="Nutrium">
+        <img class="logo" src="../../aComponentes/Logo.png" alt="Logo">
     </section>
 
     <section class="medio">
-<article class="cont">
-    <div class="atras">
-        <span class="flechita">↩</span>
-    </div>
-</article>
-<article class="mensaje">
-    <section class="head">
-        <article class="prefijo">
-            <div class="de"></div>
-            <div class="para"></div>
+        <article class="cont">
+            <div class="atras" data-href="../home/index.html">
+                <span class="flechita">←</span>
+            </div>
         </article>
-        <article class="nombres">
-<div class="uno"></div>
-<div class="uno"></div>
+
+        <article class="mensaje">
+            <section class="head">
+                <div class="fila">
+                    <div class="de izq">De:</div>
+                    <div class="der">Dr. Pantufla</div>
+                </div>
+                <div class="fila">
+                    <div class="para izq">Para:</div>
+                    <div class="der">Peeta Mellark</div>
+                </div>
+                <div class="fila">
+                    <div class="asunto izq">Asunto:</div>
+                    <div class="der info">Respuesta a "Dónde me puedo dar la vacuna"</div>
+                </div>
+            </section>
+
+            <section class="contenido">
+                <div class="texto">
+                    Buenos días señor Mellark, ya le estoy subiendo la vacuna que se tiene que dar y se la puede dar en cualquier farmacia que cubra su obra social. Saludos!
+                </div>
+                <div class="envio">
+                    <button class="enviar" type="button">Enviar</button>
+                </div>
+            </section>
         </article>
     </section>
-    <section class="contenido">
-        <div class="oracion"></div>
-        <div class="oracion"></div>
-        <div class="oracion"></div>
-        <div class="oracion"></div>
-        <div class="oracion"></div>
-        <div class="oracion"></div>
-    </section>
-<article class="cont dos">
-    <div class="enviar">
-        <span class="env">↪</span>
-    </div>
-</article>
+
+    <section class="abajo">
+        <div class="btnsabajo">
+            <div class="Home" data-href="../../home/paciente/index.html">
+                <img class="homeimg" src="../../aComponentes/home.png" alt="Home">
+            </div>
+            <img class="Mapa" src="../../aComponentes/Predeterminado.png" alt="Lista" data-href="../../lista/home/index.html">
+            <img class="Escaner" src="../../aComponentes/Escáner.png" alt="Escáner" data-href="../../scanner/home/index.html">
+            <img class="Guardados" src="../../aComponentes/Guardados.png" alt="Guardados" data-href="../../guardados/home/index.html">
+            <img class="Usuario" src="../../aComponentes/Usuario.png" alt="Usuario" data-href="../../info-perfil/index.html">
+        </div>
     </section>
 
-
-
-
+    <script src="../../nav.js" defer></script>
 </body>
 </html>
