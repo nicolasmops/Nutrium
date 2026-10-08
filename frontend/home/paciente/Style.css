@@ -49,10 +49,10 @@ body{
     flex-direction: column;
     background-color: #ffac70;
 }
-.Historial{
+.card{
     width: 90.3vw; 
     height: 33.37vh; 
-    background-color: #8096EF;
+     background: linear-gradient(135deg, #3b4aa8 0%, #4a5bc4 55%, #5b6ff0 100%);
     margin-left: 5.34vw; 
     margin-right: 5.34vw; 
     margin-top: 1.74vh;
@@ -68,44 +68,32 @@ body{
     width: 50.728vw; 
     justify-content: space-between;
 }
- 
- 
-.Doctora{
-    width: 38.11vw; 
-    height: 27.70vh; 
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1.636vh; 
-    margin-bottom: 2.399vh; 
-    margin-right: 4.005vw + 2.43vw; 
-}
+
 .Hist{
-    width: 40.048vw; 
-    height: 22.25vh; 
+    width: 31.31vw; 
+   height: 16.36vh;
     display: flex;
     background-color: #f0c9a7;
     margin-left: 5.34vw; 
     margin-right: 5.34vw; 
     margin-bottom: 1.5vh; 
-    padding-left: 1.214vw; 
     border-radius: 32px;
     border: 5px solid #8b4d31;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     box-shadow: 6px 6px 4px #00000025;
 }
 .clipboard{
 width: 21.60vw;
 height: 9.71vh;
-margin-top: 3.88vw;
 }
 .histo{
     font-family: "Sora", sans-serif;
     font-size: 24px;
     font-weight: 800;
-    color: #8b4d31;
-    margin-left: 4.37vw;
-    margin-top: 1.42vh;
+    color: #F0C9A7;
+    margin-left: 5.58vw;
 }
 
  
@@ -121,15 +109,7 @@ margin-top: 3.88vw;
 }
  
  
-.Doctor{
-    width: 38.83vw; 
-    height: 26.94vh;
-    display: flex;
-    margin-top: 1.636vh;
-    margin-bottom: 2.399vh;
-    margin-left: 3.16vw; 
- 
-}
+
  
 .der{
     height: 22.25vh;
