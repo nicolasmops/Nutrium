@@ -91,7 +91,7 @@ body{
 }
 .blob-abajo-grande{
     bottom: 0;
-    right: 0;
+    right: -5.10vw;
     width: 59.22vw;    /* 244px / 412 */
 }
 
@@ -151,19 +151,20 @@ height: 9.71vh;
 
  
 .der{
-    height: 22.25vh;
+    height: 16.36vh;
     display: flex;
     flex-direction: column;
-    width: 38.83vw;
+    width: 31.31vw;
     border: 5px solid #8b4d31;
     border-radius: 32px;
     background-color: #f0c9a7;
     align-items: center;
-    margin-left: 2.07vw;
-    box-shadow: 6px 6px 4px #00000025;
+    margin-left: 4.37vw;
+    box-shadow: 6px 6px 4px #00000025;  
+    justify-content: center;
 }
 .chatpers{
-    margin-top: 3.33vh;
+  
 height: 9.81vh;
 width: 21.84vw;
 }
@@ -172,7 +173,7 @@ width: 21.84vw;
     font-size: 24px;
     font-weight: 800;
     color: #F0C9A7;
-    margin-top: 1.42vh;
+  
 }
 .abajo{
     width: 100%;
