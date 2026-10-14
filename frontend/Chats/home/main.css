@@ -6,13 +6,11 @@
 
 .arriba{
     width: 100%;
-    height: 14.26vh; 
+    height: 14.29vh; 
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
-    
-    align-items: center;
-    
+    align-items: center
 }
  
 .Titulo{
@@ -23,11 +21,10 @@
     color: white;
     justify-content: center;
     align-items: center;
-   
+    margin-top: 4.36vh;
     margin-left: 5.7vw; 
     margin-right: 7.28vw; 
 }
-
 
 .logo{
     font-family: "Sora", sans-serif;
@@ -37,9 +34,10 @@
     color: white;
     justify-content: center;
     align-items: center;
-   
+    margin-top: 4.8vh;
     margin-right: 4.854vw; 
 }
+
 body{
     width: 100vw; 
     height: 100vh; 
@@ -73,24 +71,16 @@ body{
 
 }
 
-.filtro{
+input{
     margin-top: 1.091vh; 
     margin-left: 3.641vw; 
-    width: 52.427vw; 
-    min-height: 2.181vh; 
-    background-color: #2541B2;
+    width: 51.21vw; 
+    min-height: 3.27vh; 
+    background-color: #DDDDDD;
+    border: solid #979797;
 }
-.mensaje{
-    width: 92.23vw;
-    min-height: 9.81vh;
-    background-color: #8096EF;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-radius: 10px;
-    padding-left: 2.66vw;
-    transition: 0.5s ease;
+filtro::placeholder{
+    color: #676767;
 }
 .foto{
     width: 16.26vw;
@@ -106,33 +96,59 @@ body{
     gap: 1.09vh;
     padding-left: 1.94vw;
 }
+
 .nombre{
    width: 32vw; 
    height: 3.05vh;
    background-color: #2541B2;
-   border-radius: 50px
+   border-radius: 50px;
+   transition: 0.5s ease;
 }
+
 .msj{
     background-color: #2541B2;
     width: 56.79vw;
     height: 2.18vh;
     border-radius: 50px;
 }
-.mensaje .despliegue{
-    display: none;
+
+.mensaje{
+    width: 92.23vw;
+    min-height: 9.81vh;
+    background-color: #8096EF;
+    margin: 0 auto;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vh 0 1vh 2.66vw;
+}
+
+
+.mensaje .despliegue{ display: none; }
+
+.mensaje.abierto{
+    min-height: 34.13vh;
+    justify-content: flex-start;
 }
 
 .mensaje.abierto .despliegue{
-    display: block;
-}
-
-.mensaje.abierto{
-    width: 92.23vw;
-    min-height: 34.13vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-
+    flex-wrap: wrap;
+    gap: 1vh 2vw;
+    padding: 1vh 2.66vw;
+}
+p{
+    color: white;
+    font-family: "Sora", sans-serif;
 }
 
 .abajo{
