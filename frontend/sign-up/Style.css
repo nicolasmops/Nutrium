@@ -54,4 +54,66 @@ body{
     border-radius: 10px;
     background-color: #FFAC70;
     margin-top: 3.71vh;
+    display: flex;
+    flex-direction: column;
+}
+.crear{
+    font-family: "Sora", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top:1.74vh;
+    margin-left: 20.15vw;
+}
+.labels{
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 5.34vw;
+}
+.asterisco{
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    color: red;
+    font-size: 16px;
+}
+.tYc{
+    font-size: 12px;
+    margin-left: 2.43vw;
+
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    margin-left: 5.34vw;
+    margin-top: 1.74vh;
+}
+.input{
+    border:0;
+    background-color: #DDDDDD;
+    color: #676767;
+    font-weight: bold;
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding-left: 3.16vw;
+    width:  73.30vw;
+    height: 5.13vh;
+    border-radius: 10px;
+    margin-left: 5.34vw;
+    margin-top: 0.55vh;
+}
+.name{
+    margin-top:2.18vh;
+}
+
+.date{
+    margin-top: 0.87vh;
+}
+.checkbox{
+    height: 2.40vh;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    background-color: #FFE4D0;
+    border: solid 1px black;
 }
