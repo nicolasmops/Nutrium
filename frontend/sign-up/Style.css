@@ -80,6 +80,7 @@ body{
     font-size: 12px;
     margin-left: 2.43vw;
 
+
 }
 .contenedor{
     display: flex;
@@ -116,4 +117,42 @@ body{
     border-radius: 4px;
     background-color: #FFE4D0;
     border: solid 1px black;
+}
+.t{
+    width: 52.55vw;
+    height: fit-content;
+    
+}
+.abajo{
+    margin-left: 2.7vw;
+}
+.nacimiento{
+    display: flex;
+    gap: 3.40vw;
+}
+.dia{
+    width: 15.53vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left:4.85vw;
+    padding-right: 4.85vw;
+    margin-right: 0;
+}
+.mes{
+    width: 33.01vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-left:4.85vw;
+    margin-right: 0;
+    margin-left: 0;
+}
+.año{
+    width: 17.96vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 0;
+    margin-left: 0;
 }
