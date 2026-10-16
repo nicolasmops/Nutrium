@@ -4,5 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = el.dataset.href;
       });
     });
-  }); 
-  console.log("se commitear y pushear con cmd")
+  });
+  const form = document.getElementById("formulario")
+  const nombre = document.getElementById("nombre") 
+async function registrarse() {
+
+  
+}

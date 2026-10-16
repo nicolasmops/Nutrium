@@ -18,27 +18,26 @@
         <form class="formulario" id="formulario">
             <p class="crear">¡Crea una cuenta!</p>
             <label for="nombre" class="labels name">Nombre completo <span class="asterisco">*</span></label>
-            <input type="text" name="nombre" class ="input" placeholder="Escribe tu nombre" required>
+            <input type="text" name="nombre" class ="input" placeholder="Escribe tu nombre" id="nombre"required>
             <label for="fecha" class="labels date">Fecha de nacimiento <span class="asterisco">*</span></label>
         <section class="nacimiento">    
-            <input type="number" name="fecha" class="input dia" min="1" max="31" placeholder="DD" required>
+            <input type="number" name="fecha" class="input dia" min="1" max="31" maxlength="2" placeholder="DD" required>
             <select name="fecha" id="mes" class="input mes" required>
                 <option value="" class="value">MES</option>
-                <option value="enero" class="value">Enero</option>
-                <option value="febrero" class="value">Febrero</option>
-                <option value="marzo" class="value">Marzo</option>
-                <option value="abril" class="value">Abril</option>
-                <option value="mayo" class="value">Mayo</option>
-                <option value="junio" class="value">Junio</option>
-                <option value="julio" class="value">Julio</option>
-                <option value="agosto" class="value">Agosto</option>
-                <option value="septiembre" class="value">Septiembre</option>
-                <option value="octubre" class="value">Octubre</option>
-                <option value="noviembre" class="value">Noviembre</option>
-                <option value="diciembre" class="value">Diciembre</option>
+                <option value="01" class="value">Enero</option>
+                <option value="02" class="value">Febrero</option>
+                <option value="03" class="value">Marzo</option>
+                <option value="04" class="value">Abril</option>
+                <option value="05" class="value">Mayo</option>
+                <option value="06" class="value">Junio</option>
+                <option value="07" class="value">Julio</option>
+                <option value="08" class="value">Agosto</option>
+                <option value="09" class="value">Septiembre</option>
+                <option value="10" class="value">Octubre</option>
+                <option value="11" class="value">Noviembre</option>
+                <option value="12" class="value">Diciembre</option>
             </select>
-            <input type="number" class=" input año" placeholder="YYYY" min="0" max="2027" required>
-            <button type="submit"></button>
+            <input type="number" class=" input año" placeholder="YYYY" min="0" max="2027" maxlength="4" required>
         </section>
             <label for="mail" class="labels date">Correo electrónico <span class="asterisco">*</span></label>
             <input type="email" name="mail" class="input" placeholder="ejemplo@correo.com" required>
@@ -50,6 +49,15 @@
             <label for="t&c" class="labels tYc">He leido y acepto los <a href="https://youtu.be/SbYXkOAoZpI?si=IWSsgb0tXy5Gmh5h">términos y <p class="abajo">condiciones</p></a></label>
            </div> 
         </div>
+        <button type="submit" class="crearCuenta">
+            <img class="persona"src="../aComponentes/crearCuenta.png" >
+            <p class="txt">CREAR CUENTA</p>
+        </button>
+        <p class="tCuenta">¿Ya tienes cuenta?</p>
+        <button class="crearCuenta login  btn">
+            <img class="persona"src="../aComponentes/LOGIN.png">
+            <p class="txt login">INICIAR SESIÓN</p>
+        </button>
         </form>
     </section>
     

@@ -47,6 +47,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100vh - 14.29vh;
 }
 .formulario{
     width: 83.98vw;
@@ -147,6 +149,7 @@ body{
     padding-left:4.85vw;
     margin-right: 0;
     margin-left: 0;
+    padding-left: 4.85vw;
 }
 .año{
     width: 17.96vw;
@@ -155,4 +158,43 @@ body{
     display: flex;
     margin-right: 0;
     margin-left: 0;
+    padding-left: 3.88vw;
+}
+.crearCuenta{
+    height: 4.14vh;
+    width: 52.91vw;
+    display: flex;
+    gap: 3.88vw;
+    padding-left: 5.58vw;
+    border: 0;
+    border-radius: 50px;
+    background-color: #8096EF;
+    margin-top: 1.31vh;
+    align-items: center;
+    margin-left: 15.53vw;
+}
+.persona{
+    width: 5.83vw;
+    height: 2.62vh;
+}
+.txt{
+    color: white;
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+.login{
+    background-color: white;
+    color: #8096EF;
+}
+.btn{
+    margin-top: 1.64vh;
+}
+.tCuenta{
+    color: black;
+    font-family: "Sora", sans-serif;
+    font-weight: 600; 
+    font-size: 16px;
+    margin-top: 1.74vh;
+    margin-left: 24.27vw;   
 }
