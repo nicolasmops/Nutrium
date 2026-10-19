@@ -37,20 +37,34 @@ function funcionGuardar(){
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const btnCapturar = document.getElementById('btnEscanear');
-
 let camaraPrendida = false
 
-btnCapturar.addEventListener('click', async () => {
-
-if(camaraPrendida === false){
-  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-  video.srcObject = stream;
-      camaraPrendida = true;
+async function testeo() {
+  if(camaraPrendida === false){
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+    video.srcObject = stream;
+        camaraPrendida = true;
+  }
+  else{
+    
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    const dataUrl = canvas.toDataURL('image/jpeg', 0.9);
+    const imagen = dataUrl.split(',')[1]; // base64 sin el prefijo
+    console.log(imagen)
+    const rta = await fetch("http://localhost:3000/test", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ imagen, mimeType: 'image/jpeg' }),
+    });
+  const respuesta = await rta.json()
+  let barcode = respuesta.código
+  alert(barcode)
 }
-else{
-  const context = canvas.getContext('2d');
-  context.drawImage(video, 0, 0, canvas.width, canvas.height);
-  const imagen = canvas.toDataURL('image/png')
-  console.log(imagen)
 }
-})
+btnCapturar.addEventListener('click', (event) => {
+  event.preventDefault();
+  testeo();
+});
