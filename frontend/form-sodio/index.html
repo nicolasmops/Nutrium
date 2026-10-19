@@ -10,12 +10,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="arriba">
-        <img class="Titulo" src="../aComponentes/Titulo.png"></img>
-        <img class="logo" src="../aComponentes/Logo.png"></img>
+   <img src="../aComponentes/bienvenidos.png" class="bienvenidos">
+   <img src="../aComponentes/Titulo.png"  class="nutrium">
+   <img src="../aComponentes/Slogan.png"  class="slogan">
+   <form  class="sodio" id="formulario" >
+    <p class="ayuda">Ayudanos a ayudarte</p>
+    <label for="miligramos" class="pregunta">¿Cuánto sodio podés comer cada 100g?</label>
+    <input type="text" id="miligramos" name="miligramos" placeholder="Escribe aquí" required>
+    <button type="submit" class="boton" id="boton">CONTINUAR</button>
+   </form>
+    <section class="abajo">
+        <div class="btnsabajo">
+            <div class="Home"><img class="homeimg" src="../aComponentes/home.png" data-href="../../home/paciente/index.html" alt=""></div>
+            <img class="Mapa" src="../aComponentes/Predeterminado.png" data-href="../../lista/home/index.html" alt="">
+            <img class="Escaner" src="../aComponentes/Escáner.png" data-href="../../scanner/home/index.html" alt="">
+            <img class="Guardados" src="../aComponentes/Guardados.png" data-href="../../guardados/home/index.html" alt="">
+            <img class="Usuario" src="../aComponentes/Usuario.png" data-href="../../info-perfil/index.html" alt="">
+        </div>
     </section>
-    <section class="medio"></section>
-    <section class="abajo"></section>
 
+    <script src="script.js"></script>
 </body>
 </html>
