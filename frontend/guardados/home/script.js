@@ -5,3 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  const container = document.getElementById("lista")
+  const id = /*localStorage.getItem("id") */ 3
+  async function mostrarGuardados() {
+    const resultado = await fetch('http://localhost:3000/productos/' + id, {
+      method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+      
+      }) 
+
+      const respuesta = await resultado.json()
+    
+      respuesta.forEach(producto => {
+        container.innerHTML += 
+        `
+         <section class ="producto" data-href="../rev-producto/index.html">
+            <img class = "foto" src ="${producto.foto}"></img>
+            <div class = "nombre">${producto.nombreProducto}</div>
+            <div class = "texto">${producto.descripción}</div>
+        </section>
+        `
+      })
+      
+  }
+
+mostrarGuardados()
