@@ -17,7 +17,6 @@ const mes = form.mes.value.padStart(2, '0');
     contraseña: form.contrasena.value,
     fechaNacimiento: `${dia}/${mes}/${anio}`,
     email: form.mail.value,
-    esMedico: form.esMedico.value === 'true',
   };
 
   const respuesta = await fetch('http://localhost:3000/registro/cuenta', {

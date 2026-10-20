@@ -1,89 +1,41 @@
 body{
-    width: 100vh;
-    height: 100vh;
-    background-color: #AAD9F0;
-}
-
-.abajo{
-    width: 100%;
-    height: 14.29vh;
+    width: 412px;
+    height: 917px;
     background-color: #AAD9F0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-   
 }
- 
-.btnsabajo{
-    width: 100%;
+
+
+ .bienvenidos{
+    width: 71.36vw;
+    height: 5.56vh;    
+    margin-top: 10.8vh;
+ }
+ .nutrium{
+   width: 82.77vw;
+   height: 10.36vh;
+   margin-top: 1.09vh;
+   margin-bottom: 0.87vh;
+ }
+ .slogan{
+    width: 90.29vw;
+    height: 6.98vh;
+ }
+ .sodio{
+    width:83.98vw;
+    height: 38.93vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 8.724vh; 
-      margin-top: 1.85vh;
-}
- 
-.Home{
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #FFAC70;
+    margin-top: 6.22vh;
+ }
+.ayuda{
     font-family: "Sora", sans-serif;
-    display: flex;
-    font-size: 2.427vw; 
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-
-    width: 18.20vw;
-    height: 8.07vh;
-    border-radius: 30px;
-         margin-bottom: 5.56vh;
-
-}
-.homeimg{
-    height: 3.93vh;
-    width: 9.95vw;
-}
-.Guardados{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh;
-    width: 13.835vw;
-         margin-bottom: 5.56vh;
-
-}
-.Mapa{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-         margin-bottom: 5.56vh;
-
-}
-.Usuario{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-         margin-bottom: 5.56vh;
-
-}
-.Escaner{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8.724vh; 
-    width: 19.417vw; 
-         margin-bottom: 5.56vh;
-
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10.44vw;
+    margin-top: 1.74vh;
 }
