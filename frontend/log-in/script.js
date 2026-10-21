@@ -7,22 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }); 
 
 const form = document.getElementById("form")
+const boton = document.getElementById("boton")
 
 async function loguearse(){
+  let usuarioLogueado = {
+    email: form.email.value,
+    contraseña: form.contraseña.value
+  }
 let resultado = await fetch ("http://localhost:3000/inicioSesion", {
-  method: 'GET',
+  method: 'POST',
   headers: {'Content-type': 'application/json'},
   body: JSON.stringify(usuarioLogueado)
 })
 
 const respuesta = await resultado.json() 
-let usuarioLogueado = {
-  email: form.email.value,
-  contraseña: form.contraseña.value
-}
 
-if (respuesta.status === 200) {
-  if ( localStorage.getItem('esMedico') === true){
+
+if (resultado.status === 200) {
+  if ( localStorage.getItem('esMedico') === 'true'){
     setTimeout(() => {
       window.location.href = '../home/doctor/index.html';
     }, 2000);
@@ -33,9 +35,13 @@ if (respuesta.status === 200) {
       }, 2000);
 }
 }
-else if (respuesta.status === 401){
+else if (resultado.status === 401){
   alert("Mail/Contraseña incorrecta.")
 }
 }
 
+boton.addEventListener("click", (event) =>{
+event.preventDefault()
+loguearse()
+})
 
