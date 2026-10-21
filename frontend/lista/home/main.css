@@ -83,6 +83,7 @@ body{
 
 .resto.abierto .despliegue{
     display: block;
+    transition: 0.5s ease;
 }
 
 .resto.abierto{
@@ -90,6 +91,7 @@ body{
  width: 92.23vw;
  background-color: #8096EF;
 justify-content: flex-start;
+transition: 0.5s ease;
 .foto{
     display: block;
     aspect-ratio: 1/1;
@@ -99,6 +101,7 @@ justify-content: flex-start;
     margin-right: 3.64vw;
     margin-top: 1.31vh;
     margin-bottom: 1.31vh;
+    transition: 0.5s ease;
 }
 .nombre{
     width: 59.22vw;
