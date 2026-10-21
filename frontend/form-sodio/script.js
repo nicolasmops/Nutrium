@@ -11,6 +11,7 @@ const boton = document.getElementById('boton');
 async function registrarSodio() {
   const id = localStorage.getItem('id');
   console.log('id:', id);
+  localStorage.setItem('esMedico', form.esMedico.value)
 
   const respuesta = await fetch('http://localhost:3000/registro/sodio/' + id, {
     method: 'POST',
@@ -21,8 +22,21 @@ async function registrarSodio() {
   console.log('status:', respuesta.status, await respuesta.json());
 
   if (respuesta.status === 200) {
-window.location.href = '../home/paciente/index.html';  }
-}
+    if ( localStorage.getItem('esMedico') === true){
+      setTimeout(() => {
+        window.location.href = '../home/doctor/index.html';
+      }, 2000);
+      }
+      else {
+        setTimeout(() => {
+          window.location.href = '../home/paciente/index.html';
+        }, 2000);
+  }
+  }
+  else if (respuesta.status === 401){
+    alert("Mail/Contraseña incorrecta.")
+  } 
+ }
 boton.addEventListener('click', (event) => {
   event.preventDefault();
   registrarSodio();
