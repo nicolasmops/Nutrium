@@ -13,7 +13,7 @@ async function registrarSodio() {
   console.log('id:', id);
   localStorage.setItem('esMedico', form.esMedico.value)
 
-  const respuesta = await fetch('http://localhost:3000/registro/sodio/' + id, {
+  const respuesta = await fetch('http://localhost:3000/registro/cuenta/' + id, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ sodioMax: parseInt(form.miligramos.value) })

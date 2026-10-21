@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }); 
-const id = localStorage.getItem('id')
+const id = /*localStorage.getItem('id')*/ 1
 const userEnvia = document.getElementById("enviador")
 const userRecibe = document.getElementById("recibidor")
 const asunto = document.getElementById("asunto")
 const contenido = document.getElementById("texto")
+const boton = document.getElementById("enviar")
 
 async function enviarMsj() {
 
@@ -17,7 +18,7 @@ async function enviarMsj() {
     deQuienEmail: userEnvia.value,
     aQuienEmail: userRecibe.value,
     titulo: asunto.value,
-    texto: contexto.value,
+    texto: contenido.value,
   }
   
 const resultado = await fetch ("http://localhost:3000/mensajes/" + id, {
@@ -26,14 +27,12 @@ const resultado = await fetch ("http://localhost:3000/mensajes/" + id, {
   body: JSON.stringify(mensaje)
 })
 
- let respuesta = await resultado.json()
+
 
 if (resultado.status === 200){
   alert("Mensaje enviado correctamente.")
  
-  setTimeout(() => {
-    window.location.href = '../Chats/home/index.html';
-  }, 2000);
+ window.location.href = "../home/index.html";
 }
 else if (resultado.status === 404){
 alert("Usuario no encontrado.")
@@ -41,4 +40,11 @@ alert("Usuario no encontrado.")
 else if (resultado.status === 409){
 alert("Completar todos los campos del mensaje.")
 }
+
+
 }
+
+boton.addEventListener('click', (e) => {
+  e.preventDefault()
+  enviarMsj()
+})
