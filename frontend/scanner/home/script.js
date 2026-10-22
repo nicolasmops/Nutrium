@@ -57,7 +57,7 @@ async function testeo() {
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
   const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.9));
-  const id = localStorage.getItem('id');
+  const id =/* localStorage.getItem('id');*/  4
 
   const rta = await fetch('http://localhost:3000/scanner/' + id, {
     method: 'POST',
