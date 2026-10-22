@@ -14,7 +14,7 @@ async function registrarSodio() {
   localStorage.setItem('esMedico', form.esMedico.value)
 
   const respuesta = await fetch('http://localhost:3000/registro/cuenta/' + id, {
-    method: 'POST',
+    method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ sodioMax: parseInt(form.miligramos.value) })
   });
@@ -22,7 +22,7 @@ async function registrarSodio() {
   console.log('status:', respuesta.status, await respuesta.json());
 
   if (respuesta.status === 200) {
-    if ( localStorage.getItem('esMedico') === true){
+    if ( localStorage.getItem('esMedico') === 'true'){
       setTimeout(() => {
         window.location.href = '../home/doctor/index.html';
       }, 2000);
