@@ -21,8 +21,8 @@ let resultado = await fetch ("http://localhost:3000/inicioSesion", {
 })
 
 const respuesta = await resultado.json() 
-
-
+localStorage.setItem('id', respuesta.id)
+localStorage.setItem('esMedico', respuesta.esMedico)
 if (resultado.status === 200) {
   if ( localStorage.getItem('esMedico') === 'true'){
     setTimeout(() => {
