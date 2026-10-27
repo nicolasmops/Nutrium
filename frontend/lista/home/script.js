@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const container = document.getElementById("lista")
-  const id = /*localStorage.getItem("id") */ 1
+  const id = localStorage.getItem("id") 
   async function mostrarubicaciones() {
     const resultado = await fetch('http://localhost:3000/ubicaciones/' + id, {
       method: 'GET',

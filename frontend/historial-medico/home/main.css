@@ -14,7 +14,9 @@
     align-items: center;
     
 }
- 
+.foto{
+    overflow-y: null;
+}
 .Titulo{
     font-family: "Sora", sans-serif;
     width: 64.32vw; 

@@ -13,7 +13,7 @@ container.addEventListener('click', (event) => {
 function mostrarArchivos(lista) {
   container.innerHTML = lista.map(archivo => `
     <section class="producto" data-href="../revisar-archivo/index.html">
-      <img class="foto" src="${archivo.ruta}">
+      <iframe class="foto" src="${archivo.ruta}" >
       <div class="nombre">${archivo.nombre}</div>
       <div class="texto">${archivo.fecha}</div>
     </section>
