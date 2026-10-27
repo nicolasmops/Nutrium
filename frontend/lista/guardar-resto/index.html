@@ -15,8 +15,8 @@
                 <span class="flechita">↩</span>
             </div>
         </article>
-    <article class="restaurant">
-        <div class="ft">
+    <form class="restaurant" id ="form">
+     <input type="file" id="imagen" name="imagen" accept="image/*">
             <div class="subir">Subir archivo</div>
         <div class="mas">
                   <div class="hor"></div>
@@ -26,8 +26,7 @@
         </div>
     <article class="info">
     <div class="izq">
-        <div class="nombre"></div>
-
+i
 
         <div class="direccion"></div>
         <div class="direccion"></div>
@@ -39,15 +38,15 @@
 
     </div>
     <div class="der">
-        <div class="txtn"></div>
-        <div class="txtad"></div>
-        <div class="txtd"></div>
+        <input type = "text" placeholder="Insertar nombre" name="nombre" required class="txtn"></input>
+        <input type = "text" placeholder="Insertar direccion" name="address" required class="txtad"></input>
+        <input type = "text" placeholder="Insertar descripcion (opcional)" name="descripcion" class="txtd"></input>
     </div>
 </article>
     <div class="nsq"></div>
 
 
-    <div class="BTNGUARDAR">Guardar</div>
+    <button type = "submit" id = "boton" class="BTNGUARDAR">Guardar</button>
    
     </article>
     </section>
