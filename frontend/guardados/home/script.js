@@ -6,9 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+<<<<<<< HEAD
 const container = document.getElementById("lista")
 const id = localStorage.getItem("id"); 
 let productos = []
+=======
+  const container = document.getElementById("lista")
+  const id = /*localStorage.getItem("id") */ 2
+  async function mostrarGuardados() {
+    const resultado = await fetch('http://localhost:3000/productos/' + id, {
+      method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+      
+      }) 
+>>>>>>> c73565a1c0e3df11baeac45ad63217b9a5b17a48
 
 container.addEventListener("click", (e) => {
   const tarjeta = e.target.closest(".producto")
@@ -22,6 +33,7 @@ async function mostrarGuardados() {
     method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     
+<<<<<<< HEAD
     }) 
 
     const respuesta = await resultado.json()
@@ -39,5 +51,18 @@ async function mostrarGuardados() {
     })
     
 }
+=======
+      respuesta.forEach(producto => {
+        container.innerHTML += 
+        `
+         <section class ="producto" data-href="../rev-producto/index.html">
+            <img class = "foto" src ="${producto.foto}"></img>
+            <div class = "nombre">${producto.nombreProducto}</div>
+            <div class = "texto">${producto.descripción}</div>
+        </section>
+        `
+      })
+  }
+>>>>>>> c73565a1c0e3df11baeac45ad63217b9a5b17a48
 
 mostrarGuardados()
