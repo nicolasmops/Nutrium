@@ -45,21 +45,10 @@
    
     margin-right: 4.854vw; 
 }
-.logo1{
-    width: 4.854vw; 
-    height: 2.181vh; 
-    background-color: #D9D9D9;
-    margin-left: 4.369vw; 
-}
+
 body{
     width: 100vw; 
     height: 100vh; 
-}
-.logo2{
-    width: 38.592vw; 
-    height: 2.181vh; 
-    background-color: #2541B2;
-    margin-left: 2.913vw; 
 }
 
 .medio{
@@ -70,12 +59,45 @@ body{
     overflow-y: auto;
 
 }
-.ns{
+.medio{
+    height: 73.828vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: #ffac70;
+}
+.buscadorCompleto{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 1.091vh;
+    width: 52.427vw;
+}
+.buscador{
     margin-top: 1.091vh; 
     margin-left: 3.641vw; 
     width: 52.427vw; 
     height: 2.181vh; 
-    background-color: #2541B2;
+    background-color: #DDDDDD;
+    border: #979797 solid 1px;
+    padding-left: 5vw;
+    color: #676767;
+}
+
+.buscador:focus{
+    outline: none;
+}
+.buscador:not(:placeholder-shown) + .lupa{
+    display: none;
+}
+.lupa{
+    position: absolute;
+    top: 1.5vh;
+    left: 5.59vw;
+    width: 3.16vw;
+    height: 1.4vh;
+    pointer-events: none;
 }
 .producto{
     width: 44.417vw; 
@@ -130,12 +152,14 @@ body{
 
 .abajo{
     width: 100%;
-    height: 13.086vh; 
+    height: 14.29vh;
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
     align-items: center;
+   
 }
+ 
 .btnsabajo{
     width: 100%;
     display: flex;
@@ -143,54 +167,73 @@ body{
     align-items: center;
     justify-content: space-evenly;
     height: 8.724vh; 
+      margin-top: 1.85vh;
 }
+ 
 .Home{
     font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
     display: flex;
+    font-size: 2.427vw; 
     justify-content: center;
     align-items: center;
+    height: 6.216vh; 
+    width: 13.835vw; 
+    border-radius: 30px;
+         margin-bottom: 5.56vh;
+
+}
+.homeimg{
     height: 6.216vh; 
     width: 13.835vw; 
 }
 .Guardados{
     font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
+    font-size: 2.427vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
+    height: 6.216vh;
+    width: 13.835vw;
+         margin-bottom: 5.56vh;
+
 }
 .Mapa{
     font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
+    font-size: 2.427vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 6.216vh; 
     width: 13.835vw; 
+         margin-bottom: 5.56vh;
+
 }
 .Usuario{
     font-family: "Sora", sans-serif;
     font-size: 2.427vw; 
-    background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 6.216vh; 
+    width: 13.835vw; 
+    margin-bottom: 5.56vh;
+    height: 6.216vh; 
+    width: 13.835vw; 
+    border-radius: 30px;
+
+}
+.imgUsuario{
     height: 6.216vh; 
     width: 13.835vw; 
 }
 .Escaner{
     font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
+    font-size: 2.427vw;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 8.724vh; 
     width: 19.417vw; 
+         margin-bottom: 5.56vh;
+
 }

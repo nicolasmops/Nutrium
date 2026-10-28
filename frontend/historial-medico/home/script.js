@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const buscador = document.getElementById("buscador")
 const container = document.querySelector(".lista-guardados")
-const id = localStorage.getItem('id')
+const id = /*localStorage.getItem('id')*/ 3   
 let todosLosArchivos = []
 let archivosMostrados = []
 
@@ -28,6 +28,7 @@ function mostrarArchivos(lista) {
       <div class="texto">${archivo.fecha}</div>
     </section>
   `).join('')
+
 }
 
 async function cargarArchivos() {
@@ -52,5 +53,5 @@ function buscar() {
   mostrarArchivos(archivosFiltrados)
 }
 
-buscador.addEventListener("input", buscar)
+buscador.addEventListener("input", buscar)  
 cargarArchivos()
