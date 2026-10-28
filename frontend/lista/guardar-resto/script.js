@@ -37,7 +37,6 @@ async function guardarResto() {
   });
 
   if (resultado.status === 200) {
-    alert("Ubicación guardada exitosamente.");
     setTimeout(() => {
       window.location.href = "../home/index.html";
     }, 2000);

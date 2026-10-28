@@ -1,3 +1,13 @@
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-href]').forEach(el => {
+    el.addEventListener('click', () => {
+      window.location.href = el.dataset.href;
+    });
+  });
+});
+
 const buscador = document.getElementById("buscador")
 const container = document.querySelector(".lista-guardados")
 const id = localStorage.getItem('id')
