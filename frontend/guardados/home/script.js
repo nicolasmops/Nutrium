@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const container = document.getElementById("lista")
-  const id = /*localStorage.getItem("id") */ 3
+  const id = /*localStorage.getItem("id") */ 1
   async function mostrarGuardados() {
     const resultado = await fetch('http://localhost:3000/productos/' + id, {
       method: 'GET',
@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML += 
         `
          <section class ="producto" data-href="../rev-producto/index.html">
-            <img class = "foto" src ="${producto.foto}"></img>
+            <img class = "foto" src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCbskEqo8QTP0DjG81UlFzu1U_69ZExvo5oKzcCgv0Xu-j1hjzxjcsu0aBIEDuFX80v4ouw1rx5WKmWG1E6z4Z35CKx5VH9H8IsdKtvTnC_A&s=10"></img>
             <div class = "nombre">${producto.nombreProducto}</div>
             <div class = "texto">${producto.descripción}</div>
         </section>
         `
       })
-      
+      //${producto.foto}
   }
 
 mostrarGuardados()
