@@ -17,6 +17,9 @@
 .foto{
     overflow-y: null;
 }
+.producto .foto {
+    pointer-events: none;
+  }
 .Titulo{
     font-family: "Sora", sans-serif;
     width: 64.32vw; 

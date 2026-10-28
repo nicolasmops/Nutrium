@@ -162,38 +162,13 @@ align-items: center;
     width: 22.81vw;
     background-color: #2541B2;
 }
-.der{
-    margin-top:1.41vh;
-    margin-left: 2.43vw;
-    width: 58.01vw;
-    height: 8.94vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 .txtn{
     width: 40.78vw;
     min-height: 3.05vh;
     background-color: #2541B2;
 }
-.txtad{
-    width: 48.54vw;
-    min-height: 1.96vh;
-    background-color: #2541B2;
-    
-}
-.txtd{
-    width: 58.01vw;
-    min-height: 1.96vh;
-    background-color: #2541B2;
-}
-.nsq{
-    width: 76.21vw;
-    height: 1.53vh;
-    background-color: #2541B2;
-    margin-top: 1vh;
-    margin-left: 3.88vw;
-}
+
 .BTNGUARDAR{
     width: 37.62vw;
     height: 9.05vh;
@@ -205,7 +180,7 @@ align-items: center;
     align-items: center;
     border-radius: 10px;
     margin-left: 3.88vw;
-    margin-top: 3.81vh;
+    
 }
 
 .abajo{

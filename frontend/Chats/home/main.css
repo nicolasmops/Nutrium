@@ -78,6 +78,7 @@ input{
     min-height: 3.27vh; 
     background-color: #DDDDDD;
     border: solid #979797;
+    margin-bottom: 0;
 }
 filtro::placeholder{
     color: #676767;
@@ -116,12 +117,13 @@ filtro::placeholder{
     width: 92.23vw;
     min-height: 9.81vh;
     background-color: #8096EF;
-    margin: 0 auto;
     border-radius: 10px;
     transition: 0.5s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 1.52vh;
+    margin-left: 3.88vw;
 }
 
 .top{

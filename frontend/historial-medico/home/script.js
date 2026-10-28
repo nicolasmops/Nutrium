@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-href]').forEach(el => {
     el.addEventListener('click', () => {
@@ -12,18 +10,20 @@ const buscador = document.getElementById("buscador")
 const container = document.querySelector(".lista-guardados")
 const id = localStorage.getItem('id')
 let todosLosArchivos = []
+let archivosMostrados = []
 
 container.addEventListener('click', (event) => {
-  const tarjeta = event.target.closest('[data-href]')
-  if (tarjeta) {
-    window.location.href = tarjeta.dataset.href
-  }
+  const tarjeta = event.target.closest('.producto')
+  if (!tarjeta) return
+  const archivo = archivosMostrados[tarjeta.dataset.index]
+  window.open(archivo.ruta, "_blank")
 })
 
 function mostrarArchivos(lista) {
-  container.innerHTML = lista.map(archivo => `
-    <section class="producto" data-href="../revisar-archivo/index.html">
-      <iframe class="foto" src="${archivo.ruta}">
+  archivosMostrados = lista
+  container.innerHTML = lista.map((archivo, i) => `
+    <section class="producto" data-index="${i}">
+      <iframe class="foto" src="${archivo.foto}"></iframe>
       <div class="nombre">${archivo.nombre}</div>
       <div class="texto">${archivo.fecha}</div>
     </section>
