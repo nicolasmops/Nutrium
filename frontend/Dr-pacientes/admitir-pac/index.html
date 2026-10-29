@@ -20,26 +20,24 @@
             <span class="flechita">↩</span>
         </div>
     </article>
-    <article class="fondo">
+    <form class="fondo" id="formulario">
         <div class="ftito"></div>
-        <article class="info">
+        <section class="info">
             <section class="izq">
                 <div class="camp alto"></div>
                 <div class="camp"></div>
                 <div class="camp"></div>
-                <div class="camp"></div>
-                <div class="camp"></div>
+
             </section>
             <section class="der">
-                <div class="txt alto"></div>
-                <div class="txt"></div>
-                <div class="txt"></div>
-                <div class="txt"></div>
-                <div class="txt"></div>
+                <input class="txt alto" name="nombre" placeholder="Insertar nombre completo" required type="text"></input>
+                <input class="txt" name="email" placeholder="Insertar correo electronico" type="email" required></input>
+                <textarea class="txt" name="notas" placeholder="Insertar notas (opcional)" type="text"></textarea>
+
             </section>
-        </article>
-        <div class="agregar">Agregar</div>
-    </article>
+        </section>
+        <button class="agregar" type="submit" id="agregar">Agregar</button>
+    </form>
 </section>
     <section class="abajo">
         <div class="btnsabajo">

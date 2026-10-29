@@ -6,63 +6,50 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-<<<<<<< HEAD
 const container = document.getElementById("lista")
+const buscador = document.getElementById("buscar")
 const id = localStorage.getItem("id"); 
 let productos = []
-=======
-  const container = document.getElementById("lista")
-  const id = /*localStorage.getItem("id") */ 2
-  async function mostrarGuardados() {
-    const resultado = await fetch('http://localhost:3000/productos/' + id, {
-      method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-      
-      }) 
->>>>>>> c73565a1c0e3df11baeac45ad63217b9a5b17a48
-
+  
 container.addEventListener("click", (e) => {
   const tarjeta = e.target.closest(".producto")
   if (!tarjeta) return
-  sessionStorage.setItem("productoGuardado", JSON.stringify(productos[tarjeta.dataset.index]))
+  sessionStorage.setItem("productoGuardado", JSON.stringify(productosMostrados[tarjeta.dataset.index]))
   window.location.href = tarjeta.dataset.href
 })
 
-async function mostrarGuardados() {
-  const resultado = await fetch('http://localhost:3000/productos/' + id, {
-    method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-    
-<<<<<<< HEAD
-    }) 
-
-    const respuesta = await resultado.json()
-    productos = respuesta
-  
-    respuesta.forEach((producto, i) => {
-      container.insertAdjacentHTML("beforeend",
-      `
-       <section class ="producto" data-index="${i}" data-href="../rev-producto/index.html">
-          <img class = "foto" src ="${producto.foto}"></img>
-          <div class = "nombre">${producto.nombreProducto}</div>
-          <div class = "texto">${producto.descripción}</div>
-      </section>
-      `)
-    })
-    
+function mostrarProductos(lista) {
+  productosMostrados = lista
+  container.innerHTML = lista.map((producto, i) => `
+    <section class="producto" data-index="${i}" data-href="../rev-producto/index.html">
+      <img class="foto" src="${producto.foto}">
+      <div class="nombre">${producto.nombreProducto}</div>
+      <div class="texto">${producto.descripción}</div>
+    </section>
+  `).join('')
 }
-=======
-      respuesta.forEach(producto => {
-        container.innerHTML += 
-        `
-         <section class ="producto" data-href="../rev-producto/index.html">
-            <img class = "foto" src ="${producto.foto}"></img>
-            <div class = "nombre">${producto.nombreProducto}</div>
-            <div class = "texto">${producto.descripción}</div>
-        </section>
-        `
-      })
-  }
->>>>>>> c73565a1c0e3df11baeac45ad63217b9a5b17a48
 
-mostrarGuardados()
+async function cargarProductos() {
+  const resultado = await fetch("http://localhost:3000/productos/" + id)
+  const respuesta = await resultado.json()
+
+  if (!Array.isArray(respuesta)) {
+    alert(respuesta.estatus)
+    return
+  }
+
+  todosLosProductos = respuesta
+  mostrarProductos(todosLosProductos)
+}
+
+function buscar() {
+  const texto = buscador.value.toLowerCase()
+  const productosFiltrados = todosLosProductos.filter(producto => {
+    return producto.nombreProducto.toLowerCase().includes(texto)
+      || String(producto["descripción"]).toLowerCase().includes(texto)
+  })
+  mostrarProductos(productosFiltrados)
+}
+
+buscador.addEventListener("input", buscar)
+cargarProductos()

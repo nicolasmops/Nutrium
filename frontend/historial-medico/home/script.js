@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const buscador = document.getElementById("buscador")
 const container = document.querySelector(".lista-guardados")
-const id = /*localStorage.getItem('id')*/ 3   
+const id = localStorage.getItem('id')
 let todosLosArchivos = []
 let archivosMostrados = []
 
@@ -16,19 +16,18 @@ container.addEventListener('click', (event) => {
   const tarjeta = event.target.closest('.producto')
   if (!tarjeta) return
   const archivo = archivosMostrados[tarjeta.dataset.index]
-  window.open(archivo.ruta, "_blank")
+  window.open("http://localhost:3000/" + archivo.ruta, "_blank")
 })
 
 function mostrarArchivos(lista) {
   archivosMostrados = lista
   container.innerHTML = lista.map((archivo, i) => `
     <section class="producto" data-index="${i}">
-      <iframe class="foto" src="${archivo.foto}"></iframe>
+      <img class="foto" src="data:image/webp;base64,${archivo.img}">
       <div class="nombre">${archivo.nombre}</div>
       <div class="texto">${archivo.fecha}</div>
     </section>
   `).join('')
-
 }
 
 async function cargarArchivos() {
@@ -53,5 +52,5 @@ function buscar() {
   mostrarArchivos(archivosFiltrados)
 }
 
-buscador.addEventListener("input", buscar)  
+buscador.addEventListener("input", buscar)
 cargarArchivos()
