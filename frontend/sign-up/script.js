@@ -19,6 +19,8 @@ const mes = form.mes.value.padStart(2, '0');
     email: form.mail.value,
   };
 
+console.log(user)
+
   const respuesta = await fetch('http://localhost:3000/registro/cuenta', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
