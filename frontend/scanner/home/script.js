@@ -15,7 +15,8 @@ const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const btnCapturar = document.getElementById('btnEscanear');
 
-let camaraPrendida = false;
+let stream = null;
+let iniciando = false;
 
 function funcionAbrir() {
   popup.showModal();
@@ -38,15 +39,35 @@ siButton.addEventListener('click', funcionAbrirGuardar);
 noButton.addEventListener('click', funcionCerrar);
 guardarButton.addEventListener('click', funcionGuardar);
 
-async function testeo() {
-  if (!camaraPrendida) {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-    video.srcObject = stream;
-    camaraPrendida = true;
-    return;
-  }
+async function prenderCamara() {
+  if ((stream && stream.active) || iniciando) return;
+  iniciando = true;
 
-  if (video.videoWidth === 0) {
+  const nuevoStream = await navigator.mediaDevices
+    .getUserMedia({
+      video: { facingMode: 'user' },
+      audio: false
+    })
+    .finally(() => {
+      iniciando = false;
+    });
+
+  stream = nuevoStream;
+  video.srcObject = stream;
+  video.setAttribute('playsinline', '');
+  video.muted = true;
+  await video.play();
+}
+
+function apagarCamara() {
+  if (stream) {
+    stream.getTracks().forEach(track => track.stop());
+    stream = null;
+  }
+}
+
+async function capturar() {
+  if (!stream || video.videoWidth === 0) {
     alert('La cámara todavía no está lista');
     return;
   }
@@ -92,5 +113,15 @@ async function testeo() {
 
 btnCapturar.addEventListener('click', (event) => {
   event.preventDefault();
-  testeo();
+  capturar();
 });
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    prenderCamara();
+  }
+});
+
+window.addEventListener('beforeunload', apagarCamara);
+
+prenderCamara();
