@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const container = document.getElementById("lista")
 const buscador = document.getElementById("buscar")
-const id = localStorage.getItem("id"); 
+const id = localStorage.getItem('id'); 
 let productos = []
   
 container.addEventListener("click", (e) => {

@@ -50,22 +50,14 @@ body{
     width: 100vw; 
     height: 100vh; 
 }
-
 .medio{
-    height: 73.828vh; 
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-
-}
-.medio{
-    height: 73.828vh; 
+    height: 71.45vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     background-color: #ffac70;
+    position: relative;
 }
 .buscadorCompleto{
     position: relative;
@@ -114,16 +106,17 @@ body{
 }
 .nombre{
     width: 21.214vw; 
+    color: white;
     height: 2.181vh; 
-    background-color: #2541B2;
     margin: 1.091vh 2.184vw 0; 
+    font-family: "Sora", sans-serif;
 }
 .texto{
     width: 30.825vw; 
     height: 1.309vh; 
-    background-color: #2541B2;
-    margin-left: 2.184vw; 
-    margin-top: 0.872vh; 
+    color: white;
+    margin-left: 2.184vw;  
+    font-family: "Sora", sans-serif;
 }
 .lista-guardados{
     display: flex;
@@ -139,15 +132,14 @@ body{
     width: 25.97vw;
     border-radius: 50%;
 
-    position: fixed;
-    bottom: 8rem;
+    position: absolute;
+    bottom: 0.98vh;
     right: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 80px;
-    color: white;
-
+    color: white
 }
 
 .abajo{
