@@ -11,6 +11,10 @@ const popupGuardar = document.getElementById('popupGuardar');
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const btnCapturar = document.getElementById('btnEscanear');
+const btnGuardar = document.querySelector(".btnGuardar")
+const btnCancelar = document.querySelector(".cancelar")
+const id = localStorage.getItem('id');
+
 
 let stream = null;
 let iniciando = false;
@@ -34,8 +38,30 @@ const resultados = {
   }
 };
 
+async function Guardar() {
+  popupGuardar.innerHTML = 
+  `
+      <section class="up">
+                <img src="" class="fto"></img>
+                <p class="nombreProducto"></p>
+            </section>
+            <form class="rest">
+                <textarea class="descripcion"></textarea>
+                <textarea class="divLorem"></textarea>
+            </form>
+            <article class="contenedor">
+            <button type="button"class="cancelar"><img src="../../aComponentes/flechaGuardar.png" class="flechaGuardar"></img></button>
+            <button type ="submit" class="btnGuardar" id="btnGuardar">Guardar</button>
+        </article>
+  `
+}
+
+
 function mostrarResultado(producto) {
   const resultado = resultados[producto.apto];
+
+
+  sessionStorage.setItem('productoEscaneado', producto)
   popup.innerHTML = `
     <section class="resto">
       <p class="nombreProducto">${producto.nombre}</p>
@@ -49,6 +75,41 @@ function mostrarResultado(producto) {
     </section>
   `;
   popup.showModal();
+}
+async function Guardar() {
+  const Producto = sessionStorage.getItem("productoEscaneado")
+  noiiophe+
+  popupGuardar.innerHTML = 
+  `
+      <section class="up">
+                <img src="${producto.foto}" class="fto"></img>
+                <p class="nombreProducto">${producto.nombre}</p>
+                <div class ="apto ${resultados[producto.apto].clase}">${resultados[producto.apto].titulo}</div>
+            </section>
+            <form class="rest">
+                <textarea class="descripcion" name="descripcion" placeholder="Insertar descripción (opcional)"></textarea>
+                <p class="divLorem">${resultados[producto.apto].texto}</p>
+            </form>
+            <article class="contenedor">
+            <button type="button"class="cancelar"><img src="../../aComponentes/flechaGuardar.png" class="flechaGuardar"></img></button>
+            <button type submit class="btnGuardar" id="btnGuardar">Guardar</button>
+        </article>
+  `
+  const form = document.querySelector(".rest")
+
+  let productoGuardado = {
+    barcode: Producto.barcode,
+    descripción: form.descripcion.value
+  }
+  const resultado = await fetch ("http://localhost:3000/scanner/" + id, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(productoGuardado)
+  })
+
+if(resultado.status !== 200){
+alert("Error al guardar. Por favor, volver a intentar.")
+} 
 }
 
 document.addEventListener('click', (event) => {
@@ -101,7 +162,6 @@ async function capturar() {
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
   const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.9));
-  const id = localStorage.getItem('id');
 
   const rta = await fetch('http://localhost:3000/scanner/' + id, {
     method: 'POST',
@@ -125,6 +185,7 @@ async function capturar() {
 
   productoActual = {
     barcode: respuesta.barcode,
+    foto: respuesta.foto,
     nombre: respuesta.nombreProducto,
     sodio: respuesta.sodioMg,
     apto: respuesta.apto
@@ -147,7 +208,5 @@ document.addEventListener('visibilitychange', () => {
 });
 
 window.addEventListener('beforeunload', apagarCamara);
-
-
 
 prenderCamara();
