@@ -1,44 +1,41 @@
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-   
     <section class="arriba">
         <img class="Titulo" src="../../aComponentes/Titulo.png"></img>
         <img class="logo" src="../../aComponentes/Logo.png"></img>
     </section>
     <section class="medio">
-        <article class="cont">
-            <div class="atras">
-                <span class="flechita">↩</span>
-            </div>
+        <article class="pacienteSeleccionado">
+            <img src="../../aComponentes/akar-icons_arrow-left.png" alt="" class="flechita" data-href="../Historial-Medico-Paciente/index.html">
+            <img src="" alt="" class="ftPerfil"></img>
+            <p class="nombre"></p>
         </article>
-    <article class="restaurant">
-        <div class="ft"></div>
-        </div>
-    <article class="info">
-    
-        <div class="nombre"></div>
-    <DIV class="CONT">    
-        <div class="nsq"></div>
-        <div class="nsq"></div>
-        <div class="nsq"></div>     
-</DIV>
-    <div class="BTNGUARDAR">Guardar</div>
 
-    
-</article>
-   
-
-
-    
-    </article>
+<form class="restaurant" id="form">            
+    <input type="file" class="ft" accept=".pdf" required>
+<div class="subir" id="subir">Subir archivo</div>
+            <div class="mas">
+                <div class="hor"></div>
+                <div class="ver"></div>
+            </div>
+            <section class="info">
+                <div class="der">
+                    <input type="text" name="nombre" class="txtn"></input>
+                </div>
+                <button class="BTNGUARDAR" id="boton">Guardar</button>
+            </section>
+        </form>
     </section>
     <section class="abajo">
         <div class="btnsabajo">
-            <div class="Home" data-href="../../home/paciente/index.html" >Home</div>
+            <div class="Home" data-href="../../home/paciente/index.html">Home</div>
             <div class="Mapa" data-href="../../lista/home/index.html">Lista</div>
             <div class="Escaner" data-href="../../scanner/home/index.html">Escaner</div>
             <div class="Guardados" data-href="../../guardados/home/index.html">Guardados</div>
@@ -48,4 +45,3 @@
     <script src="script.js" defer></script>
 </body>
 </html>
-

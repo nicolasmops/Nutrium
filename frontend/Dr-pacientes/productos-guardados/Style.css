@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.arriba{
+    width: 100%;
+    height: 14.29vh; 
+    background-color: #AAD9F0;
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+ 
+.Titulo{
+    font-family: "Sora", sans-serif;
+    width: 64.32vw; 
+    height: 8.07vh; 
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.36vh;
+    margin-left: 5.7vw; 
+    margin-right: 7.28vw; 
+}
+
+.logo{
+    font-family: "Sora", sans-serif;
+    width: 13.592vw; 
+    height: 6.107vh; 
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.8vh;
+    margin-right: 4.854vw; 
+}
+body{
+    width: 100vw; 
+    height: 100vh; 
+}
+
+
+.medio{
+    height: 73.828vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: #ffac70;
+}
+.pacienteSeleccionado{
+    display: flex;
+    width: 100%;
+    height: 7.52vh;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
+.ftPerfil{
+    aspect-ratio: 1/1;
+    background-color: #676767;
+    width: 10.67vw;
+    border-radius: 100px;
+    margin-left: 4.61vw;
+}
+
+.nombrePaciente{
+    font-family: "Sora", sans-serif;
+    font-size: 20px;
+    color: #2c2c2c;
+    font-weight: 600;
+    margin-left: 2.91vw;
+    width: auto;
+}
+
+.flechita{
+    height: 4.79vh;
+    aspect-ratio: 1/1;
+    margin-left: 3.15vw;
+}
+.buscadorCompleto{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 1.091vh;
+    width: 52.427vw;
+}
+.buscador{
+    margin-top: 1.091vh; 
+    margin-left: 3.641vw; 
+    width: 52.427vw; 
+    height: 2.181vh; 
+    background-color: #DDDDDD;
+    border: #979797 solid 1px;
+    padding-left: 5vw;
+    color: #676767;
+}
+
+.buscador:focus{
+    outline: none;
+}
+.buscador:not(:placeholder-shown) + .lupa{
+    display: none;
+}
+.lupa{
+    position: absolute;
+    top: 1.5vh;
+    left: 5.59vw;
+    width: 3.16vw;
+    height: 1.4vh;
+   
+    pointer-events: none;
+}
+.producto{
+    width: 44.417vw; 
+    height: 25.190vh; 
+    background-color: #8096EF;
+}
+.foto{
+    display: flex;
+    justify-content: center; 
+    margin: 1.091vh 2.184vw 0;
+    aspect-ratio: 1/1; 
+    width: 40.048vw;  
+    background-color: #D9D9D9;
+
+}
+.nombre{
+    width: 21.214vw; 
+    height: 2.181vh; 
+    margin: 1.091vh 2.184vw 0.22vh; 
+    font-family: "Sora", sans-serif;
+    color: white;
+}
+.texto{
+    width: 30.825vw; 
+    height: 1.309vh; 
+    margin-left: 2.184vw; 
+   
+    font-family: "Sora", sans-serif;
+    color: #DEDEDE;
+}
+.lista-guardados{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.091vh; 
+    margin-left: 3.88vw; 
+    column-gap: 1.3vh; 
+    row-gap: 3.39vw; 
+}
+
+.abajo{
+    width: 100%;
+    height: 14.29vh;
+    background-color: #AAD9F0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+ 
+.btnsabajo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 8.724vh; 
+      margin-top: 1.85vh;
+}
+ 
+.Home{
+    font-family: "Sora", sans-serif;
+    display: flex;
+    font-size: 2.427vw; 
+    justify-content: center;
+    align-items: center;
+    height: 6.216vh; 
+    width: 13.835vw; 
+    
+         margin-bottom: 5.56vh;
+
+}
+.imgguardados{
+    height: 5.67vh;
+    width: 12.62vw;
+}
+.Guardados{
+    font-family: "Sora", sans-serif;
+    font-size: 2.427vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.216vh;
+    width: 13.835vw;
+         margin-bottom: 5.56vh;
+         background-color: #ff9040;
+    width: 16.20vw;
+    height: 7.2vh;
+    border-radius: 30px;
+
+}
+.Mapa{
+    font-family: "Sora", sans-serif;
+    font-size: 2.427vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.216vh; 
+    width: 13.835vw; 
+         margin-bottom: 5.56vh;
+
+}
+.Usuario{
+    font-family: "Sora", sans-serif;
+    font-size: 2.427vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.216vh; 
+    width: 13.835vw; 
+         margin-bottom: 5.56vh;
+
+}
+.Escaner{
+    font-family: "Sora", sans-serif;
+    font-size: 2.427vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8.724vh; 
+    width: 19.417vw; 
+         margin-bottom: 5.56vh;
+
+}

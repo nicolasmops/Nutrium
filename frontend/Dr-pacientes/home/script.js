@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "beforeend",
         `
           <div class="pac" data-index="${indice}" data-href="../info-pac/index.html">
-            <img class="foto" src="${srcFoto(paciente.información?.foto)}">
-            <div class="nombre">${paciente.información?.nombre ?? ""}</div>
-            <div class="descripcion">${paciente["descripción"] ?? ""}</div>
+            <img class="foto" src="${srcFoto(paciente.información.foto)}">
+            <div class="nombre">${paciente.información.nombre}</div>
+            <div class="descripcion">${paciente.información.sodioMax}mg</div>
           </div>
         `
       );
