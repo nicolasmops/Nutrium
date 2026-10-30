@@ -48,14 +48,38 @@
     flex-wrap: nowrap;
     row-gap: 1.96vh;
 }
-.filtro{
-    width: 52.43vw;
-    height: 2.18vh;
-    background-color: #2541B2;
-    margin-bottom: 1.2vh;
-    margin-left: 1.2vh;
+.buscadorCompleto{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 1.091vh;
+    width: 52.427vw;
+}
+.buscador{
+    margin-top: 1.091vh; 
+    margin-left: 3.641vw; 
+    width: 52.427vw; 
+    height: 2.181vh; 
+    background-color: #DDDDDD;
+    border: #979797 solid 1px;
+    padding-left: 5vw;
+    color: #676767;
 }
 
+.buscador:focus{
+    outline: none;
+}
+.buscador:not(:placeholder-shown) + .lupa{
+    display: none;
+}
+.lupa{
+    position: absolute;
+    top: 1.5vh;
+    left: 5.59vw;
+    width: 3.16vw;
+    height: 1.4vh;
+    pointer-events: none;
+}
 .pacientes {
     width: 100%;
     height: 68vh;
