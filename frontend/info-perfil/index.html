@@ -12,15 +12,17 @@
         <img class="Titulo" src="../aComponentes/Titulo.png" alt="Nutrium">
         <img class="logo" src="../aComponentes/Logo.png" alt="Logo">
     </section>
-    <section class="medio">
+    <section class="medio" style="overflow-y: auto;">
 <div class="nombreFtyRol">
 <section class="izq">
     <img class="ft" src=""></img>
+    <input type="file" class="valor" name="Dres" id="medico"  placeholder="(D)D/(M)M/AAAA"  style="display: none;" accept="image/*">
+
     <p class="valor Nombre"></p>
     <input type="text" class="valor" name="fechaNacimiento" id="nombre" placeholder="Introducir su nombre completo"  style="display: none;">
 
     <div class="rol"></div>
-    <select  class="valor" name="fechaNacimiento" id="medico"  style="display: none;">
+    <select  class="valor" name="fechaNacimiento" id="rol"  style="display: none;">
     <option value="">Elija su rol</option>
     <option value="false">Paciente</option>
     <option value="true">Médico</option>
@@ -44,6 +46,7 @@
 
     <p class="categoria">Correo electrónico</p>
     <p class="valor Mail"></p>
+    <input type="email" class="valor" name="fechaNacimiento" id="email"m  placeholder="(D)D/(M)M/AAAA"  style="display: none;">
 
 
 </section>
@@ -55,6 +58,8 @@
     <section class="texto">
         <p class="categoria">Médico/s</p>
         <p class="valor Médicos"></p>
+            <input type="text" class="valor" name="Dres" id="medico"  placeholder="(D)D/(M)M/AAAA"  style="display: none;">
+
     </section>
     <section class="boton">
         <button class="editar medicos"></button>
@@ -64,6 +69,7 @@
     <section class="texto">
         <p class="categoria">Sodio máximo por 100g</p>
         <p class="valor Sodio"></p>
+            <input type="number" class="valor" name="sodi" id="sodium"  placeholder="(D)D/(M)M/AAAA"  style="display: none;">
     </section>
     <section class="boton">    
         <button class="editar sodio"></button>

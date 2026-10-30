@@ -57,7 +57,22 @@ body{
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    position: relative
+}
+.mas{
+    background-color: #FF6A00;
+    height: 11.668vh;
+    width: 25.97vw;
+    border-radius: 50%;
 
+    position: absolute;
+    bottom: 0.98vh;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: white
 }
 .ns{
     margin-top: 1.091vh; 

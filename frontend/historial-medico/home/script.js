@@ -23,7 +23,7 @@ function mostrarArchivos(lista) {
   archivosMostrados = lista
   container.innerHTML = lista.map((archivo, i) => `
     <section class="producto" data-index="${i}">
-      <img class="foto" src="data:image/webp;base64,${archivo.img}">
+<img class="foto" src="data:image/webp;base64,${archivo.img}">
       <div class="nombre">${archivo.nombre}</div>
       <div class="texto">${archivo.fecha}</div>
     </section>

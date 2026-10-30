@@ -20,6 +20,11 @@ const btnMail = document.querySelector(".mail")
 const btnSodio = document.querySelector(".sodio")
 const btnMedicos = document.querySelector(".medicos")
 const inputFecha = document.getElementById("fechaNacimiento")
+const inputNombre = document.getElementById("nombre")
+const inputMail = document.getElementById("email")
+const inputRol = document.getElementById("rol")
+const inputMedicos = document.getElementById("medico")
+const inputSodio = document.getElementById("sodium")
 const id = localStorage.getItem('id')
 async function infoUser (){
 
@@ -41,7 +46,7 @@ rolUser.innerHTML = `Paciente`
 }
 
 
-fotoUser.src = respuesta.foto
+fotoUser.src = "data:image/png;base64," + respuesta.foto
 correoUser.innerHTML = `${respuesta.email}`
 fechaUser.innerHTML = `${respuesta.fechaNacimiento}`
 nombreUser.innerHTML = `${respuesta.nombre}`

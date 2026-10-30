@@ -8,36 +8,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const popup = document.getElementById('popup');
 const popupGuardar = document.getElementById('popupGuardar');
-const siButton = document.getElementById('si');
-const noButton = document.getElementById('no');
-const guardarButton = document.getElementById('btnGuardar');
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const btnCapturar = document.getElementById('btnEscanear');
 
 let stream = null;
 let iniciando = false;
+let productoActual = null;
 
-function funcionAbrir() {
+const resultados = {
+  0: {
+    clase: 'siPuede',
+    titulo: 'Puede consumirse',
+    texto: 'Este producto puede ser consumido, ya que la cantidad de sodio que contiene es menor a la máxima indicada para vos. Si tenes alguna duda, por favor consultale a un médico.'
+  },
+  1: {
+    clase: 'moderacion',
+    titulo: 'Con moderación',
+    texto: 'Este producto puede ser consumido con moderación, ya que la cantidad de sodio que contiene es igual a la máxima indicada para vos. Si tenes alguna duda, por favor consultale a un médico.'
+  },
+  2: {
+    clase: 'noPuede',
+    titulo: 'No puede consumirse',
+    texto: 'Este producto no puede ser consumido, ya que la cantidad de sodio que contiene es mayor a la máxima indicada para vos. Si tenes alguna duda, por favor consultale a un médico.'
+  }
+};
+
+function mostrarResultado(producto) {
+  const resultado = resultados[producto.apto];
+  popup.innerHTML = `
+    <section class="resto">
+      <p class="nombreProducto">${producto.nombre}</p>
+      <div class="s&n ${resultado.clase}" id="s&n">${resultado.titulo}</div>
+      <p class="lorem" style="width: 79.12vw; font-size: 18px;">${resultado.texto}</p>
+      <p class="quest">Sodio cada 100g: ${producto.sodio} mg</p>
+    </section>
+    <section class="botones">
+      <div class="no" id="no">Continuar</div>
+      <div class="si" id="si">Guardar</div>
+    </section>
+  `;
   popup.showModal();
 }
 
-function funcionAbrirGuardar() {
-  popup.close();
-  popupGuardar.showModal();
-}
-
-function funcionCerrar() {
-  popup.close();
-}
-
-function funcionGuardar() {
-  popupGuardar.close();
-}
-
-siButton.addEventListener('click', funcionAbrirGuardar);
-noButton.addEventListener('click', funcionCerrar);
-guardarButton.addEventListener('click', funcionGuardar);
+document.addEventListener('click', (event) => {
+  if (event.target.closest('#si')) {
+    popup.close();
+    popupGuardar.showModal();
+  } else if (event.target.closest('#no')) {
+    popup.close();
+  } else if (event.target.closest('#btnGuardar')) {
+    popupGuardar.close();
+  }
+});
 
 async function prenderCamara() {
   if ((stream && stream.active) || iniciando) return;
@@ -45,7 +68,7 @@ async function prenderCamara() {
 
   const nuevoStream = await navigator.mediaDevices
     .getUserMedia({
-      video: { facingMode: 'user' },
+      video: { facingMode: { ideal: 'environment' } },
       audio: false
     })
     .finally(() => {
@@ -100,15 +123,14 @@ async function capturar() {
     return;
   }
 
-  if (respuesta.apto === 2) {
-    console.log('apto');
-  } else if (respuesta.apto === 1) {
-    console.log('con moderacion');
-  } else if (respuesta.apto === 0) {
-    console.log('no comer');
-  }
+  productoActual = {
+    barcode: respuesta.barcode,
+    nombre: respuesta.nombreProducto,
+    sodio: respuesta.sodioMg,
+    apto: respuesta.apto
+  };
 
-  funcionAbrir();
+  mostrarResultado(productoActual);
 }
 
 btnCapturar.addEventListener('click', (event) => {
@@ -119,9 +141,13 @@ btnCapturar.addEventListener('click', (event) => {
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') {
     prenderCamara();
+  } else {
+    apagarCamara();
   }
 });
 
 window.addEventListener('beforeunload', apagarCamara);
+
+
 
 prenderCamara();

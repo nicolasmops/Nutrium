@@ -42,7 +42,7 @@
     width: 100%;
 }
 .editar{
-    height: 10vh;
+    min-height: 10vh;
     aspect-ratio: 1/1;
 }
 .abajo{

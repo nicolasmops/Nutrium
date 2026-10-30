@@ -58,6 +58,15 @@ body{
     width: 100vw;
     height: 73.828vh;
 }
+.noPuede{
+    background-color: #E81224;
+}
+.siPuede{
+    background-color: #15BB0B;
+}
+.moderacion{
+    background-color: #FFAE00;
+}
 .zonaEscaneo {
     position: absolute;
     width: 70%;
