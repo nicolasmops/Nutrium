@@ -59,6 +59,9 @@ body{
     overflow-y: auto;
     position: relative
 }
+.pacienteseleccionado{
+    
+}
 .mas{
     background-color: #FF6A00;
     height: 11.668vh;
