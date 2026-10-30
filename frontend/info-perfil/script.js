@@ -25,6 +25,7 @@ const inputMail = document.getElementById("email")
 const inputRol = document.getElementById("rol")
 const inputMedicos = document.getElementById("medico")
 const inputSodio = document.getElementById("sodium")
+const inputFoto = document.getElementById("foto")
 const id = localStorage.getItem('id')
 async function infoUser (){
 
@@ -58,26 +59,96 @@ sodioUser.innerHTML = `${respuesta.sodioMax}`
 }
 infoUser()
 
-btnFecha.addEventListener("click", () => {
-inputFecha.value = fechaUser.textContent
-fechaUser.style.display = "none"
-inputFecha.style.display = "inline-block"
-inputFecha.focus()
+function hacerEditable(boton, texto, input, campo) {
+  boton.addEventListener("click", () => {
+    input.value = texto.textContent
+    texto.style.display = "none"
+    input.style.display = "inline-block"
+    input.focus()
+  })
 
-})
-inputFecha.addEventListener("blur", async () => {
-  fechaUser.textContent = inputFecha.value
-  inputFecha.style.display = "none"
-  fechaUser.style.display = "inline-block"
+  input.addEventListener("blur", async () => {
+    const anterior = texto.textContent
+    input.style.display = "none"
+    texto.style.display = "inline-block"
 
-const resultado = await fetch("http://localhost:3000/usuario/" + id, {
+    if (input.value === anterior) return
+
+    texto.textContent = input.value
+
+    const resultado = await fetch("http://localhost:3000/usuario/" + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ [campo]: input.value })
+    })
+
+    if (resultado.status !== 200) {
+      texto.textContent = anterior
+    }
+  })
+}
+
+hacerEditable(btnFecha, fechaUser, inputFecha, "fechaNacimiento")
+hacerEditable(btnMail, correoUser, inputMail, "email")
+hacerEditable(btnSodio, sodioUser, inputSodio, "sodioMax")
+hacerEditable(btnMedicos, medicosUser, inputMedicos, "medico")
+
+function leerFoto(archivo) {
+  return new Promise(resolve => {
+    const lector = new FileReader()
+    lector.onload = () => resolve(lector.result.split(",")[1])
+    lector.readAsDataURL(archivo)
+  })
+}
+
+function mostrarInputs(visible) {
+  const textos = [nombreUser, rolUser]
+  const inputs = [inputNombre, inputRol, inputFoto]
+  textos.forEach(el => el.style.display = visible ? "none" : "inline-block")
+  inputs.forEach(el => el.style.display = visible ? "inline-block" : "none")
+}
+
+let editando = false
+
+btnMucho.addEventListener("click", async () => {
+  if (!editando) {
+    editando = true
+    inputNombre.value = nombreUser.textContent
+    inputRol.value = rolUser.textContent
+    mostrarInputs(true)
+    inputNombre.focus()
+    return
+  }
+
+  editando = false
+
+  const datos = {
+    nombre: inputNombre.value,
+    esMedico: inputRol.value === "Médico"
+  }
+
+  if (inputFoto.files[0]) {
+    datos.foto = await leerFoto(inputFoto.files[0])
+  }
+
+  const resultado = await fetch("http://localhost:3000/usuario/" + id, {
     method: "PUT",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify({ fechaNacimiento: inputFecha.value }),
-})
-if (resultado.status != 200) {
-    fechaUser.textContent = "Error al actualizar la fecha. Por favor, inténtalo de nuevo."
-}
+    body: JSON.stringify(datos)
+  })
+
+  if (resultado.status === 200) {
+    nombreUser.textContent = datos.nombre
+    rolUser.textContent = datos.esMedico ? "Médico" : "Paciente"
+    if (datos.foto) {
+      fotoUser.src = "data:image/png;base64," + datos.foto
+    }
+  }
+
+  inputFoto.value = ""
+  mostrarInputs(false)
 })
