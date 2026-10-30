@@ -105,7 +105,8 @@ body{
     background-color: #D9D9D9;
 }
 .nombre{
-    width: 21.214vw; 
+    width: 40vw; 
+    overflow-x: hidden;
     color: white;
     height: 2.181vh; 
     margin: 1.091vh 2.184vw 0; 
