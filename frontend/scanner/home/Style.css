@@ -15,30 +15,29 @@
     }
      
     .Titulo{
-        font-family: "Sora", sans-serif;
-        width: 64.32vw; 
-        height: 8.07vh; 
-        display: flex;
-        color: white;
-        justify-content: center;
-        align-items: center;
-       
-        margin-left: 5.7vw; 
-        margin-right: 7.28vw; 
-    }
-    
-    
-    .logo{
-        font-family: "Sora", sans-serif;
-        width: 13.592vw; 
-        height: 6.107vh; 
-        display: flex;
-        color: white;
-        justify-content: center;
-        align-items: center;
-       
-        margin-right: 4.854vw; 
-    }    
+    font-family: "Sora", sans-serif;
+    width: 64.32vw;
+    height: 8.07vh;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.36vh;
+    margin-left: 5.7vw;
+    margin-right: 7.28vw;
+}
+
+.logo{
+    font-family: "Sora", sans-serif;
+    width: 13.592vw;
+    height: 6.107vh;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.8vh;
+    margin-right: 4.854vw;
+}
 
 body{
     width: 100vw; 
@@ -56,7 +55,8 @@ body{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 73.828vh;
+    height: 71.45vh;
+    background-color: #ffac70;
 }
 .noPuede{
     background-color: #E81224;
@@ -88,22 +88,12 @@ body{
     height: 66.435vh;
 }
 
-.camara {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: #EE7070;
-}
-
-.camara video,
-.camara canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
+.camara{
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: #000000;
 }
 
 .b-escanear {
@@ -112,11 +102,10 @@ body{
     left: 50%;
     transform: translateX(-50%);
     width: 16.74vw;
-    height: 7.52vh;
-    border-radius: 50%;
-    background-color: #D9D9D9;
+    aspect-ratio: 1;
+    border-radius: 999px;
+    background-color: #ececec;
     z-index: 10;
-    cursor: pointer;
 }
 .popup{
     height: 49.73vh;
@@ -266,67 +255,56 @@ body{
 
 .abajo{
     width: 100%;
-    height: 13.086vh; 
+    height: 14.29vh;
     background-color: #AAD9F0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
+
 .btnsabajo{
     width: 100%;
+    height: 100%;
+    padding-bottom: 3.4vh;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-evenly;
-    height: 8.724vh; 
 }
-.Home{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-}
-.Guardados{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-}
-.Mapa{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-}
+
+.Home,
 .Usuario{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
+    width: 16.26vw;
+    aspect-ratio: 1;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
 }
+
+.Home img,
+.imgUsuario{
+    width: 9.5vw;
+    height: auto;
+    object-fit: contain;
+}
+
+.Mapa,
+.Guardados{
+    width: 13.835vw;
+    height: 6.216vh;
+    object-fit: contain;
+}
+
 .Escaner{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
+    width: 22.3vw;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    background-color: #ff9040;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8.724vh; 
-    width: 19.417vw; 
+}
+
+.imgEscaner{
+    width: 16vw;
+    height: auto;
+    object-fit: contain;
 }

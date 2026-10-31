@@ -32,18 +32,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   const contenedor = document.getElementById("contenedor")
   const productoUsable = JSON.parse(producto)
 let aptitud = productoUsable.apto
-
+let claseDeApto = ""
  
 
 function revisarProducto(){
   if (productoUsable.apto === true){
     aptitud = "Puede consumirse"
+    claseDeApto = "verde"
  }
  else if (productoUsable.apto === 1){
-    aptitud = "Consumir con moderacion"
+    aptitud = "Con moderacion"
+    claseDeApto = "amarillo"
  }
  else if (productoUsable.apto === false){
-    aptitud = "No consumir"
+    aptitud = "No puede consumirse"
+    claseDeApto = "rojo"
  }
   contenedor.innerHTML = 
   `
@@ -51,7 +54,7 @@ function revisarProducto(){
             <img class="foto" src = ${productoUsable.foto}></img>
             <section class="bottom">
                 <div class="nombre">${productoUsable.nombreProducto}</div>
-                <div class = "apto">${aptitud}</div>
+                <div class = "apto ${claseDeApto}">${aptitud}</div>
                 <div class="descripcion uno">${productoUsable.descripción}</div>
                 <div class="guardar" data-href="../productos-guardados/index.html">Continuar</div>
             </section>
