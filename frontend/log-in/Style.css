@@ -2,10 +2,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "Sora", sans-serif;
 }
 body{
-    width: 412px;
-    height: 917px;
+    width: 100vw;
+    height: 100vh;
     background-color: #AAD9F0;
     display: flex;
     flex-direction: column;
@@ -25,4 +26,108 @@ body{
  .slogan{
     width: 90.29vw;
     height: 6.98vh;
+    margin-bottom: 4.58vh;
  }
+ .formulario{
+    background-color: #FFAC70;
+    width: 84vw;
+    height: 44.82vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .titulo{
+    font-family: "Sora", sans-serif;
+    font-size: 20px;
+    margin-top: 1.85vh;
+    margin-bottom: 2.3vh;
+ }
+ .form{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5.34vw;
+    width: 84vw;
+    height: 26.3vh;
+
+ }
+ .contencion{
+    position: relative;
+ }
+ input{
+    width: 73.3vw;
+    height: 5.125vh;
+    background-color: #DDDDDD;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 0.9vh;
+    padding-left: 2vw;
+    
+    padding-left: 10.2vw;
+ }
+ .sobre{
+    position: absolute;
+    top: 1.2vh;
+    left: 3.2vw;
+ }
+ .candado{
+    position: absolute;
+    top: 1.2vh;
+    left: 3.2vw;
+ }
+ input:placeholder-shown{
+    padding-left: 10.2vw;
+    font-size: 16px;
+ }
+ label{
+    margin-bottom: 0.44vh;
+    font-weight: bold;
+ }
+ .boton{
+    width: 52.43vw;
+    height: 4.14vh;
+    background-color: #8096EF;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 10.43vw;
+    font-size: 16px;
+    margin-top: 1.74vh;
+    padding-left: 7.28vw;
+}
+.contraseña{
+    font-size: 14px;
+    color: white;
+}
+.pregunta{
+    font-size: 16px;
+    margin-top: 1.53vh
+}
+.sign-up{
+    margin-top: 1.96vh;
+    width: 52.43vw;
+    height: 4.14vh;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #8096EF;
+    padding-left: 7.28vw;
+    
+}
+.sufrimiento{
+    width: 52.43vw;
+    position: relative;
+}
+.usuario, .usuario-mas{
+    position: absolute;
+    top: 2.5vh;
+    left: 4.5vw;
+    width: 5.82vw;
+    height: 2.61vh;
+}
+.usuario{
+    margin-left: 10.43vw;
+}
