@@ -1,213 +1,216 @@
 *{
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
 
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: "Sora", sans-serif;
 }
 
 .arriba{
     width: 100%;
-    height: 14.26vh; 
+    height: 14.29vh;
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
-    
     align-items: center;
-    
-}
- 
-.Titulo{
-    font-family: "Sora", sans-serif;
-    width: 64.32vw; 
-    height: 8.07vh; 
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-   
-    margin-left: 5.7vw; 
-    margin-right: 7.28vw; 
 }
 
+.Titulo{
+    width: 64.32vw;
+    height: 8.07vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.36vh;
+    margin-left: 5.7vw;
+    margin-right: 7.28vw;
+}
 
 .logo{
-    font-family: "Sora", sans-serif;
-    width: 13.592vw; 
-    height: 6.107vh; 
+    width: 13.592vw;
+    height: 6.107vh;
     display: flex;
-    color: white;
     justify-content: center;
     align-items: center;
-   
-    margin-right: 4.854vw; 
+    margin-top: 4.8vh;
+    margin-right: 4.854vw;
 }
 
-.medio {
-    height: 73.82vh;
+.medio{
     width: 100%;
+    height: 71.42vh;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    row-gap: 1.96vh;
+    background-color: #ffac70;
 }
+
 .buscadorCompleto{
     position: relative;
+    flex-shrink: 0;
+    width: 51.5vw;
+    margin: 1.57vh 0 0 3.5vw;
     display: flex;
     align-items: center;
-    margin-top: 1.091vh;
-    width: 52.427vw;
 }
+
 .buscador{
-    margin-top: 1.091vh; 
-    margin-left: 3.641vw; 
-    width: 52.427vw; 
-    height: 2.181vh; 
-    background-color: #DDDDDD;
-    border: #979797 solid 1px;
-    padding-left: 5vw;
+    width: 100%;
+    height: 3.15vh;
+    padding-left: 6.2vw;
+    border: 1px solid #979797;
+    border-radius: 3px;
+    background-color: #dddddd;
+    font-family: "Sora", sans-serif;
+    font-size: 12px;
+    color: #676767;
+}
+
+.buscador::placeholder{
     color: #676767;
 }
 
 .buscador:focus{
     outline: none;
 }
+
 .buscador:not(:placeholder-shown) + .lupa{
     display: none;
 }
+
 .lupa{
     position: absolute;
-    top: 1.5vh;
-    left: 5.59vw;
+    top: 50%;
+    left: 1.5vw;
     width: 3.16vw;
-    height: 1.4vh;
+    height: auto;
+    transform: translateY(-50%);
     pointer-events: none;
 }
-.pacientes {
-    width: 100%;
-    height: 68vh;
+
+.pacientes{
+    flex: 1;
+    min-height: 0;
+    padding: 1.7vh 3.5vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    row-gap: 1.96vh;
     overflow-y: auto;
-    justify-content: space-evenly;
-
 }
 
 .pac{
-    width: 42.72vw;
-    height: 21.81vh;
+    flex-shrink: 0;
+    width: 44.3vw;
+    height: 21.7vh;
+    border: 1px solid #5f6bc4;
+    border-radius: 6px;
     background-color: #8096EF;
-    border-radius: 5%;
+    box-shadow: 3px 3px 4px #00000040;
 }
 
 .foto{
-    width: 24.27vw;
-    aspect-ratio: 1/1;
+    display: block;
+    width: 25.2vw;
+    aspect-ratio: 1;
+    margin: 1.3vh auto 0;
+    border-radius: 999px;
     background-color: #D9D9D9;
-    margin-top: 1.4vh;
-    margin-right: 9.2vw;
-    margin-bottom: 1.4vh;
-    margin-left: 9.2vw;
-    border-radius: 50%;
+    object-fit: cover;
 }
-.nombre{
-    width: 32.04vw;
-    height: 3.05vh;
-    background-color: #2541B2;
-    margin-left: 5.34vw;
-    margin-right: 5.34vw;
-    border-radius: 50px;
-}
-.descripcion{
-    width: 36.9vw;
-    height: 2.18vh;
-    margin-top: 1.31vh;
-    background-color: #2541B2;
-    margin-left: 2.91vw;
-    margin-right: 2.91vw;
-    border-radius: 50px;
-    
-}
-.mas{
-    background-color: #FF6A00;
-    height: 11.668vh;
-    width: 25.97vw;
-    border-radius: 50%;
 
-    position: fixed;
-    bottom: 8rem;
-    right: 1rem;
+.nombre{
+    margin-top: 1.3vh;
+    padding: 0 1vw;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.descripcion{
+    width: fit-content;
+    height: 2.6vh;
+    margin: 1vh auto 0;
+    padding: 0 3.9vw;
+    border-radius: 999px;
+    background-color: #2541B2;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 80px;
-    color: white;
-
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
+.mas{
+    position: fixed;
+    right: 2vw;
+    bottom: 15.3vh;
+    width: 23.2vw;
+    aspect-ratio: 1;
+    border-radius: 999px;
+    background-color: #d4520f;
+    box-shadow: 2px 3px 4px #00000040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    font-weight: 300;
+    color: #ffffff;
+}
 
 .abajo{
     width: 100%;
-    height: 13.086vh; 
+    height: 14.29vh;
     background-color: #AAD9F0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
+
 .btnsabajo{
     width: 100%;
+    height: 100%;
+    padding-bottom: 3.4vh;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-evenly;
-    height: 8.724vh; 
 }
-.Home{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-aspect-ratio: 1/1;
-border-radius: 30px;
-    width: 18.2vw; 
-}
-.Guardados{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-}
-.Mapa{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-}
+
+.Home,
 .Usuario{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
+    width: 16.26vw;
+    aspect-ratio: 1;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
 }
+
+.homeimg,
+.imgUsuario{
+    width: 9.5vw;
+    height: auto;
+    object-fit: contain;
+}
+
+.Mapa,
+.Guardados{
+    width: 13.835vw;
+    height: 6.216vh;
+    object-fit: contain;
+}
+
 .Escaner{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8.724vh; 
-    width: 19.417vw; 
+    width: 19.417vw;
+    height: 8.724vh;
+    object-fit: contain;
 }

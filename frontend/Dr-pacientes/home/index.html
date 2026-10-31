@@ -1,44 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pacientes</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <section class="arriba">
-        <img class="Titulo" src="../../aComponentes/Titulo.png"></img>
-        <img class="logo" src="../../aComponentes/Logo.png"></img>
-        </div>
-        <div class="logo">Logo</div>
+        <img class="Titulo" src="../../aComponentes/Titulo.png" alt="Nutrium">
+        <img class="logo" src="../../aComponentes/Logo.png" alt="Logo">
     </section>
 
-    <section class="medio" style="flex-direction: column;">
-        
-        <div class="buscadorCompleto"> 
-            <input type="text" placeholder="Buscar productos" id="buscador" class="buscador">  
-            <img src="../../aComponentes/Lupa.png" class="lupa">
+    <section class="medio">
+        <div class="buscadorCompleto">
+            <input type="text" placeholder="Buscar paciente" id="buscador" class="buscador">
+            <img src="../../aComponentes/Lupa.png" class="lupa" alt="">
         </div>
 
-        <section class="pacientes" id ="contenedor">
+        <section class="pacientes" id="contenedor"></section>
 
-      
-   
-       
         <div class="mas" data-href="../admitir-pac">+</div>
-        </section>
-
     </section>
 
     <section class="abajo">
         <div class="btnsabajo">
-            <div class="Home" data-href="../../home/doctor/index.html" >Home</div>
-            <div class="Mapa" data-href="../../lista/home/index.html">Lista</div>
-            <div class="Escaner" data-href="../../scanner/home/index.html">Escaner</div>
-            <div class="Guardados" data-href="../../guardados/home/index.html">Guardados</div>
-            <div class="Usuario" data-href="../../info-perfil/index.html">Usuario</div>
+            <div class="Home"><img class="homeimg" src="../../aComponentes/home.png" data-href="../../home/doctor/index.html" alt=""></div>
+            <img class="Mapa" src="../../aComponentes/Predeterminado.png" data-href="../../lista/home/index.html" alt="">
+            <img class="Escaner" src="../../aComponentes/Escáner.png" data-href="../../scanner/home/index.html" alt="">
+            <img class="Guardados" src="../../aComponentes/Guardados.png" data-href="../../guardados/home/index.html" alt="">
+            <div class="Usuario"><img class="imgUsuario" src="../../aComponentes/Usuario.png" data-href="../../info-perfil/index.html" alt=""></div>
         </div>
     </section>
 
