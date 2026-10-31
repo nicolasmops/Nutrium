@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
    
@@ -57,9 +60,13 @@
 <div class="medicos">
     <section class="texto">
         <p class="categoria">Médico/s</p>
-        <p class="valor Médicos"></p>
-            <input type="text" class="valor" name="Dres" id="medico"  placeholder="(D)D/(M)M/AAAA"  style="display: none;">
-
+        <div class="valor Médicos"></div>
+        <div class="nuevoMedico" style="display: none;">
+            <span class="numeroMedico"></span>
+            <input type="text" class="valor" id="medicoNombre" placeholder="Nombre del médico">
+            <span>; </span>
+            <input type="email" class="valor" id="medicoEmail" placeholder="Mail del médico">
+        </div>
     </section>
     <section class="boton">
         <button class="editar medicos"></button>
