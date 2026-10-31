@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-href]').forEach(el => {
+    el.addEventListener('click', () => {
+      window.location.href = el.dataset.href;
+    });
+  });
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor");
   const buscador = document.getElementById("buscador");
