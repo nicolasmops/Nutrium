@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Sora", sans-serif;
 }
 
 .arriba{
@@ -80,8 +81,38 @@ input{
     border: solid #979797;
     margin-bottom: 0;
 }
-filtro::placeholder{
+.buscadorCompleto{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 1.091vh;
+    width: 52.427vw;
+}
+.buscador{
+    margin-top: 1.091vh; 
+    margin-left: 3.641vw; 
+    width: 52.427vw; 
+    height: 2.181vh; 
+    background-color: #DDDDDD;
+    border: #979797 solid 1px;
+    padding-left: 5vw;
     color: #676767;
+}
+
+.buscador:focus{
+    outline: none;
+}
+.buscador:not(:placeholder-shown) + .lupa{
+    display: none;
+}
+.lupa{
+    position: absolute;
+    top: 1.5vh;
+    left: 5.59vw;
+    width: 3.16vw;
+    height: 1.4vh;
+   
+    pointer-events: none;
 }
 .foto{
     width: 16.26vw;
@@ -99,18 +130,20 @@ filtro::placeholder{
 }
 
 .nombre{
-   width: 32vw; 
+    color: white;
+   width: 54.12vw; 
    height: 3.05vh;
-   background-color: #2541B2;
    border-radius: 50px;
    transition: 0.5s ease;
+   font-size: 20px;
 }
 
 .msj{
-    background-color: #2541B2;
+    color: white;    
     width: 56.79vw;
     height: 2.18vh;
     border-radius: 50px;
+    font-size: 15px;
 }
 
 .mensaje{

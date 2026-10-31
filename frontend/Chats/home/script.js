@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const contenedor = document.getElementById("contenedor");
 const id = 1;  //localStorage.getItem("id") ;
-const buscador = document.getElementById("filtro");
+const buscador = document.getElementById("buscador");
 let mensajes = [];
 
 function mostrarMensajes(lista) {
