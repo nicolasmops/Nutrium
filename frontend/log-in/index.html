@@ -14,16 +14,37 @@
     <img src="../aComponentes/Titulo.png"  class="nutrium">
     <img src="../aComponentes/Slogan.png"  class="slogan">
 
-    <form id="form">
+
+    <article class="formulario">
+    <h1 class="titulo">Ingresá con tu correo</h1>
+    <form id="form" class="form">
 
         <label>Correo Electronico</label>
-        <input type="email" name="email">
+        <div class="contencion">
+        <img src="../aComponentes/ci_mail.png" alt="" class="sobre">
+        <input type="email" name="email" class="email" placeholder="ejemplo@gmail.com">
+        </div>
+
 
         <label>Contraseña</label>
-        <input type="password" name="contraseña">
+        <div class="contencion">
+        <img class="candado" src="../aComponentes/candado.png" alt="">
+        <input type="password" name="contraseña" class="contra" placeholder="escribe tu contraseña">
+        </div>
 
-        <button type="submit" id="boton">Enviar</button>
+        <p class="contraseña">¿Olvidaste tu contraseña?</p>
+        <div class="sufrimiento">
+            <img src="../aComponentes/Usuario.png" alt="" class="usuario">
+        <button type="submit" id="boton" class="boton">INICIAR SESIÓN</button>
+        </div>
     </form>
+
+    <h2 class="pregunta">¿Aún no tienes cuenta?</h2>
+          <div class="sufrimiento">
+            <img src="../aComponentes/Usuario+.png" alt="" class="usuario-mas">
+    <button data-href="../sign-up" class="sign-up">CREAR CUENTA</button>
+</div>
+    </article>
 
 <script src="script.js"></script>
 </body>
