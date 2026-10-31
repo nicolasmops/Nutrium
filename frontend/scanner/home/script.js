@@ -78,7 +78,6 @@ function mostrarResultado(producto) {
 }
 async function Guardar() {
   const Producto = sessionStorage.getItem("productoEscaneado")
-  noiiophe+
   popupGuardar.innerHTML = 
   `
       <section class="up">
