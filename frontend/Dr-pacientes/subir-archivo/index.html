@@ -1,47 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cargar archivo</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="arriba">
-        <img class="Titulo" src="../../aComponentes/Titulo.png"></img>
-        <img class="logo" src="../../aComponentes/Logo.png"></img>
+        <img class="Titulo" src="../../aComponentes/Titulo.png" alt="Nutrium">
+        <img class="logo" src="../../aComponentes/Logo.png" alt="Logo">
     </section>
+
     <section class="medio">
         <article class="pacienteSeleccionado">
             <img src="../../aComponentes/akar-icons_arrow-left.png" alt="" class="flechita" data-href="../Historial-Medico-Paciente/index.html">
-            <img src="" alt="" class="ftPerfil"></img>
+            <img src="" alt="" class="ftPerfil">
             <p class="nombre"></p>
         </article>
 
-<form class="restaurant" id="form">            
-    <input type="file" class="ft" accept=".pdf" required>
-<div class="subir" id="subir">Subir archivo</div>
-            <div class="mas">
-                <div class="hor"></div>
-                <div class="ver"></div>
+        <form class="restaurant" id="form">
+            <div class="zonaSubir">
+                <input type="file" class="ft" accept=".pdf" required>
+                <div class="subir" id="subir">Subir archivo</div>
+                <div class="mas">
+                    <div class="hor"></div>
+                    <div class="ver"></div>
+                </div>
             </div>
+
             <section class="info">
                 <div class="der">
-                    <input type="text" name="nombre" class="txtn"></input>
+                    <input type="text" name="nombre" class="txtn" placeholder="Insertar nombre">
                 </div>
-                <button class="BTNGUARDAR" id="boton">Guardar</button>
+                <div class="pie">
+                    <img src="../../aComponentes/nutriaQsobresale.png" class="nutria" alt="">
+                    <button class="BTNGUARDAR" id="boton">Guardar</button>
+                </div>
             </section>
         </form>
     </section>
+
     <section class="abajo">
         <div class="btnsabajo">
-            <div class="Home" data-href="../../home/doctor/index.html">Home</div>
-            <div class="Mapa" data-href="../../lista/home/index.html">Lista</div>
-            <div class="Escaner" data-href="../../scanner/home/index.html">Escaner</div>
-            <div class="Guardados" data-href="../../guardados/home/index.html">Guardados</div>
-            <div class="Usuario" data-href="../../info-perfil/index.html">Usuario</div>
+            <div class="Home"><img src="../../aComponentes/home.png" data-href="../../home/paciente/index.html" alt=""></div>
+            <img class="Mapa" src="../../aComponentes/Predeterminado.png" data-href="../../lista/home/index.html" alt="">
+            <img class="Escaner" src="../../aComponentes/Escáner.png" data-href="../../scanner/home/index.html" alt="">
+            <img class="Guardados" src="../../aComponentes/Guardados.png" data-href="../../guardados/home/index.html" alt="">
+            <div class="Usuario"><img class="imgUsuario" src="../../aComponentes/Usuario.png" data-href="../../info-perfil/index.html" alt=""></div>
         </div>
     </section>
+
     <script src="script.js" defer></script>
 </body>
 </html>

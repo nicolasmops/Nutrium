@@ -1,14 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   document.querySelectorAll('[data-href]').forEach(el => {
     el.addEventListener('click', () => {
-      window.location.href = el.dataset.href;
-    });
-  });
-});
+      window.location.href = el.dataset.href
+    })
+  })
+
+  const home = document.querySelector('.Home [data-href], .Home[data-href]')
+  if (!home) return
+
+  let esMedico = JSON.parse(localStorage.getItem('esMedico'))
+
+  if (esMedico === null) {
+    const id = localStorage.getItem('id')
+    const resultado = await fetch("http://localhost:3000/usuario/" + id)
+    const usuario = await resultado.json()
+    esMedico = usuario.esMedico
+    localStorage.setItem('esMedico', JSON.stringify(esMedico))
+  }
+
+  if (esMedico === true) {
+    home.dataset.href = home.dataset.href.replace("home/paciente", "home/doctor")
+  }
+})
 
 const contenedor = document.getElementById("contenedor");
+<<<<<<< HEAD
 const id = 1;  //localStorage.getItem("id") ;
 const buscador = document.getElementById("buscador");
+=======
+const id = localStorage.getItem("id") ;
+const buscador = document.getElementById("filtro");
+>>>>>>> bf9fccdb43b4204bb5669c5d7c1d0256a023bb1a
 let mensajes = [];
 
 function mostrarMensajes(lista) {

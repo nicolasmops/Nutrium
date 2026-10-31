@@ -1,11 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   document.querySelectorAll('[data-href]').forEach(el => {
     el.addEventListener('click', () => {
-      window.location.href = el.dataset.href;
-    });
-  });
-});
+      window.location.href = el.dataset.href
+    })
+  })
 
+  const home = document.querySelector('.Home [data-href], .Home[data-href]')
+  if (!home) return
+
+  let esMedico = JSON.parse(localStorage.getItem('esMedico'))
+
+  if (esMedico === null) {
+    const id = localStorage.getItem('id')
+    const resultado = await fetch("http://localhost:3000/usuario/" + id)
+    const usuario = await resultado.json()
+    esMedico = usuario.esMedico
+    localStorage.setItem('esMedico', JSON.stringify(esMedico))
+  }
+
+  if (esMedico === true) {
+    home.dataset.href = home.dataset.href.replace("home/paciente", "home/doctor")
+  }
+})
 
 const fotoUser = document.querySelector(".ft")
 const correoUser = document.querySelector(".Mail")
@@ -14,50 +30,73 @@ const medicosUser = document.querySelector(".Médicos")
 const sodioUser = document.querySelector(".Sodio")
 const rolUser = document.querySelector(".rol")
 const fechaUser = document.querySelector(".Fecha")
-const btnMucho = document.querySelector(".mucho")
-const btnFecha = document.querySelector(".fecha")
-const btnMail = document.querySelector(".mail")
-const btnSodio = document.querySelector(".sodio")
-const btnMedicos = document.querySelector(".medicos")
+
+const btnMucho = document.querySelector(".editar.mucho")
+const btnFecha = document.querySelector(".editar.fecha")
+const btnMail = document.querySelector(".editar.mail")
+const btnSodio = document.querySelector(".editar.sodio")
+const btnMedicos = document.querySelector(".editar.medicos")
+
 const inputFecha = document.getElementById("fechaNacimiento")
 const inputNombre = document.getElementById("nombre")
 const inputMail = document.getElementById("email")
 const inputRol = document.getElementById("rol")
-const inputMedicos = document.getElementById("medico")
-const inputSodio = document.getElementById("sodium")
 const inputFoto = document.getElementById("foto")
+const inputSodio = document.getElementById("sodium")
+
+const grupoPerfil = document.querySelector(".nombreFtyRol .izq")
+const nuevoMedico = document.querySelector(".nuevoMedico")
+const numeroMedico = document.querySelector(".numeroMedico")
+const inputMedicoNombre = document.getElementById("medicoNombre")
+const inputMedicoEmail = document.getElementById("medicoEmail")
+
 const id = localStorage.getItem('id')
-async function infoUser (){
 
+let medicos = []
+let editandoMedicos = false
+let editandoPerfil = false
 
-const resultado = await fetch ("http://localhost:3000/usuario/" + id, {
-method:'GET',
-headers: {'Content-type': 'application/json'},
-})
+async function infoUser() {
+  const resultado = await fetch("http://localhost:3000/usuario/" + id, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  })
 
+  const respuesta = await resultado.json()
 
-const respuesta = await resultado.json()
+  rolUser.textContent = respuesta.esMedico === true ? "Médico" : "Paciente"
+  fotoUser.src = "data:image/png;base64," + respuesta.foto
+  correoUser.textContent = respuesta.email
+  fechaUser.textContent = respuesta.fechaNacimiento
+  nombreUser.textContent = respuesta.nombre
+  sodioUser.textContent = respuesta.sodioMax
 
-
-if (respuesta.esMedico === true){
-rolUser.innerHTML = `Médico`
+  medicos = respuesta.médicos || []
+  mostrarMedicos()
 }
-else {
-rolUser.innerHTML = `Paciente`
+
+function mostrarMedicos() {
+  medicosUser.textContent = ""
+
+  if (medicos.length === 0) {
+    medicosUser.textContent = "Sin médicos"
+    return
+  }
+
+  medicos.forEach((medico, i) => {
+    const linea = document.createElement("div")
+    linea.textContent = "Médico " + (i + 1) + ": " + medico.nombre + "; " + medico.email
+    medicosUser.appendChild(linea)
+  })
 }
 
-
-fotoUser.src = "data:image/png;base64," + respuesta.foto
-correoUser.innerHTML = `${respuesta.email}`
-fechaUser.innerHTML = `${respuesta.fechaNacimiento}`
-nombreUser.innerHTML = `${respuesta.nombre}`
-sodioUser.innerHTML = `${respuesta.sodioMax}`
-
-
-
-
+function alSalirDelFoco(contenedor, callback) {
+  contenedor.addEventListener("focusout", (e) => {
+    if (!document.hasFocus()) return
+    if (contenedor.contains(e.relatedTarget)) return
+    callback()
+  })
 }
-infoUser()
 
 function hacerEditable(boton, texto, input, campo) {
   boton.addEventListener("click", () => {
@@ -67,7 +106,7 @@ function hacerEditable(boton, texto, input, campo) {
     input.focus()
   })
 
-  input.addEventListener("blur", async () => {
+  alSalirDelFoco(input, async () => {
     const anterior = texto.textContent
     input.style.display = "none"
     texto.style.display = "inline-block"
@@ -93,7 +132,6 @@ function hacerEditable(boton, texto, input, campo) {
 hacerEditable(btnFecha, fechaUser, inputFecha, "fechaNacimiento")
 hacerEditable(btnMail, correoUser, inputMail, "email")
 hacerEditable(btnSodio, sodioUser, inputSodio, "sodioMax")
-hacerEditable(btnMedicos, medicosUser, inputMedicos, "medico")
 
 function leerFoto(archivo) {
   return new Promise(resolve => {
@@ -103,34 +141,41 @@ function leerFoto(archivo) {
   })
 }
 
-function mostrarInputs(visible) {
-  const textos = [nombreUser, rolUser]
-  const inputs = [inputNombre, inputRol, inputFoto]
-  textos.forEach(el => el.style.display = visible ? "none" : "inline-block")
-  inputs.forEach(el => el.style.display = visible ? "inline-block" : "none")
+function mostrarInputsPerfil(visible) {
+  nombreUser.style.display = visible ? "none" : "inline-block"
+  rolUser.style.display = visible ? "none" : "inline-block"
+  inputNombre.style.display = visible ? "inline-block" : "none"
+  inputRol.style.display = visible ? "inline-block" : "none"
+  inputFoto.style.display = visible ? "inline-block" : "none"
 }
 
-let editando = false
+btnMucho.addEventListener("click", () => {
+  if (editandoPerfil) return
+  editandoPerfil = true
+  inputNombre.value = nombreUser.textContent
+  inputRol.value = rolUser.textContent === "Médico" ? "true" : "false"
+  mostrarInputsPerfil(true)
+  inputNombre.focus()
+})
 
-btnMucho.addEventListener("click", async () => {
-  if (!editando) {
-    editando = true
-    inputNombre.value = nombreUser.textContent
-    inputRol.value = rolUser.textContent
-    mostrarInputs(true)
-    inputNombre.focus()
-    return
-  }
+alSalirDelFoco(grupoPerfil, async () => {
+  if (!editandoPerfil) return
+  editandoPerfil = false
 
-  editando = false
+  const nombreAnterior = nombreUser.textContent
+  const rolAnterior = rolUser.textContent
+  const archivo = inputFoto.files[0]
 
-  const datos = {
-    nombre: inputNombre.value,
-    esMedico: inputRol.value === "Médico"
-  }
+  const nombre = inputNombre.value.trim() === "" ? nombreAnterior : inputNombre.value.trim()
+  const esMedico = inputRol.value === "" ? rolAnterior === "Médico" : inputRol.value === "true"
 
-  if (inputFoto.files[0]) {
-    datos.foto = await leerFoto(inputFoto.files[0])
+  mostrarInputsPerfil(false)
+  inputFoto.value = ""
+
+  const datos = { nombre, esMedico }
+
+  if (archivo) {
+    datos.foto = await leerFoto(archivo)
   }
 
   const resultado = await fetch("http://localhost:3000/usuario/" + id, {
@@ -142,13 +187,48 @@ btnMucho.addEventListener("click", async () => {
   })
 
   if (resultado.status === 200) {
-    nombreUser.textContent = datos.nombre
-    rolUser.textContent = datos.esMedico ? "Médico" : "Paciente"
+    nombreUser.textContent = nombre
+    rolUser.textContent = esMedico ? "Médico" : "Paciente"
     if (datos.foto) {
       fotoUser.src = "data:image/png;base64," + datos.foto
     }
   }
-
-  inputFoto.value = ""
-  mostrarInputs(false)
 })
+
+btnMedicos.addEventListener("click", () => {
+  if (editandoMedicos) return
+  editandoMedicos = true
+  numeroMedico.textContent = "Médico " + (medicos.length + 1) + ": "
+  nuevoMedico.style.display = "block"
+  inputMedicoNombre.focus()
+})
+
+alSalirDelFoco(nuevoMedico, async () => {
+  if (!editandoMedicos) return
+  editandoMedicos = false
+
+  const nombre = inputMedicoNombre.value.trim()
+  const email = inputMedicoEmail.value.trim()
+
+  nuevoMedico.style.display = "none"
+
+  if (nombre === "" || email === "") return
+
+  const resultado = await fetch("http://localhost:3000/usuario/" + id, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ médicos: medicos.concat({ nombre, email }) })
+  })
+
+  if (resultado.status === 200) {
+    inputMedicoNombre.value = ""
+    inputMedicoEmail.value = ""
+    infoUser()
+  } else {
+    alert("No se pudo agregar el médico. Revisá que el mail sea de un médico registrado.")
+  }
+})
+
+infoUser()
