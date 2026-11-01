@@ -255,15 +255,14 @@ body{
     background-color: #ff9040;
 }
 
-.homeimg,
-.imgUsuario{
+.imgMapa
+.homeimg{
     width: 9.5vw;
     height: auto;
     object-fit: contain;
 }
-
-.imgMapa{
-    width: 7.5vw;
+.imgUsuario{
+    width: 12.62vw;
     height: auto;
     object-fit: contain;
 }

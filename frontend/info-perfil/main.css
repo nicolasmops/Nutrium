@@ -304,7 +304,14 @@ div.sodio .texto p.valor{
     align-items: center;
 }
 
+.imgMapa
+.homeimg{
+    width: 9.5vw;
+    height: auto;
+    object-fit: contain;
+}
 .imgUsuario{
-    width: 8.5vw;
-aspect-ratio: 1/1;
+    width: 12.62vw;
+    height: auto;
+    object-fit: contain;
 }

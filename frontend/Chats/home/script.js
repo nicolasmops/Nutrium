@@ -32,7 +32,7 @@ function mostrarMensajes(lista) {
   contenedor.innerHTML = lista.map(msj => `
     <article class="mensaje">
       <div class="top">
-        <img class="foto" src="${msj.deQuienFoto}" alt="">
+        <img class="foto" src="data:image/webp;base64,${msj.deQuienFoto}" alt="">
         <div class="cont">
           <div class="nombre">${msj.deQuienEmail}</div>
           <div class="msj">${msj.titulo}</div>
@@ -51,7 +51,7 @@ function mostrarMensajes(lista) {
           <div class="contenido">
             <div class="empuje"></div>
             <button type="button" class="btnResponder">
-              <img class="iconoResponder" src="RUTA" alt="">
+              <img class="iconoResponder" src="../../aComponentes/boxicons_reply-big-filled.png" alt="">
             </button>
             <p>${msj.texto}</p>
           </div>

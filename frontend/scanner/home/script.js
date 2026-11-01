@@ -58,9 +58,12 @@ function mostrarResultado(producto) {
   popup.innerHTML = `
     <section class="resto">
       <p class="nombreProducto">${producto.nombre}</p>
-      <div class="s&n ${resultado.clase}" id="s&n">${resultado.titulo}</div>
-      <p class="lorem" style="width: 79.12vw; font-size: 18px;">${resultado.texto}</p>
-      <p class="quest">Sodio cada 100g: ${producto.sodio} mg</p>
+      <div class="sn ${resultado.clase}">${resultado.titulo}</div>
+      <p class="lorem">${resultado.texto}</p>
+      <p class="quest">
+        <span class="sodioTxt">Sodio cada 100g:</span>
+        <span class="sodioVal">${producto.sodio} mg</span>
+      </p>
     </section>
     <section class="botones">
       <div class="no" id="no">Continuar</div>

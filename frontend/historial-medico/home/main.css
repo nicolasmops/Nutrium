@@ -217,9 +217,16 @@ body{
     border-radius: 30px;
 
 }
+.imgMapa
+.homeimg{
+    width: 9.5vw;
+    height: auto;
+    object-fit: contain;
+}
 .imgUsuario{
-    height: 6.216vh; 
-    width: 13.835vw; 
+    width: 12.62vw;
+    height: auto;
+    object-fit: contain;
 }
 .Escaner{
     font-family: "Sora", sans-serif;
