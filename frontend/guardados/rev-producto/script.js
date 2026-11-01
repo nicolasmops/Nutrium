@@ -42,10 +42,10 @@ function revisarProducto(){
     aptitud = "No consumir"
     clase = "noPuede"
  }
-  contenedor.innerHTML = //${productoUsable.foto}
+  contenedor.innerHTML =
   `
        <article class="Mensaje">
-            <img class="foto" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCbskEqo8QTP0DjG81UlFzu1U_69ZExvo5oKzcCgv0Xu-j1hjzxjcsu0aBIEDuFX80v4ouw1rx5WKmWG1E6z4Z35CKx5VH9H8IsdKtvTnC_A&s=10"></img>
+            <img class="foto" src = "${productoUsable.foto}"></img>
             <section class="bottom">
             <div class="alto">
                 <div class="nombre">${productoUsable.nombreProducto}</div>
