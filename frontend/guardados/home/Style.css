@@ -44,7 +44,7 @@ body{
 
 
 .medio{
-    height: 73.828vh; 
+    height: 71.54vh; 
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -129,35 +129,9 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-   
+    justify-content: space-around;
 }
- 
-.btnsabajo{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 8.724vh; 
-      margin-top: 1.85vh;
-}
- 
-.Home{
-    font-family: "Sora", sans-serif;
-    display: flex;
-    font-size: 2.427vw; 
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-    
-         margin-bottom: 5.56vh;
 
-}
-.imgguardados{
-    height: 5.67vh;
-    width: 12.62vw;
-}
 .Guardados{
     font-family: "Sora", sans-serif;
     font-size: 2.427vw;
@@ -166,43 +140,47 @@ body{
     align-items: center;
     height: 6.216vh;
     width: 13.835vw;
-         margin-bottom: 5.56vh;
-         background-color: #ff9040;
+    background-color: #ff9040;
     width: 16.20vw;
     height: 7.2vh;
     border-radius: 30px;
 
 }
+
+
+.btnsabajo{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3.4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Home, .Usuario{
+    width: 16.26vw;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeimg, .imgUsuario{
+    width: 9.5vw;
+    height: auto;
+    object-fit: contain;
+}
+
 .Mapa{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-         margin-bottom: 5.56vh;
-
+    width: 13.835vw;
+    height: 6.216vh;
+    object-fit: contain;
 }
-.Usuario{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
-         margin-bottom: 5.56vh;
 
-}
 .Escaner{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8.724vh; 
-    width: 19.417vw; 
-         margin-bottom: 5.56vh;
-
+    width: 19.417vw;
+    height: 8.724vh;
+    object-fit: contain;
 }
