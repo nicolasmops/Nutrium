@@ -283,3 +283,8 @@ body{
     width: 19.417vw;
     margin-bottom: 5.56vh;
 }
+.imgUsuario{
+    width: 12.62vw;
+    height: auto;
+    object-fit: contain;
+}

@@ -201,7 +201,11 @@ body{
     height: auto;
     object-fit: contain;
 }
-
+.imgUsuario{
+    width: 12.62vw;
+    height: auto;
+    object-fit: contain;
+}
 .Mapa,
 .Guardados{
     width: 13.835vw;

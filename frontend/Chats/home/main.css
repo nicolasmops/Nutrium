@@ -330,3 +330,8 @@ body{
     height: 8.724vh;
     object-fit: contain;
 }
+.imgUsuario{
+    width: 12.62vw;
+    height: auto;
+    object-fit: contain;
+}
