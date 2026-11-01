@@ -23,33 +23,37 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 })
 
+const container = document.getElementById("lista")
+const id = localStorage.getItem("id")
 
-  const container = document.getElementById("lista")
-  const id = localStorage.getItem("id") 
-  async function mostrarubicaciones() {
-    const resultado = await fetch('http://localhost:3000/ubicaciones/' + id, {
-      method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-      
-      }) 
+async function mostrarubicaciones() {
+  const resultado = await fetch('http://localhost:3000/ubicaciones/' + id, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  })
 
-      const respuesta = await resultado.json()
-      console.log(respuesta)
-    
-      respuesta.forEach(ubicacion => {
-        container.innerHTML += 
-        `
-         <div class ="resto">
-            <img class = "foto" src ="${ubicacion.foto}"></img>
-            <div class = "nombre">${ubicacion.nombre}</div>
-            <div class = "desc">${ubicacion.dirección}</div>
-            <div class="despliegue">
-                <div class="descripcion">${ubicacion.descripción}</div>
-            </div>
+  const respuesta = await resultado.json()
+  console.log(respuesta)
+
+  respuesta.forEach(ubicacion => {
+    container.innerHTML += `
+      <div class="resto">
+        <img class="foto" src="${ubicacion.foto}">
+        <div class="info">
+          <div class="desc">${ubicacion.dirección}</div>
+          <div class="nombre">${ubicacion.nombre}</div>
         </div>
-        `
-      })
-      
-  }
+        <div class="despliegue">
+          <div class="descripcion">${ubicacion.descripción}</div>
+        </div>
+      </div>
+    `
+  })
+}
+
+container.addEventListener('click', e => {
+  const card = e.target.closest('.resto')
+  if (card) card.classList.toggle('abierto')
+})
 
 mostrarubicaciones()

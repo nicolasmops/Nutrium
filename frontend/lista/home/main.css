@@ -1,230 +1,217 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    width: 100vw; 
-    height: 100vh; 
-}
-
-.arriba{
-    width: 100%;
-    height: 14.26vh; 
-    background-color: #AAD9F0;
-    display: flex;
-    flex-direction: row;
-    
-    align-items: center;
-    
-}
- 
-.Titulo{
     font-family: "Sora", sans-serif;
-    width: 64.32vw; 
-    height: 8.07vh; 
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-   
-    margin-left: 5.7vw; 
-    margin-right: 7.28vw; 
 }
 
-
-.logo{
-    font-family: "Sora", sans-serif;
-    width: 13.592vw; 
-    height: 6.107vh; 
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-   
-    margin-right: 4.854vw; 
-}
-
-
-
-.medio{
-    height: 73.828vh; 
-    width: 100%;
+body {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+
+.arriba {
+    height: 14vh;
+    flex-shrink: 0;
+    background-color: #AAD9F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+.Titulo {
+    height: 8vh;
+    max-width: 60vw;
+    object-fit: contain;
+}
+
+.logo {
+    height: 6vh;
+    max-width: 14vw;
+    object-fit: contain;
+}
+
+.medio {
+    flex: 1;
+    min-height: 0;
+    background-color: #FFA869;
     overflow-y: auto;
-    gap: 1.2vh;
+    padding: 1.5vh 4vw 12vh;
 }
-.ns{
-    margin-top: 1.091vh; 
-    margin-left: 3.641vw; 
-    width: 52.427vw; 
-    min-height: 2.181vh; 
-    background-color: #2541B2;
-    padding-bottom: 1.2vh;
-}
-.resto{
-    width: 91.01vw;
-    min-height: 17.45vh;
+
+.ns {
+    width: 55vw;
+    height: 3vh;
+    min-height: 22px;
+    margin-bottom: 1.5vh;
     background-color: #D9D9D9;
-    margin-left: 3.64vw;
-    margin-bottom: 1.2vh;
+    border: 1px solid #9A9A9A;
+    border-radius: 4px;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    padding: 0 2vw;
+    gap: 1vw;
+}
+
+.ns .material-symbols-outlined {
+    font-size: 12px;
+    color: #333333;
+}
+
+.ns input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 10px;
+}
+
+#lista {
+    display: flex;
     flex-direction: column;
-    transition: 0.5s ease;
-    .foto{
-        display: none
-    }
-}
-.resto .despliegue{
-    display: none;
+    gap: 1.5vh;
 }
 
-.resto.abierto .despliegue{
-    display: block;
-    transition: 0.5s ease;
-}
-
-.resto.abierto{
- min-height: 52.23vh;
- width: 92.23vw;
- background-color: #8096EF;
-justify-content: flex-start;
-transition: 0.5s ease;}
-.resto.abierto .foto{
-    display: block;
-    aspect-ratio: 1/1;
-    width: 84.95vw;
+.resto {
+    position: relative;
+    width: 100%;
     background-color: #D9D9D9;
-    margin-left: 3.64vw;
-    margin-right: 3.64vw;
-    margin-top: 1.31vh;
-    margin-bottom: 1.31vh;
-    transition: 0.5s ease;
-}
-.resto.abierto .nombre{
-    width: 59.22vw;
-    height: 4.03vh;
-    margin-bottom: 1.31vh;
-    margin-left: 3.64vw;
-    transition: 0.5s ease;
-}
-.resto.abierto .desc{
-    width: 63.38vw;
-    height: 1.74vh;
-    margin-bottom: 1.31vh;
-    margin-left: 3.64vw;
-    transition: 0.5s ease;
-}
-.resto.abierto .descripcion{
-    width: 84.95vw;
-    height: 1.74vh;
-    background-color: #2541B2;
-    margin-bottom: 1.31vh;
-    margin-left: 2.91vw;
-    margin-left: 3.64vw;
-    transition: 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.4s ease;
 }
 
-
-
-.nombre{
-    width: 34.7vw;
-    height: 2.2vh;
-    background-color: #2541B2;
-    margin-left: 4.37vw;
-    margin-bottom: 0.76vh;
-}
-.desc{
-    width: 52.18vw;
-    height: 1.1vh;
-    background-color: #2541B2;
-    margin-left: 4.37vw;
-    margin-bottom: 2.18vh;
+.resto .foto {
+    display: block;
+    width: 100%;
+    height: 19vh;
+    object-fit: cover;
+    background-color: #9B9B9B;
+    transition: height 0.4s ease;
 }
 
-.mas{
-    background-color: #FF6A00;
-    height: 11.668vh;
-    width: 25.97vw;
-    border-radius: 50%;
+.resto .info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1vh 4vw 1.2vh;
+    background-color: rgba(120, 150, 170, 0.75);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2vh;
+}
 
+.resto .desc {
+    font-size: 2.6vw;
+    font-weight: 400;
+}
+
+.resto .nombre {
+    font-size: 4.2vw;
+    font-weight: 700;
+}
+
+.resto .despliegue {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.resto .descripcion {
+    padding: 1.5vh 4vw 2vh;
+    font-size: 3.2vw;
+    color: #1B1B1B;
+}
+
+.resto.abierto {
+    background-color: #8096EF;
+}
+
+.resto.abierto .foto {
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.resto.abierto .info {
+    position: static;
+    background-color: transparent;
+}
+
+.resto.abierto .despliegue {
+    max-height: 40vh;
+}
+
+.mas {
     position: fixed;
-    bottom: 8rem;
-    right: 1rem;
+    right: 4vw;
+    bottom: 15vh;
+    width: 15vw;
+    height: 15vw;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 50%;
+    background-color: #D4510F;
+    color: white;
+    font-size: 10vw;
+    font-weight: 300;
+    line-height: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 80px;
-    color: white;
-
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 10;
 }
 
-.abajo{
-    width: 100%;
-    height: 13.086vh; 
+.abajo {
+    height: 12vh;
+    flex-shrink: 0;
     background-color: #AAD9F0;
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
-.btnsabajo{
+
+.btnsabajo {
     width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 8.724vh; 
 }
-.Home{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
+
+.btnsabajo > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #111111;
 }
-.Guardados{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
+
+.btnsabajo .material-symbols-outlined {
+    font-size: 7vw;
 }
-.Mapa{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
+
+.btnsabajo .Escaner {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 8px;
 }
-.Usuario{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh; 
-    width: 13.835vw; 
+
+.btnsabajo .Escaner .material-symbols-outlined {
+    font-size: 13vw;
 }
-.Escaner{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw; 
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 8.724vh; 
-    width: 19.417vw; 
+
+.btnsabajo .Mapa {
+    background-color: #FF8A2B;
 }
