@@ -23,21 +23,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 })
 
-const form = document.getElementById("form");
+const form = document.getElementById("formulario");
 const boton = document.getElementById("boton");
 const id = localStorage.getItem("id");
 const input = document.querySelector(".ft");
-const odioAChlo = document.getElementById("subir");
+const textoSubir = document.querySelector(".subir");
 
 input.addEventListener("change", () => {
   const archivo = input.files[0];
-  odioAChlo.textContent = archivo ? archivo.name : "Subir archivo";
+  textoSubir.textContent = archivo ? archivo.name : "Subir archivo";
 });
 
 async function guardarArchivo() {
   const archivo = input.files[0];
   if (!archivo) {
-    alert("Seleccioná un archivo");
+
     return;
   }
 
@@ -51,7 +51,7 @@ async function guardarArchivo() {
   });
 
   if (resultado.status === 200) {
-    alert("Archivo subido exitosamente");
+   
     setTimeout(() => {
       window.location.href = "../home/index.html";
     }, 2000);

@@ -25,19 +25,22 @@ document.addEventListener('DOMContentLoaded', async () => {
   const producto = sessionStorage.getItem("productoGuardado")
   const contenedor = document.getElementById("contenedor")
   const productoUsable = JSON.parse(producto)
-let aptitud = "a"
-
+let aptitud
+let clase
  
 
 function revisarProducto(){
   if (productoUsable.apto === 2){
     aptitud = "Puede consumirse"
+    clase = "siPuede"
  }
  else if (productoUsable.apto === 1){
     aptitud = "Consumir con moderacion"
+    clase = "moderacion"
  }
  else if (productoUsable.apto === 0){
     aptitud = "No consumir"
+    clase = "noPuede"
  }
   contenedor.innerHTML = 
   `
@@ -45,7 +48,7 @@ function revisarProducto(){
             <img class="foto" src = ${productoUsable.foto}></img>
             <section class="bottom">
                 <div class="nombre">${productoUsable.nombreProducto}</div>
-                <div class = "apto">${aptitud}</div>
+                <div class = "apto ${clase}">${aptitud}</div>
                 <div class="descripcion uno">${productoUsable.descripción}</div>
                 <div class="guardar" data-href="../home/index.html">Continuar</div>
             </section>

@@ -1,196 +1,231 @@
 *{
     margin: 0;
-
-
     padding: 0;
     box-sizing: border-box;
 }
 
-
-.arriba{
-    width: 100%;
-    height: 14.26vh; 
-    background-color: #AAD9F0;
-    display: flex;
-    flex-direction: row;
-    
-    align-items: center;
-    
-}
- 
-.Titulo{
-    font-family: "Sora", sans-serif;
-    width: 64.32vw; 
-    height: 8.07vh; 
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-   
-    margin-left: 5.7vw; 
-    margin-right: 7.28vw; 
-}
-
-
-.logo{
-    font-family: "Sora", sans-serif;
-    width: 13.592vw; 
-    height: 6.107vh; 
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-   
-    margin-right: 4.854vw; 
-}
-.logo1{
-    width: 4.854vw;
-    height: 2.181vh;
-    background-color: #D9D9D9;
-    
-}
 body{
     width: 100vw;
     height: 100vh;
-}
-.logo2{
-    width: 46.36vw;
-    height: 2.181vh;
-    background-color: #2541B2;
-    margin-left: 2.67vw;
+    font-family: "Sora", sans-serif;
 }
 
+.arriba{
+    width: 100%;
+    height: 14.26vh;
+    background-color: #AAD9F0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Titulo{
+    width: 64.32vw;
+    height: 8.07vh;
+    object-fit: contain;
+    margin-left: 5.7vw;
+    margin-right: 7.28vw;
+}
+
+.logo{
+    width: 13.592vw;
+    height: 6.107vh;
+    object-fit: contain;
+    margin-right: 4.854vw;
+}
 
 .medio{
-    height: 73.82vh;
+    height: 71.45vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ffac70;
+    overflow: hidden;
 }
+
 .cont{
-height: 3.16vh;
-width:  100%;
-margin-top: 1.19vh;
+    width: 100%;
+    height: 3.5vh;
+    margin-top: 1.19vh;
+    display: flex;
+    align-items: center;
 }
+
 .atras{
-width: 13.83vw;
-height: 3.16vh;
-background-color: #D9D9D9;
-margin-left: 3.4vw;
-display: flex;
-justify-content: center;
-align-items: center;
+    width: 13.83vw;
+    height: 3.16vh;
+    background-color: #D9D9D9;
+    border: 1px solid #979797;
+    margin-left: 3.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
+
 .flechita{
-    font-size: 24px;
+    width: 6.4vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
+
 .restaurant{
+    position: relative;
     width: 93.2vw;
-    height: 67.61vh;
-    background-color: #8096ef;
+    flex: 1;
+    min-height: 0;
     margin-top: 0.98vh;
+    margin-bottom: 1.2vh;
+    background-color: #8096ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.74vh 3.83vw 0;
+    gap: 1.8vh;
 }
-.ft{
-    width: 85.43vw;
+
+.zona{
+    position: relative;
+    width: 100%;
     aspect-ratio: 1/1;
-    background-color: #979797;
-    margin-top: 1.74vh;
-    margin-left: 3.83vw;
+    flex-shrink: 1;
+    min-height: 0;
+    background-color: #D9D9D9;
+    border: 1px solid #979797;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3vh;
+    cursor: pointer;
+    overflow: hidden;
 }
-.info{
-    display: flex;
-    flex-direction: row;
+
+.ft{
+    display: none;
 }
+
 .subir{
-    height: 3.81vh;
-    width: 57.03vw;
-    background-color: #2541B2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family:  "Sora", sans-serif;
-    color: white;
-    font-size: 24px; 
+    font-size: 3.4vh;
+    font-weight: 400;
+    color: #4a4a4a;
+    text-align: center;
 }
+
 .mas{
-    margin-top: 5.27vh;
-    height: 9.53v;
-    aspect-ratio: 1/1;
-    height: 39.29px;
     position: relative;
+    width: 9.7vw;
+    height: 9.7vw;
 }
+
 .hor{
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 0;
-    width: 9.7vw;
+    width: 100%;
     height: 0.65vh;
-    background-color: white;
+    background-color: #4a4a4a;
     border-radius: 50px;
+    transform: translateY(-50%);
 }
+
 .ver{
     position: absolute;
     top: 0;
-    left: 45%;
-    width: 1.46vw;
-    height: 4.36vh;
-    background-color: white;
+    left: 50%;
+    width: 0.65vh;
+    height: 100%;
+    background-color: #4a4a4a;
     border-radius: 50px;
+    transform: translateX(-50%);
 }
-.izq{
-    width: 22.82vw;
-    height: 8.94vh;
-    margin-top:1.41vh;
-    margin-left: 3.88vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1vh;
-}
-.nombre{
-    width: 19.66vw;
-    min-height: 3.05vh;
-    background-color: #2541B2;
-}
-.direccion{
-    min-height: 1.96vh;
-    width: 22.81vw;
-    background-color: #2541B2;
+
+.nombre-archivo{
+    position: absolute;
+    bottom: 1vh;
+    left: 2vw;
+    right: 2vw;
+    font-size: 1.6vh;
+    color: #4a4a4a;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .txtn{
-    width: 40.78vw;
-    min-height: 3.05vh;
-    background-color: #2541B2;
+    width: 100%;
+    height: 5.2vh;
+    background-color: #a5b4f3;
+    border: none;
+    padding: 0 4vw;
+    font-family: "Sora", sans-serif;
+    font-size: 2vh;
+    color: #2a2a2a;
+}
+
+.txtn::placeholder{
+    color: #676767;
+}
+
+.txtn:focus{
+    outline: 2px solid #FF6A00;
+}
+
+.pie{
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: visible;
+}
+
+.nutria{
+    position: absolute;
+    bottom: 0;
+    left: 14vw;
+    height: 12.5vh;
+    width: auto;
+    object-fit: contain;
+    bottom: -0.6vh;
 }
 
 .BTNGUARDAR{
-    width: 37.62vw;
-    height: 9.05vh;
-    background-color: #d9d9d9;
-    font-size: 32;
-    font-family: "Sora", sans-serif;;
+    position: absolute;
+    bottom: 1.5vh;
+    right: 3.83vw;
+    width: 31vw;
+    height: 4.6vh;
+    background-color: #D9D9D9;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    font-family: "Sora", sans-serif;
+    font-size: 2vh;
+    color: #2a2a2a;
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    margin-left: 3.88vw;
-    
+    cursor: pointer;
+}
+.BTNGUARDAR:active{
+    background-color: #FF6A00;
+    color: white;
 }
 
 .abajo{
     width: 100%;
-    height: 13.086vh;
+    height: 14.29vh;
     background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .btnsabajo{
     width: 100%;
     display: flex;
@@ -198,64 +233,33 @@ align-items: center;
     align-items: center;
     justify-content: space-evenly;
     height: 8.724vh;
-}
-.Home{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh;
-    width: 13.835vw;
+    margin-top: 1.85vh;
 }
 
-
-.Guardados{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh;
-    width: 13.835vw;
-}
-.Mapa{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    background-color: #D9D9D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh;
-    width: 13.835vw;
-}
-
-
+.Home,
+.Mapa,
+.Guardados,
 .Usuario{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    background-color: #D9D9D9;
     display: flex;
-
-
-    justify-content: center;
-    align-items: center;
-
-
     justify-content: center;
     align-items: center;
     height: 6.216vh;
     width: 13.835vw;
+    margin-bottom: 5.56vh;
 }
+
 .Escaner{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 8.724vh;
     width: 19.417vw;
+    margin-bottom: 5.56vh;
+}
+
+.icono{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
 }

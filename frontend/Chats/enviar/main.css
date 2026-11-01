@@ -81,7 +81,10 @@ body{
     cursor: pointer;
 }
 .flechita{
-        font-size: 2.2vh;
+    width: 6.4vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 .mensaje{
     height: 63.69vh;

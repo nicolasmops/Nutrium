@@ -14,7 +14,15 @@
     align-items: center;
     
 }
- 
+ .noPuede{
+    background-color: #E81224;
+}
+.siPuede{
+    background-color: #15BB0B;
+}
+.moderacion{
+    background-color: #FFAE00;
+}
 .Titulo{
     font-family: "Sora", sans-serif;
     width: 64.32vw; 
