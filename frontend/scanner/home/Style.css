@@ -397,21 +397,10 @@ body{
     object-fit: contain;
 }
 
-.Escaner{
-    width: 22.3vw;
-    aspect-ratio: 1;
-    border-radius: 30px;
-    background-color: #ff9040;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.imgEscaner{
-    width: 16vw;
-    height: auto;
-    object-fit: contain;
-}
+   
+
+
 *{
       font-family: "Sora", sans-serif; 
 }
@@ -493,5 +482,14 @@ body{
 }
 
 .seleccionado{
+    margin-top: 1.745vh;
+    width: 24.27vw;
+    aspect-ratio: 1/1;
     background-color: #ff9040;
+     border-radius: 30px;
+    background-color: #ff9040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

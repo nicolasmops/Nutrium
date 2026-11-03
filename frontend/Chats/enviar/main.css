@@ -365,6 +365,11 @@ body{
     object-fit: contain;
 }
 
-.seleccionado{
-    background-color: #ff9040;
+.selecciondo{
+    width: 16.26vw;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
 }

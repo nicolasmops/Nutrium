@@ -100,6 +100,7 @@ body{
     gap: 1.9vh;
     overflow-y: auto;
 }
+
 .resto{
     --alto-foto: 18.8vh;
     --mt: 0px;
@@ -284,78 +285,10 @@ body{
     width: 100%;
     height: 14.29vh;
     background-color: #AAD9F0;
-}
-
-.btnsabajo{
-    width: 100%;
-    height: 100%;
-    padding-bottom: 3.4vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.Home,
-.Mapa,
-.Usuario{
-    width: 16.26vw;
-    aspect-ratio: 1;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Mapa{
-    background-color: #ff9040;
-}
-.imgMapa
-.homeimg{
-    width: 9.5vw;
-    height: auto;
-    object-fit: contain;
-}
-.imgUsuario{
-    width: 12.62vw;
-    height: auto;
-    object-fit: contain;
-}
-
-
-.Guardados{
-    width: 13.835vw;
-    height: 6.216vh;
-    object-fit: contain;
-}
-
-.Escaner{
-    width: 19.417vw;
-    height: 8.724vh;
-    object-fit: contain;
-}.abajo{
-    width: 100%;
-    height: 14.29vh;
-    background-color: #AAD9F0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-}
-
-.Guardados{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh;
-    width: 13.835vw;
-
-    width: 16.20vw;
-    height: 7.2vh;
-    border-radius: 30px;
-
 }
 
 .btnsabajo{
@@ -377,24 +310,9 @@ body{
     align-items: center;
 }
 
-.Usuario{
-    width: 12.621vw;
-    height: 5.671vh;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .homeimg{
     width: 9.5vw;
     height: auto;
-    object-fit: contain;
-}
-
-.imgUsuario{
-    width: 12.621vw;
-    height: 5.671vh;
     object-fit: contain;
 }
 
@@ -405,11 +323,40 @@ body{
 }
 
 .Escaner{
-    width: 19.417vw;
-    height: 8.724vh;
+    width: 15.534vw;
+    height: 6.979vh;
+    object-fit: contain;
+}
+
+.Guardados{
+    font-size: 2.427vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.20vw;
+    height: 7.2vh;
+    border-radius: 30px;
+}
+
+.Usuario{
+    width: 12.621vw;
+    height: 5.671vh;
+    border-radius: 30px;
+    object-fit: contain;
+}
+
+.imgUsuario{
+    width: 12.621vw;
+    height: 5.671vh;
     object-fit: contain;
 }
 
 .seleccionado{
+    width: 16.26vw;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
     background-color: #ff9040;
 }

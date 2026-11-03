@@ -296,20 +296,7 @@ body{
     justify-content: space-around;
 }
 
-.Guardados{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh;
-    width: 13.835vw;
 
-    width: 16.20vw;
-    height: 7.2vh;
-    border-radius: 30px;
-
-}
 
 .btnsabajo{
     width: 100%;
@@ -363,6 +350,11 @@ body{
     object-fit: contain;
 }
 
-.seleccionado{
-    background-color: #ff9040;
+.selecciondo{
+    width: 16.26vw;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
 }
