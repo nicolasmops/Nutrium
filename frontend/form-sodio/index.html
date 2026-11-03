@@ -15,12 +15,12 @@
    <img src="../aComponentes/Slogan.png"  class="slogan">
    <form  class="sodio" id="formulario" >
     <p class="ayuda">Ayudanos a ayudarte</p>
-    <label for="miligramos" class="pregunta">¿Cuánto sodio podés comer cada 100g?</label>
-    <input type="text" id="miligramos" name="miligramos" placeholder="Escribe aquí" required>
-    <select name="esMedico" id="medico" class="medico">
-        <option value="" class="value">¿Eres médico?</option>
-        <option value="true" class="value">Sí</option>
-        <option value="false" class="value">No</option>
+    <label for="miligramos" class="pregunta">¿Cuántos sodio podés comer cada 100g?</label>
+    <input type="text" class ="miligramos" name="miligramos" placeholder="Ejemplo: 100mg" required>
+    <label for="esMedico" class="pregunta">¿Sos médico/a o paciente?</label>
+    <select name="esMedico" id="medico" class="miligramos" required>
+        <option value="false" class="value">Paciente</option>
+        <option value="true" class="value">Médico</option>
     </select>
     <button type="submit" class="boton" id="boton">CONTINUAR</button>
    </form>

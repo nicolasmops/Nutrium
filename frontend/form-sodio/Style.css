@@ -1,41 +1,109 @@
-body{
-    width: 412px;
-    height: 917px;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
     background-color: #AAD9F0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Sora", sans-serif;
 }
 
 
- .bienvenidos{
+.bienvenidos {
     width: 71.36vw;
-    height: 5.56vh;    
+    height: auto;
     margin-top: 10.8vh;
- }
- .nutrium{
-   width: 82.77vw;
-   height: 10.36vh;
-   margin-top: 1.09vh;
-   margin-bottom: 0.87vh;
- }
- .slogan{
+}
+
+.nutrium {
+    width: 82.77vw;
+    height: auto;
+    margin-top: 1.09vh;
+    margin-bottom: 0.87vh;
+}
+
+.slogan {
     width: 90.29vw;
-    height: 6.98vh;
- }
- .sodio{
-    width:83.98vw;
-    height: 38.93vh;
+    height: auto;
+}
+
+
+.sodio {
+    width: 83.98vw;
+    padding: 1.74vh 0 3vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     border-radius: 10px;
     background-color: #FFAC70;
     margin-top: 6.22vh;
- }
-.ayuda{
-    font-family: "Sora", sans-serif;
-    font-weight: bold;
+}
+
+.ayuda {
+    margin: 0 0 1.8vh;
+    font-weight: 700;
     font-size: 24px;
-    margin-left: 10.44vw;
-    margin-top: 1.74vh;
+    text-align: center;
+    color: #000;
+}
+
+.pregunta {
+    align-self: flex-start;
+    margin: 1vh 0 0.8vh 5.33vw;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #000;
+}
+
+/* ---------- Input y select ---------- */
+.miligramos {
+    width: 73.3vw;
+    height: 5.12vh;
+    background-color: #dddddd;
+    color: #676767;
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 4.12vw;
+    outline: none;
+}
+
+.miligramos::placeholder {
+    color: #676767;
+    opacity: 1;
+}
+
+
+
+
+
+.boton {
+    margin-top: 3.2vh;
+    padding: 1.4vh 8vw;
+    background-color: #8B9DF7;
+    color: #ffffff;
+    font-family: "Sora", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  
+}
+select.miligramos {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 10vw;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 4vw center;
+    color: #676767;
 }
