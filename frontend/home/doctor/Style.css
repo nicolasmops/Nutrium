@@ -143,6 +143,7 @@ body{
     margin-right: 4.5vw;
 }
 
+
 .abajo{
     width: 100%;
     height: 14.29vh;
@@ -150,39 +151,10 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 }
 
-.btnsabajo{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 8.724vh;
-    margin-top: 1.85vh;
-}
-
-.Home{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 18.20vw;
-    height: 8.07vh;
-    background-color: #ff9040;
-    border-radius: 30px;
-    margin-bottom: 5.56vh;
-}
-
-.homeimg{
-    height: 3.93vh;
-    width: 9.95vw;
-}
-
-.Guardados,
-.Mapa,
-.Usuario{
+.Guardados{
     font-family: "Sora", sans-serif;
     font-size: 2.427vw;
     display: flex;
@@ -190,16 +162,65 @@ body{
     align-items: center;
     height: 6.216vh;
     width: 13.835vw;
-    margin-bottom: 5.56vh;
+
+    width: 16.20vw;
+    height: 7.2vh;
+    border-radius: 30px;
+
 }
 
-.Escaner{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
+.btnsabajo{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 3.4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Home{
+    width: 16.26vw;
+    aspect-ratio: 1;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8.724vh;
+}
+
+.Usuario{
+    width: 12.621vw;
+    height: 5.671vh;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeimg{
+    width: 9.5vw;
+    height: auto;
+    object-fit: contain;
+}
+
+.imgUsuario{
+    width: 12.621vw;
+    height: 5.671vh;
+    object-fit: contain;
+}
+
+.Mapa{
+    width: 13.835vw;
+    height: 6.216vh;
+    object-fit: contain;
+}
+
+.Escaner{
     width: 19.417vw;
-    margin-bottom: 5.56vh;
+    height: 8.724vh;
+    object-fit: contain;
+}
+
+.seleccionado{
+    background-color: #ff9040;
 }
