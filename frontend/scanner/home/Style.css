@@ -132,7 +132,7 @@ body{
 
 .popup .nombreProducto{
     width: 100%;
-    font-size: 32px;
+    font-size: 35px;
     font-weight: 400;
     line-height: 5vh;
     text-align: center;
@@ -148,7 +148,7 @@ body{
     height: 5.4vh;
     margin-top: 2.9vh;
     border-radius: 10px;
-    font-size: 17px;
+    font-size: 25px;
     font-weight: 600;
     line-height: 5.4vh;
     text-align: center;
@@ -163,7 +163,7 @@ body{
 .popup .lorem{
     max-height: 13.8vh;
     margin-top: 3.9vh;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 21px;
     text-align: center;
     color: #ffffff;
@@ -185,12 +185,12 @@ body{
 }
 
 .popup .sodioTxt{
-    font-size: 16px;
+    font-size: 20px;
     color: #e8eafc;
 }
 
 .popup .sodioVal{
-    font-size: 21px;
+    font-size: 25px;
     font-weight: 400;
 }
 
@@ -290,7 +290,7 @@ body{
     border-radius: 3px;
     background-color: #ffffff4d;
     font-family: "Sora", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
     color: #1b1b1b;
     resize: none;
@@ -298,10 +298,15 @@ body{
 
 .popupGuardar .descripcion::placeholder{
     color: #555555;
+    font-size: 16px;
+        font-family: "Sora", sans-serif;
+
 }
 
 .popupGuardar .descripcion:focus{
     outline: none;
+        font-family: "Sora", sans-serif;
+
 }
 
 .popupGuardar .divLorem{
@@ -309,10 +314,12 @@ body{
     padding: 0.65vh 1.4vw;
     border-radius: 3px;
     background-color: #ffffff4d;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     color: #1b1b1b;
     overflow-y: auto;
+        font-family: "Sora", sans-serif;
+
 }
 
 .popupGuardar .contenedor{
@@ -404,4 +411,7 @@ body{
     width: 16vw;
     height: auto;
     object-fit: contain;
+}
+*{
+      font-family: "Sora", sans-serif; 
 }
