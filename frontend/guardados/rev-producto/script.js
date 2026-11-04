@@ -30,7 +30,7 @@ let clase
  
 
 function revisarProducto(){
-  if (productoUsable.apto === 2){
+  if (productoUsable.apto === 0){
     aptitud = "Puede consumirse"
     clase = "siPuede"
  }
@@ -38,7 +38,7 @@ function revisarProducto(){
     aptitud = "Consumir con moderacion"
     clase = "moderacion"
  }
- else if (productoUsable.apto === 0){
+ else if (productoUsable.apto === 2){
     aptitud = "No consumir"
     clase = "noPuede"
  }
@@ -63,3 +63,26 @@ function revisarProducto(){
   `
 }
 revisarProducto()
+async function borrarProducto() {
+  const id = localStorage.getItem("id")
+
+  try {
+    const resultado = await fetch(
+      "http://localhost:3000/producto/" + id + "/" + productoUsable.barcode,
+      { method: "DELETE" }
+    )
+    const datos = await resultado.json()
+
+    if (!resultado.ok) {
+      alert(datos.estatus)
+      return
+    }
+
+    sessionStorage.removeItem("productoGuardado")
+    window.location.href = "../home/index.html"
+  } catch {
+    alert("No se pudo conectar con el servidor")
+  }
+}
+
+document.querySelector(".borrar").addEventListener("click", borrarProducto)

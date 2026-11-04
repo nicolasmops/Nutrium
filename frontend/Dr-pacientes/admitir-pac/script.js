@@ -28,26 +28,31 @@ const boton = document.getElementById('agregar');
 const id = localStorage.getItem('id');
 
 async function agregarPaciente() {
-  let pacienteNuevo = {
+  const pacienteNuevo = {
     descripción: form.notas.value,
-  información: {
-    nombre: form.nombre.value,
-    email: form.email.value,
-  }
+    información: {
+      nombre: form.nombre.value,
+      email: form.email.value,
+    }
   }
 
- const response = await fetch("http://localhost:3000/medico/" + id + "/pacientes", {
+  const response = await fetch("http://localhost:3000/medico/" + id + "/pacientes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify(pacienteNuevo)
-  });
+  })
+
+  const respuesta = await response.json().catch(() => null)
 
   if (response.status === 200) {
-    alert("Paciente agregado correctamente");
-    window.location.href = "../home/index.html";
+    alert("Paciente agregado correctamente")
+    window.location.href = "../home/index.html"
+    return
   }
+
+  alert(respuesta ? respuesta.estatus : "La ruta no existe en el backend (" + response.status + ")")
 }
 
 boton.addEventListener('click', (e) => {
