@@ -244,6 +244,9 @@ div.sodio .texto p.valor{
     border-radius: 12px;
 }
 
+input:not([type="file"]){
+    margin-top: 0.5vh;
+}
 
 .abajo{
     width: 100%;
@@ -253,21 +256,6 @@ div.sodio .texto p.valor{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-}
-
-.Guardados{
-    font-family: "Sora", sans-serif;
-    font-size: 2.427vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.216vh;
-    width: 13.835vw;
-
-    width: 16.20vw;
-    height: 7.2vh;
-    border-radius: 30px;
-
 }
 
 .btnsabajo{
@@ -280,18 +268,12 @@ div.sodio .texto p.valor{
     align-items: center;
 }
 
-.Home{
+.Home,
+.Mapa,
+.Guardados,
+.Usuario{
     width: 16.26vw;
     aspect-ratio: 1;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Usuario{
-    width: 12.621vw;
-    height: 5.671vh;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -304,15 +286,16 @@ div.sodio .texto p.valor{
     object-fit: contain;
 }
 
-.imgUsuario{
-    width: 12.621vw;
-    height: 5.671vh;
+.imgMapa{
+    width: 13.835vw;
+    height: 6.216vh;
     object-fit: contain;
 }
 
-.Mapa{
-    width: 13.835vw;
-    height: 6.216vh;
+.imgguardados,
+.imgUsuario{
+    width: 12.621vw;
+    height: 5.671vh;
     object-fit: contain;
 }
 
